@@ -16,7 +16,6 @@
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <!-- Tailwind Configuration -->
     <script>
         tailwind.config = {
             theme: {
@@ -42,7 +41,6 @@
         }
     </script>
 
-    <!-- Custom CSS Styles -->
     <style>
         body {
             background-color: #F6F1ED;
@@ -121,7 +119,6 @@
 </head>
 <body class="antialiased selection:bg-brand-rose selection:text-white">
 
-    <!-- NAVBAR -->
     <header class="fixed top-0 left-0 right-0 z-50 glass-nav transition-all duration-300" id="mainHeader">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
             
@@ -159,7 +156,6 @@
             </button>
         </div>
 
-        <!-- Mobile Navigation Menu -->
         <div id="mobileMenu" class="hidden lg:hidden bg-brand-cream border-b border-brand-sandDark px-6 py-6 space-y-4 shadow-xl">
             <a href="#inicio" class="mobile-link block text-xs uppercase tracking-wider font-semibold text-brand-dark hover:text-brand-rose">Inicio</a>
             <a href="#tratamientos" class="mobile-link block text-xs uppercase tracking-wider font-semibold text-brand-dark hover:text-brand-rose">Tratamientos & Precios</a>
@@ -176,7 +172,6 @@
         </div>
     </header>
 
-    <!-- HERO SECTION -->
     <section id="inicio" class="relative pt-28 sm:pt-36 pb-16 lg:pb-24 overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
@@ -267,7 +262,6 @@
         </div>
     </section>
 
-    <!-- PROPUESTA DE VALOR / PRESENTACIÓN -->
     <section class="py-16 bg-white/70 border-y border-brand-sandDark/40">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="max-w-3xl mx-auto text-center space-y-4">
@@ -317,7 +311,6 @@
         </div>
     </section>
 
-    <!-- TRATAMIENTOS SECTION -->
     <section id="tratamientos" class="py-20 bg-brand-cream relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
@@ -326,38 +319,59 @@
                 <h2 class="font-serif-title text-3xl sm:text-4xl text-brand-dark mt-1">Tratamientos Estéticos y Odontológicos</h2>
             </div>
 
-            <!-- Category Filter Tabs -->
-            <div class="flex items-center gap-2 overflow-x-auto pb-4 mb-8 no-scrollbar scroll-smooth" id="categoryTabs">
-                <button onclick="filterCategory('todos')" class="tab-btn active text-xs font-semibold uppercase tracking-wider px-5 py-2.5 rounded-full border border-brand-dark/20 whitespace-nowrap">
-                    Todos los Tratamientos
+            <!-- Category Filter Carousel Container -->
+            <div class="relative mb-8 group/cat">
+                <!-- Left Fade Indicator -->
+                <div id="catFadeLeft" class="pointer-events-none absolute left-0 top-0 bottom-0 w-10 bg-gradient-to-r from-brand-cream via-brand-cream/80 to-transparent z-10 transition-opacity duration-300 opacity-0"></div>
+                
+                <!-- Left Arrow Button (Desktop) -->
+                <button id="catArrowLeft" onclick="scrollCategories(-250)" aria-label="Anterior categoría" 
+                        class="hidden sm:flex absolute -left-3 top-1/2 -translate-y-1/2 z-20 w-8 h-8 rounded-full bg-white/90 backdrop-blur-sm shadow-md border border-brand-sandDark/70 text-brand-dark hover:bg-brand-rose hover:text-white hover:border-brand-rose transition-all duration-300 items-center justify-center text-xs opacity-0 pointer-events-none">
+                    <i class="fa-solid fa-chevron-left text-[11px]"></i>
                 </button>
-                <button onclick="filterCategory('evaluacion')" class="tab-btn text-xs font-semibold uppercase tracking-wider px-5 py-2.5 rounded-full border border-brand-dark/20 text-brand-dark whitespace-nowrap hover:border-brand-rose">
-                    Consultas & Evaluaciones
+
+                <!-- Category Filter Tabs Container -->
+                <div class="flex items-center gap-2 overflow-x-auto py-1 px-1 sm:px-6 no-scrollbar scroll-smooth select-none" id="categoryTabs">
+                    <button onclick="filterCategory('todos', this)" class="tab-btn active text-xs font-semibold uppercase tracking-wider px-5 py-2.5 rounded-full border border-brand-dark/20 whitespace-nowrap shrink-0">
+                        Todos los Tratamientos
+                    </button>
+                    <button onclick="filterCategory('evaluacion', this)" class="tab-btn text-xs font-semibold uppercase tracking-wider px-5 py-2.5 rounded-full border border-brand-dark/20 text-brand-dark whitespace-nowrap shrink-0 hover:border-brand-rose">
+                        Consultas & Evaluaciones
+                    </button>
+                    <button onclick="filterCategory('mesoterapia', this)" class="tab-btn text-xs font-semibold uppercase tracking-wider px-5 py-2.5 rounded-full border border-brand-dark/20 text-brand-dark whitespace-nowrap shrink-0 hover:border-brand-rose">
+                        Mesoterapia & Hidratación
+                    </button>
+                    <button onclick="filterCategory('acido', this)" class="tab-btn text-xs font-semibold uppercase tracking-wider px-5 py-2.5 rounded-full border border-brand-dark/20 text-brand-dark whitespace-nowrap shrink-0 hover:border-brand-rose">
+                        Ácido Hialurónico
+                    </button>
+                    <button onclick="filterCategory('bioestimuladores', this)" class="tab-btn text-xs font-semibold uppercase tracking-wider px-5 py-2.5 rounded-full border border-brand-dark/20 text-brand-dark whitespace-nowrap shrink-0 hover:border-brand-rose">
+                        Bioestimuladores
+                    </button>
+                    <button onclick="filterCategory('hilos', this)" class="tab-btn text-xs font-semibold uppercase tracking-wider px-5 py-2.5 rounded-full border border-brand-dark/20 text-brand-dark whitespace-nowrap shrink-0 hover:border-brand-rose">
+                        Hilos Tensores
+                    </button>
+                    <button onclick="filterCategory('toxina', this)" class="tab-btn text-xs font-semibold uppercase tracking-wider px-5 py-2.5 rounded-full border border-brand-dark/20 text-brand-dark whitespace-nowrap shrink-0 hover:border-brand-rose">
+                        Toxina Botulínica
+                    </button>
+                    <button onclick="filterCategory('hifu-facial', this)" class="tab-btn text-xs font-semibold uppercase tracking-wider px-5 py-2.5 rounded-full border border-brand-dark/20 text-brand-dark whitespace-nowrap shrink-0 hover:border-brand-rose">
+                        HIFU Facial
+                    </button>
+                    <button onclick="filterCategory('hifu-corporal', this)" class="tab-btn text-xs font-semibold uppercase tracking-wider px-5 py-2.5 rounded-full border border-brand-dark/20 text-brand-dark whitespace-nowrap shrink-0 hover:border-brand-rose">
+                        HIFU Corporal
+                    </button>
+                    <button onclick="filterCategory('otros', this)" class="tab-btn text-xs font-semibold uppercase tracking-wider px-5 py-2.5 rounded-full border border-brand-dark/20 text-brand-dark whitespace-nowrap shrink-0 hover:border-brand-rose">
+                        Tecnología / Otros
+                    </button>
+                </div>
+
+                <!-- Right Arrow Button (Desktop) -->
+                <button id="catArrowRight" onclick="scrollCategories(250)" aria-label="Siguiente categoría" 
+                        class="hidden sm:flex absolute -right-3 top-1/2 -translate-y-1/2 z-20 w-8 h-8 rounded-full bg-white/90 backdrop-blur-sm shadow-md border border-brand-sandDark/70 text-brand-dark hover:bg-brand-rose hover:text-white hover:border-brand-rose transition-all duration-300 items-center justify-center text-xs">
+                    <i class="fa-solid fa-chevron-right text-[11px]"></i>
                 </button>
-                <button onclick="filterCategory('mesoterapia')" class="tab-btn text-xs font-semibold uppercase tracking-wider px-5 py-2.5 rounded-full border border-brand-dark/20 text-brand-dark whitespace-nowrap hover:border-brand-rose">
-                    Mesoterapia & Hidratación
-                </button>
-                <button onclick="filterCategory('acido')" class="tab-btn text-xs font-semibold uppercase tracking-wider px-5 py-2.5 rounded-full border border-brand-dark/20 text-brand-dark whitespace-nowrap hover:border-brand-rose">
-                    Ácido Hialurónico
-                </button>
-                <button onclick="filterCategory('bioestimuladores')" class="tab-btn text-xs font-semibold uppercase tracking-wider px-5 py-2.5 rounded-full border border-brand-dark/20 text-brand-dark whitespace-nowrap hover:border-brand-rose">
-                    Bioestimuladores
-                </button>
-                <button onclick="filterCategory('hilos')" class="tab-btn text-xs font-semibold uppercase tracking-wider px-5 py-2.5 rounded-full border border-brand-dark/20 text-brand-dark whitespace-nowrap hover:border-brand-rose">
-                    Hilos Tensores
-                </button>
-                <button onclick="filterCategory('toxina')" class="tab-btn text-xs font-semibold uppercase tracking-wider px-5 py-2.5 rounded-full border border-brand-dark/20 text-brand-dark whitespace-nowrap hover:border-brand-rose">
-                    Toxina Botulínica
-                </button>
-                <button onclick="filterCategory('hifu-facial')" class="tab-btn text-xs font-semibold uppercase tracking-wider px-5 py-2.5 rounded-full border border-brand-dark/20 text-brand-dark whitespace-nowrap hover:border-brand-rose">
-                    HIFU Facial
-                </button>
-                <button onclick="filterCategory('hifu-corporal')" class="tab-btn text-xs font-semibold uppercase tracking-wider px-5 py-2.5 rounded-full border border-brand-dark/20 text-brand-dark whitespace-nowrap hover:border-brand-rose">
-                    HIFU Corporal
-                </button>
-                <button onclick="filterCategory('otros')" class="tab-btn text-xs font-semibold uppercase tracking-wider px-5 py-2.5 rounded-full border border-brand-dark/20 text-brand-dark whitespace-nowrap hover:border-brand-rose">
-                    Tecnología / Otros
-                </button>
+
+                <!-- Right Fade Indicator -->
+                <div id="catFadeRight" class="pointer-events-none absolute right-0 top-0 bottom-0 w-10 bg-gradient-to-l from-brand-cream via-brand-cream/80 to-transparent z-10 transition-opacity duration-300"></div>
             </div>
 
             <!-- Treatments Grid Container -->
@@ -374,7 +388,6 @@
         </div>
     </section>
 
-    <!-- SECCIÓN EVALUACIÓN / PRE-DIAGNÓSTICO -->
     <section class="py-16 bg-brand-rose text-white relative overflow-hidden">
         <div class="absolute -right-20 -top-20 w-80 h-80 rounded-full bg-white/5 pointer-events-none blur-3xl"></div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -487,7 +500,6 @@
         </div>
     </section>
 
-    <!-- PLAN ANUAL DESTACADO -->
     <section id="plan-anual" class="py-20 bg-brand-dark text-white relative overflow-hidden">
         
         <!-- Subtle Glow Backgrounds -->
@@ -583,7 +595,6 @@
         </div>
     </section>
 
-    <!-- SOBRE LA DRA. LAURA ROMANIELLO -->
     <section id="sobre-mi" class="py-20 bg-brand-cream">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
@@ -661,7 +672,6 @@
         </div>
     </section>
 
-    <!-- CONTACTO Y HORARIOS -->
     <section id="contacto" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
@@ -789,7 +799,6 @@
         </div>
     </section>
 
-    <!-- FOOTER -->
     <footer class="bg-brand-dark text-white pt-12 pb-8 border-t border-white/10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-white/10">
@@ -884,7 +893,6 @@
         </span>
     </a>
 
-    <!-- JAVASCRIPT APP LOGIC -->
     <script>
         const PHONE_NUMBER = "56996341132";
 
@@ -1011,14 +1019,81 @@
             });
         }
 
-        function filterCategory(cat) {
+        function filterCategory(cat, element) {
             const tabs = document.querySelectorAll('.tab-btn');
             tabs.forEach(tab => tab.classList.remove('active'));
             
-            const activeTab = Array.from(tabs).find(t => t.getAttribute('onclick') && t.getAttribute('onclick').includes(cat));
-            if (activeTab) activeTab.classList.add('active');
+            let targetBtn = element;
+            if (!targetBtn) {
+                targetBtn = Array.from(tabs).find(t => t.getAttribute('onclick') && t.getAttribute('onclick').includes(`'${cat}'`));
+            }
+
+            if (targetBtn) {
+                targetBtn.classList.add('active');
+                
+                // Auto-scroll selected category button into center view
+                targetBtn.scrollIntoView({
+                    behavior: 'smooth',
+                    inline: 'center',
+                    block: 'nearest'
+                });
+            }
 
             renderTreatments(cat);
+            setTimeout(updateCategoryArrows, 300);
+        }
+
+        function scrollCategories(distance) {
+            const container = document.getElementById('categoryTabs');
+            if (container) {
+                container.scrollBy({
+                    left: distance,
+                    behavior: 'smooth'
+                });
+            }
+        }
+
+        function updateCategoryArrows() {
+            const container = document.getElementById('categoryTabs');
+            const arrowLeft = document.getElementById('catArrowLeft');
+            const arrowRight = document.getElementById('catArrowRight');
+            const fadeLeft = document.getElementById('catFadeLeft');
+            const fadeRight = document.getElementById('catFadeRight');
+
+            if (!container) return;
+
+            const scrollLeft = container.scrollLeft;
+            const maxScroll = container.scrollWidth - container.clientWidth;
+
+            // Check if scrolled past start
+            if (scrollLeft <= 10) {
+                if (arrowLeft) {
+                    arrowLeft.classList.add('opacity-0', 'pointer-events-none');
+                    arrowLeft.classList.remove('opacity-100');
+                }
+                if (fadeLeft) fadeLeft.classList.add('opacity-0');
+            } else {
+                if (arrowLeft) {
+                    arrowLeft.classList.remove('opacity-0', 'pointer-events-none');
+                    arrowLeft.classList.add('opacity-100');
+                }
+                if (fadeLeft) fadeLeft.classList.remove('opacity-0');
+            }
+
+            // Check if reached end
+            if (scrollLeft >= maxScroll - 10) {
+                if (arrowRight) {
+                    arrowRight.classList.add('opacity-0', 'pointer-events-none');
+                    arrowRight.classList.remove('opacity-100');
+                }
+                if (fadeRight) fadeRight.classList.add('opacity-0');
+            } else {
+                if (arrowRight) {
+                    arrowRight.classList.remove('opacity-0', 'pointer-events-none');
+                    arrowRight.classList.add('opacity-100');
+                }
+                if (fadeRight) fadeRight.classList.remove('opacity-0');
+            }
         }
 
         function openBookingModal(serviceName) {
@@ -1050,7 +1125,7 @@
             }
             msg += `%0AQuedo atenta/o a su confirmación de disponibilidad. ¡Muchas gracias!`;
 
-            window.open(`https://wa.me/?text=${msg}`, '_blank');
+            window.open(`https://wa.me/${PHONE_NUMBER}?text=${msg}`, '_blank');
             closeBookingModal();
         }
 
@@ -1079,6 +1154,14 @@
         /* Initial Render on Page Load */
         window.onload = function() {
             renderTreatments('todos');
+
+            // Attach scroll listeners to update arrow & fade states dynamically
+            const categoryContainer = document.getElementById('categoryTabs');
+            if (categoryContainer) {
+                categoryContainer.addEventListener('scroll', updateCategoryArrows, { passive: true });
+                window.addEventListener('resize', updateCategoryArrows, { passive: true });
+                updateCategoryArrows();
+            }
         };
     </script>
 </body>
