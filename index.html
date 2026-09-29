@@ -208,7 +208,7 @@
                             <i class="fa-solid fa-calendar-check text-sm"></i>
                         </button>
                         
-                        <a href="https://wa.me/?text=Hola%20Dra.%20Laura%20Romaniello,%20quisiera%20solicitar%20informaci%C3%B3n%20para%20una%20evaluaci%C3%B3n" target="_blank" class="border border-brand-dark/20 hover:border-brand-rose hover:text-brand-rose bg-white/70 hover:bg-white text-brand-dark px-7 py-4 rounded-full text-xs uppercase tracking-widest font-semibold transition-all duration-300 text-center flex items-center justify-center gap-2">
+                        <a href="https://wa.me/56996341132?text=Hola%20Dra.%20Laura,%20quisiera%20recibir%20m%C3%A1s%20informaci%C3%B3n%20sobre%20los%20tratamientos%20y%20consultar%20por%20disponibilidad%20de%20horas.%20%C2%BFPodr%C3%ADan%20orientarme%3F" target="_blank" class="border border-brand-dark/20 hover:border-brand-rose hover:text-brand-rose bg-white/70 hover:bg-white text-brand-dark px-7 py-4 rounded-full text-xs uppercase tracking-widest font-semibold transition-all duration-300 text-center flex items-center justify-center gap-2">
                             <i class="fa-brands fa-whatsapp text-lg text-emerald-600"></i>
                             <span>por WhatsApp</span>
                         </a>
@@ -321,17 +321,9 @@
     <section id="tratamientos" class="py-20 bg-brand-cream relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
-            <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
-                <div>
-                    <span class="text-xs uppercase tracking-[0.25em] text-brand-rose font-semibold">Carta de Servicios & Precios</span>
-                    <h2 class="font-serif-title text-3xl sm:text-4xl text-brand-dark mt-1">Tratamientos Estéticos y Odontológicos</h2>
-                </div>
-                
-                <!-- Search Input -->
-                <div class="relative w-full md:w-72">
-                    <i class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-brand-dark/40 text-xs"></i>
-                    <input type="text" id="searchInput" oninput="handleSearch()" placeholder="Buscar p. ej. Toxina, HIFU, Labios..." class="w-full pl-10 pr-4 py-2.5 rounded-full border border-brand-sandDark bg-white text-xs text-brand-dark focus:outline-none focus:border-brand-rose shadow-sm">
-                </div>
+            <div class="mb-8">
+                <span class="text-xs uppercase tracking-[0.25em] text-brand-rose font-semibold">Carta de Servicios & Precios</span>
+                <h2 class="font-serif-title text-3xl sm:text-4xl text-brand-dark mt-1">Tratamientos Estéticos y Odontológicos</h2>
             </div>
 
             <!-- Category Filter Tabs -->
@@ -737,7 +729,7 @@
                     </div>
 
                     <!-- Main WhatsApp CTA Button -->
-                    <a href="https://wa.me/?text=Hola%20Dra.%20Laura%20Romaniello,%20deseo%20reservar%20una%20hora%20de%20atenci%C3%B3n" target="_blank" class="w-full bg-brand-rose hover:bg-brand-roseHover text-white py-4 rounded-full text-xs uppercase tracking-widest font-semibold transition-all duration-300 shadow-md flex items-center justify-center gap-3">
+                    <a href="https://wa.me/56996341132?text=Hola%20Dra.%20Laura,%20quisiera%20recibir%20m%C3%A1s%20informaci%C3%B3n%20sobre%20los%20tratamientos%20y%20consultar%20por%20disponibilidad%20de%20horas.%20%C2%BFPodr%C3%ADan%20orientarme%3F" target="_blank" class="w-full bg-brand-rose hover:bg-brand-roseHover text-white py-4 rounded-full text-xs uppercase tracking-widest font-semibold transition-all duration-300 shadow-md flex items-center justify-center gap-3">
                         <i class="fa-brands fa-whatsapp text-lg"></i>
                         <span>Reservar directamente por WhatsApp</span>
                     </a>
@@ -882,7 +874,7 @@
     </div>
 
     <!-- FLOATING WHATSAPP BUTTON -->
-    <a href="https://wa.me/?text=Hola%20Dra.%20Laura%20Romaniello,%20quisiera%20solicitar%20informaci%C3%B3n" 
+    <a href="https://wa.me/56996341132?text=Hola%20Dra.%20Laura,%20quisiera%20recibir%20m%C3%A1s%20informaci%C3%B3n%20sobre%20los%20tratamientos%20y%20consultar%20por%20disponibilidad%20de%20horas.%20%C2%BFPodr%C3%ADan%20orientarme%3F" 
        target="_blank" 
        class="fixed bottom-6 right-6 z-40 bg-emerald-500 hover:bg-emerald-600 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-xl transition-all duration-300 hover:scale-110 group" 
        title="Contactar por WhatsApp">
@@ -894,6 +886,8 @@
 
     <!-- JAVASCRIPT APP LOGIC -->
     <script>
+        const PHONE_NUMBER = "56996341132";
+
         const treatmentsData = [
             // Consultas
             { category: 'evaluacion', name: 'Consulta Profesional – Armonización Facial', time: '30 min', price: '$15.000 CLP', note: 'Evaluación facial personalizada' },
@@ -963,24 +957,17 @@
 
         let currentCategory = 'todos';
 
-        function renderTreatments(category = 'todos', searchQuery = '') {
+        function renderTreatments(category = 'todos') {
             currentCategory = category;
             const grid = document.getElementById('treatmentsGrid');
             const noResults = document.getElementById('noResults');
+            if (!grid) return;
+            
             grid.innerHTML = '';
 
             let filtered = category === 'todos' 
                 ? treatmentsData 
                 : treatmentsData.filter(t => t.category === category);
-
-            if (searchQuery.trim() !== '') {
-                const q = searchQuery.toLowerCase();
-                filtered = filtered.filter(t => 
-                    t.name.toLowerCase().includes(q) || 
-                    t.note.toLowerCase().includes(q) || 
-                    t.price.toLowerCase().includes(q)
-                );
-            }
 
             if (filtered.length === 0) {
                 noResults.classList.remove('hidden');
@@ -1025,7 +1012,6 @@
         }
 
         function filterCategory(cat) {
-            document.getElementById('searchInput').value = '';
             const tabs = document.querySelectorAll('.tab-btn');
             tabs.forEach(tab => tab.classList.remove('active'));
             
@@ -1033,11 +1019,6 @@
             if (activeTab) activeTab.classList.add('active');
 
             renderTreatments(cat);
-        }
-
-        function handleSearch() {
-            const query = document.getElementById('searchInput').value;
-            renderTreatments(currentCategory, query);
         }
 
         function openBookingModal(serviceName) {
