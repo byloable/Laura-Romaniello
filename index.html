@@ -1,0 +1,1104 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dra. Laura Romaniello | Estética Avanzada & Armonización Facial</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#191718',       // Charcoal Black
+                            cream: '#F6F1ED',      // Off-white Ivory
+                            sand: '#EAE3DC',       // Warm Neutral
+                            sandDark: '#D6CEC9',   // Moodboard Neutral
+                            rose: '#A85C70',       // Dusty Rose Accent
+                            roseLight: '#D98BBC',  // Soft Pink Accent
+                            roseHover: '#8E4A5C',  // Darker Rose for hover
+                            roseMuted: '#F4E8EC'   // Gentle Rose tint
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Montserrat', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS Styles -->
+    <style>
+        body {
+            background-color: #F6F1ED;
+            color: #191718;
+            font-family: 'Montserrat', sans-serif;
+            overflow-x: hidden;
+        }
+
+        .font-serif-title {
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* Glassmorphism & Custom Elements */
+        .glass-nav {
+            background: rgba(246, 241, 237, 0.94);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(214, 206, 201, 0.5);
+        }
+
+        .dark-glass {
+            background: rgba(25, 23, 24, 0.95);
+            backdrop-filter: blur(16px);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #F6F1ED;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #D6CEC9;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #A85C70;
+        }
+
+        /* Image Mask for Editorial Aesthetics */
+        .img-editorial {
+            filter: contrast(1.02) brightness(0.98);
+            transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .img-editorial:hover {
+            transform: scale(1.02);
+        }
+
+        .badge-rose {
+            background-color: rgba(168, 92, 112, 0.1);
+            color: #A85C70;
+            border: 1px solid rgba(168, 92, 112, 0.3);
+        }
+
+        /* Tab Transition */
+        .tab-btn {
+            transition: all 0.25s ease;
+        }
+        .tab-btn.active {
+            background-color: #191718;
+            color: #F6F1ED;
+            border-color: #191718;
+            box-shadow: 0 4px 12px rgba(25, 23, 24, 0.15);
+        }
+
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-brand-rose selection:text-white">
+
+    <!-- NAVBAR -->
+    <header class="fixed top-0 left-0 right-0 z-50 glass-nav transition-all duration-300" id="mainHeader">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            
+            <!-- Logo -->
+            <a href="#" class="flex flex-col group">
+                <span class="font-serif-title text-xl sm:text-2xl tracking-wider text-brand-dark font-medium group-hover:text-brand-rose transition-colors">
+                    DRA. LAURA ROMANIELLO
+                </span>
+                <span class="text-[10px] sm:text-xs tracking-[0.25em] text-brand-rose uppercase font-semibold">
+                    Estética & Armonización Facial
+                </span>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden lg:flex items-center space-x-7 text-xs font-medium tracking-wider uppercase text-brand-dark/80">
+                <a href="#inicio" class="hover:text-brand-rose transition-colors py-2 border-b-2 border-transparent hover:border-brand-rose">Inicio</a>
+                <a href="#tratamientos" class="hover:text-brand-rose transition-colors py-2 border-b-2 border-transparent hover:border-brand-rose">Tratamientos</a>
+                <a href="#tecnologia" class="hover:text-brand-rose transition-colors py-2 border-b-2 border-transparent hover:border-brand-rose">Tecnología</a>
+                <a href="#plan-anual" class="hover:text-brand-rose transition-colors py-2 border-b-2 border-transparent hover:border-brand-rose">Plan Anual</a>
+                <a href="#sobre-mi" class="hover:text-brand-rose transition-colors py-2 border-b-2 border-transparent hover:border-brand-rose">Sobre Mí</a>
+                <a href="#contacto" class="hover:text-brand-rose transition-colors py-2 border-b-2 border-transparent hover:border-brand-rose">Contacto</a>
+            </nav>
+
+            <!-- CTA Button -->
+            <div class="hidden sm:flex items-center space-x-3">
+                <button onclick="openBookingModal('Evaluación General')" class="bg-brand-rose hover:bg-brand-roseHover text-white px-5 py-2.5 rounded-full text-xs uppercase tracking-widest font-semibold transition-all duration-300 shadow-sm hover:shadow-md flex items-center gap-2">
+                    <span>Reservar Evaluación</span>
+                    <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Hamburger Button -->
+            <button id="mobileMenuBtn" class="lg:hidden text-brand-dark p-2 focus:outline-none" aria-label="Abrir Menú">
+                <i class="fa-solid fa-bars text-xl" id="menuIcon"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobileMenu" class="hidden lg:hidden bg-brand-cream border-b border-brand-sandDark px-6 py-6 space-y-4 shadow-xl">
+            <a href="#inicio" class="mobile-link block text-xs uppercase tracking-wider font-semibold text-brand-dark hover:text-brand-rose">Inicio</a>
+            <a href="#tratamientos" class="mobile-link block text-xs uppercase tracking-wider font-semibold text-brand-dark hover:text-brand-rose">Tratamientos & Precios</a>
+            <a href="#tecnologia" class="mobile-link block text-xs uppercase tracking-wider font-semibold text-brand-dark hover:text-brand-rose">Tecnología</a>
+            <a href="#plan-anual" class="mobile-link block text-xs uppercase tracking-wider font-semibold text-brand-dark hover:text-brand-rose">Plan Anual</a>
+            <a href="#sobre-mi" class="mobile-link block text-xs uppercase tracking-wider font-semibold text-brand-dark hover:text-brand-rose">Sobre Mí</a>
+            <a href="#contacto" class="mobile-link block text-xs uppercase tracking-wider font-semibold text-brand-dark hover:text-brand-rose">Contacto & Ubicación</a>
+            <div class="pt-4 border-t border-brand-sandDark/50">
+                <button onclick="openBookingModal('Evaluación General')" class="w-full bg-brand-rose text-white py-3 rounded-full text-xs uppercase tracking-widest font-semibold text-center flex items-center justify-center gap-2">
+                    <span>Reservar Evaluación</span>
+                    <i class="fa-brands fa-whatsapp text-sm"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="inicio" class="relative pt-28 sm:pt-36 pb-16 lg:pb-24 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+                
+                <!-- Left Text Column -->
+                <div class="lg:col-span-7 space-y-6 lg:pr-6">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full badge-rose text-xs font-semibold tracking-wider uppercase">
+                        <span class="w-2 h-2 rounded-full bg-brand-rose animate-pulse"></span>
+                        Cirujano Dentista · Estética Facial Avanzada
+                    </div>
+
+                    <h1 class="font-serif-title text-4xl sm:text-5xl lg:text-6xl text-brand-dark leading-[1.15] font-normal">
+                        Armonización Facial <br class="hidden sm:inline">
+                        <span class="italic font-light text-brand-dark/90">& Estética Avanzada</span>
+                    </h1>
+
+                    <p class="font-serif-title text-2xl sm:text-3xl text-brand-rose italic font-light tracking-wide">
+                        Ciencia. Arte. Armonía.
+                    </p>
+
+                    <p class="text-brand-dark/80 text-sm sm:text-base leading-relaxed max-w-xl font-light">
+                        Odontología integral para adultos y niños. Tratamientos médicos personalizados que realzan tu belleza natural con la más avanzada tecnología y máxima precisión clínica en La Serena.
+                    </p>
+
+                    <!-- CTAs -->
+                    <div class="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+                        <button onclick="openBookingModal('Evaluación General')" class="bg-brand-rose hover:bg-brand-roseHover text-white px-8 py-4 rounded-full text-xs uppercase tracking-widest font-semibold transition-all duration-300 shadow-md hover:shadow-lg text-center flex items-center justify-center gap-3">
+                            <span>Reservar Evaluación</span>
+                            <i class="fa-solid fa-calendar-check text-sm"></i>
+                        </button>
+                        
+                        <a href="https://wa.me/?text=Hola%20Dra.%20Laura%20Romaniello,%20quisiera%20solicitar%20informaci%C3%B3n%20para%20una%20evaluaci%C3%B3n" target="_blank" class="border border-brand-dark/20 hover:border-brand-rose hover:text-brand-rose bg-white/70 hover:bg-white text-brand-dark px-7 py-4 rounded-full text-xs uppercase tracking-widest font-semibold transition-all duration-300 text-center flex items-center justify-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-lg text-emerald-600"></i>
+                            <span>por WhatsApp</span>
+                        </a>
+                    </div>
+
+                    <!-- Micro Highlights -->
+                    <div class="pt-8 grid grid-cols-2 sm:grid-cols-4 gap-4 border-t border-brand-sandDark/60">
+                        <div>
+                            <span class="block text-xs uppercase tracking-wider text-brand-rose font-semibold">Evaluación</span>
+                            <span class="text-xs text-brand-dark/70">Personalizada</span>
+                        </div>
+                        <div>
+                            <span class="block text-xs uppercase tracking-wider text-brand-rose font-semibold">Tecnología</span>
+                            <span class="text-xs text-brand-dark/70">Última Generación</span>
+                        </div>
+                        <div>
+                            <span class="block text-xs uppercase tracking-wider text-brand-rose font-semibold">Resultados</span>
+                            <span class="text-xs text-brand-dark/70">100% Naturales</span>
+                        </div>
+                        <div>
+                            <span class="block text-xs uppercase tracking-wider text-brand-rose font-semibold">Atención</span>
+                            <span class="text-xs text-brand-dark/70">Integral & Segura</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Editorial Hero Visual -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative mx-auto max-w-md lg:max-w-none">
+                        <!-- Decorative Frame -->
+                        <div class="absolute -inset-3 rounded-2xl border border-brand-rose/20 transform rotate-1 scale-95"></div>
+                        
+                        <div class="relative rounded-2xl overflow-hidden shadow-2xl bg-brand-dark">
+                            <img src="https://images.unsplash.com/photo-1512290900673-7002fda01373?q=80&w=1000&auto=format&fit=crop" 
+                                 onerror="this.src='https://placehold.co/800x1000/191718/F6F1ED?text=Dra.+Laura+Romaniello'"
+                                 alt="Armonización Facial y Estética Médica" 
+                                 class="w-full h-[460px] sm:h-[520px] object-cover img-editorial opacity-90">
+                            
+                            <!-- Overlay Badge -->
+                            <div class="absolute bottom-6 left-6 right-6 p-5 rounded-xl dark-glass text-white border border-white/10 shadow-lg">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-10 h-10 rounded-full bg-brand-rose/20 flex items-center justify-center text-brand-roseLight border border-brand-roseLight/30 shrink-0">
+                                        <i class="fa-solid fa-sparkles text-sm"></i>
+                                    </div>
+                                    <div>
+                                        <p class="font-serif-title text-base text-brand-cream">Enfoque Clínico & Estético</p>
+                                        <p class="text-xs text-brand-sandDark font-light">Armonía que se ve, confianza que se siente.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- PROPUESTA DE VALOR / PRESENTACIÓN -->
+    <section class="py-16 bg-white/70 border-y border-brand-sandDark/40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center space-y-4">
+                <span class="text-xs uppercase tracking-[0.25em] text-brand-rose font-semibold">Atención Médica Odontológica & Estética</span>
+                <h2 class="font-serif-title text-2xl sm:text-3xl text-brand-dark">
+                    Salud bucal y armonización facial bajo un solo estándar de excelencia
+                </h2>
+                <p class="text-sm sm:text-base text-brand-dark/80 leading-relaxed font-light">
+                    Como <strong>Cirujano Dentista</strong>, la Dra. Laura Romaniello combina un profundo conocimiento anatómicofacial con tecnología de vanguardia. Ofrecemos desde odontología integral para toda la familia hasta sofisticados protocolos de bioestimulación, HIFU 12D y armonización facial con ácido hialurónico.
+                </p>
+            </div>
+
+            <!-- Pillars Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mt-12">
+                <div class="p-6 rounded-2xl bg-brand-cream border border-brand-sandDark/50 hover:border-brand-rose/40 transition-all">
+                    <div class="w-10 h-10 rounded-xl bg-brand-rose/10 text-brand-rose flex items-center justify-center mb-4 text-lg">
+                        <i class="fa-solid fa-user-doctor"></i>
+                    </div>
+                    <h3 class="font-serif-title text-lg text-brand-dark mb-1">Evaluación personalizada</h3>
+                    <p class="text-xs text-brand-dark/70 font-light leading-relaxed">Diseñamos tu plan según las necesidades únicas de tu rostro y estructura bucal.</p>
+                </div>
+
+                <div class="p-6 rounded-2xl bg-brand-cream border border-brand-sandDark/50 hover:border-brand-rose/40 transition-all">
+                    <div class="w-10 h-10 rounded-xl bg-brand-rose/10 text-brand-rose flex items-center justify-center mb-4 text-lg">
+                        <i class="fa-solid fa-microchip"></i>
+                    </div>
+                    <h3 class="font-serif-title text-lg text-brand-dark mb-1">Tecnología de vanguardia</h3>
+                    <p class="text-xs text-brand-dark/70 font-light leading-relaxed">Equipos de precisión como HIFU 12D, Ultralift y Endoláser para resultados superiores.</p>
+                </div>
+
+                <div class="p-6 rounded-2xl bg-brand-cream border border-brand-sandDark/50 hover:border-brand-rose/40 transition-all">
+                    <div class="w-10 h-10 rounded-xl bg-brand-rose/10 text-brand-rose flex items-center justify-center mb-4 text-lg">
+                        <i class="fa-solid fa-leaf"></i>
+                    </div>
+                    <h3 class="font-serif-title text-lg text-brand-dark mb-1">Resultados naturales</h3>
+                    <p class="text-xs text-brand-dark/70 font-light leading-relaxed">Buscamos potenciar la frescura y armonía sin alterar las facciones esenciales.</p>
+                </div>
+
+                <div class="p-6 rounded-2xl bg-brand-cream border border-brand-sandDark/50 hover:border-brand-rose/40 transition-all">
+                    <div class="w-10 h-10 rounded-xl bg-brand-rose/10 text-brand-rose flex items-center justify-center mb-4 text-lg">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <h3 class="font-serif-title text-lg text-brand-dark mb-1">Seguridad médica</h3>
+                    <p class="text-xs text-brand-dark/70 font-light leading-relaxed">Protocolos estrictos con insumos biológicos y estéticos de primera categoría internacional.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TRATAMIENTOS SECTION -->
+    <section id="tratamientos" class="py-20 bg-brand-cream relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+                <div>
+                    <span class="text-xs uppercase tracking-[0.25em] text-brand-rose font-semibold">Carta de Servicios & Precios</span>
+                    <h2 class="font-serif-title text-3xl sm:text-4xl text-brand-dark mt-1">Tratamientos Estéticos y Odontológicos</h2>
+                </div>
+                
+                <!-- Search Input -->
+                <div class="relative w-full md:w-72">
+                    <i class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-brand-dark/40 text-xs"></i>
+                    <input type="text" id="searchInput" oninput="handleSearch()" placeholder="Buscar p. ej. Toxina, HIFU, Labios..." class="w-full pl-10 pr-4 py-2.5 rounded-full border border-brand-sandDark bg-white text-xs text-brand-dark focus:outline-none focus:border-brand-rose shadow-sm">
+                </div>
+            </div>
+
+            <!-- Category Filter Tabs -->
+            <div class="flex items-center gap-2 overflow-x-auto pb-4 mb-8 no-scrollbar scroll-smooth" id="categoryTabs">
+                <button onclick="filterCategory('todos')" class="tab-btn active text-xs font-semibold uppercase tracking-wider px-5 py-2.5 rounded-full border border-brand-dark/20 whitespace-nowrap">
+                    Todos los Tratamientos
+                </button>
+                <button onclick="filterCategory('evaluacion')" class="tab-btn text-xs font-semibold uppercase tracking-wider px-5 py-2.5 rounded-full border border-brand-dark/20 text-brand-dark whitespace-nowrap hover:border-brand-rose">
+                    Consultas & Evaluaciones
+                </button>
+                <button onclick="filterCategory('mesoterapia')" class="tab-btn text-xs font-semibold uppercase tracking-wider px-5 py-2.5 rounded-full border border-brand-dark/20 text-brand-dark whitespace-nowrap hover:border-brand-rose">
+                    Mesoterapia & Hidratación
+                </button>
+                <button onclick="filterCategory('acido')" class="tab-btn text-xs font-semibold uppercase tracking-wider px-5 py-2.5 rounded-full border border-brand-dark/20 text-brand-dark whitespace-nowrap hover:border-brand-rose">
+                    Ácido Hialurónico
+                </button>
+                <button onclick="filterCategory('bioestimuladores')" class="tab-btn text-xs font-semibold uppercase tracking-wider px-5 py-2.5 rounded-full border border-brand-dark/20 text-brand-dark whitespace-nowrap hover:border-brand-rose">
+                    Bioestimuladores
+                </button>
+                <button onclick="filterCategory('hilos')" class="tab-btn text-xs font-semibold uppercase tracking-wider px-5 py-2.5 rounded-full border border-brand-dark/20 text-brand-dark whitespace-nowrap hover:border-brand-rose">
+                    Hilos Tensores
+                </button>
+                <button onclick="filterCategory('toxina')" class="tab-btn text-xs font-semibold uppercase tracking-wider px-5 py-2.5 rounded-full border border-brand-dark/20 text-brand-dark whitespace-nowrap hover:border-brand-rose">
+                    Toxina Botulínica
+                </button>
+                <button onclick="filterCategory('hifu-facial')" class="tab-btn text-xs font-semibold uppercase tracking-wider px-5 py-2.5 rounded-full border border-brand-dark/20 text-brand-dark whitespace-nowrap hover:border-brand-rose">
+                    HIFU Facial
+                </button>
+                <button onclick="filterCategory('hifu-corporal')" class="tab-btn text-xs font-semibold uppercase tracking-wider px-5 py-2.5 rounded-full border border-brand-dark/20 text-brand-dark whitespace-nowrap hover:border-brand-rose">
+                    HIFU Corporal
+                </button>
+                <button onclick="filterCategory('otros')" class="tab-btn text-xs font-semibold uppercase tracking-wider px-5 py-2.5 rounded-full border border-brand-dark/20 text-brand-dark whitespace-nowrap hover:border-brand-rose">
+                    Tecnología / Otros
+                </button>
+            </div>
+
+            <!-- Treatments Grid Container -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="treatmentsGrid">
+                <!-- Dynamic Javascript Cards -->
+            </div>
+
+            <div id="noResults" class="hidden text-center py-12">
+                <i class="fa-solid fa-circle-exclamation text-3xl text-brand-rose mb-3"></i>
+                <p class="font-serif-title text-xl text-brand-dark">No se encontraron tratamientos</p>
+                <p class="text-xs text-brand-dark/60 mt-1">Prueba filtrando por otra categoría o modificando la búsqueda.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECCIÓN EVALUACIÓN / PRE-DIAGNÓSTICO -->
+    <section class="py-16 bg-brand-rose text-white relative overflow-hidden">
+        <div class="absolute -right-20 -top-20 w-80 h-80 rounded-full bg-white/5 pointer-events-none blur-3xl"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                
+                <div class="lg:col-span-8 space-y-3">
+                    <span class="text-xs uppercase tracking-[0.25em] text-brand-sand font-semibold">Asesoramiento Profesional</span>
+                    <h2 class="font-serif-title text-3xl sm:text-4xl">¿No sabes qué tratamiento necesitas?</h2>
+                    <p class="text-white/90 text-sm sm:text-base font-light max-w-2xl leading-relaxed">
+                        Inicia con una evaluación médica integral. La Dra. Laura Romaniello analizará la estructura de tu rostro y la calidad de tu piel para entregarte una recomendación personalizada de acuerdo a tus metas estéticas.
+                    </p>
+                    <div class="flex flex-wrap items-center gap-6 pt-2 text-xs text-white/80">
+                        <span class="flex items-center gap-2"><i class="fa-regular fa-clock text-brand-sand"></i> 30 minutos de sesión</span>
+                        <span class="flex items-center gap-2"><i class="fa-solid fa-tag text-brand-sand"></i> $15.000 CLP (Armonización u Odontología)</span>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-4 flex lg:justify-end">
+                    <button onclick="openBookingModal('Consulta Profesional – Armonización Facial')" class="w-full sm:w-auto bg-brand-dark hover:bg-black text-white px-8 py-4 rounded-full text-xs uppercase tracking-widest font-semibold transition-all duration-300 shadow-xl flex items-center justify-center gap-3">
+                        <i class="fa-brands fa-whatsapp text-lg text-emerald-400"></i>
+                        <span>Agendar por WhatsApp</span>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- TECNOLOGÍA SECTION -->
+    <section id="tecnologia" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-xs uppercase tracking-[0.25em] text-brand-rose font-semibold">Innovación Estética & Dental</span>
+                <h2 class="font-serif-title text-3xl sm:text-4xl text-brand-dark mt-1">Tecnología de Vanguardia</h2>
+                <p class="text-xs sm:text-sm text-brand-dark/70 mt-3 font-light">
+                    Equipamiento avanzado y biotecnología médica aplicada para estimular colágeno, tensar tejidos y rejuvenecer con mínima invasión.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Tech Card 1 -->
+                <div class="bg-brand-cream rounded-2xl p-8 border border-brand-sandDark/40 flex flex-col justify-between hover:shadow-lg transition-all">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-brand-dark text-white flex items-center justify-center mb-6 text-xl">
+                            <i class="fa-solid fa-wave-square"></i>
+                        </div>
+                        <h3 class="font-serif-title text-xl text-brand-dark mb-2">HIFU 12D Ultralift</h3>
+                        <p class="text-xs text-brand-dark/80 font-light leading-relaxed mb-4">
+                            Ultrasonido Focalizado de Alta Intensidad de doce dimensiones. Logra un tensado cutáneo profundo y estimulación del SMAS sin tiempo de recuperación.
+                        </p>
+                        <ul class="space-y-2 text-xs text-brand-dark/70">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-rose"></i> Zonas Faciales y Corporales</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-rose"></i> Efecto Lifting sin Cirugía</li>
+                        </ul>
+                    </div>
+                    <div class="mt-8 pt-4 border-t border-brand-sandDark/50">
+                        <button onclick="filterCategory('hifu-facial')" class="text-xs font-semibold uppercase tracking-wider text-brand-rose hover:text-brand-dark flex items-center gap-2">
+                            <span>Ver aranceles HIFU</span>
+                            <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Tech Card 2 -->
+                <div class="bg-brand-cream rounded-2xl p-8 border border-brand-sandDark/40 flex flex-col justify-between hover:shadow-lg transition-all">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-brand-dark text-white flex items-center justify-center mb-6 text-xl">
+                            <i class="fa-solid fa-bolt"></i>
+                        </div>
+                        <h3 class="font-serif-title text-xl text-brand-dark mb-2">Endoláser & Técnica Brasileña</h3>
+                        <p class="text-xs text-brand-dark/80 font-light leading-relaxed mb-4">
+                            Procedimientos avanzados para refinamiento de contorno facial, reducción de papada 360° y remodelación estructural como Ultralift Técnica Brasileña.
+                        </p>
+                        <ul class="space-y-2 text-xs text-brand-dark/70">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-rose"></i> Endolift Papada 360°</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-rose"></i> Definición de óvalo facial</li>
+                        </ul>
+                    </div>
+                    <div class="mt-8 pt-4 border-t border-brand-sandDark/50">
+                        <button onclick="filterCategory('otros')" class="text-xs font-semibold uppercase tracking-wider text-brand-rose hover:text-brand-dark flex items-center gap-2">
+                            <span>Ver tratamientos especiales</span>
+                            <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Tech Card 3 -->
+                <div class="bg-brand-cream rounded-2xl p-8 border border-brand-sandDark/40 flex flex-col justify-between hover:shadow-lg transition-all">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-brand-dark text-white flex items-center justify-center mb-6 text-xl">
+                            <i class="fa-solid fa-vial-virus"></i>
+                        </div>
+                        <h3 class="font-serif-title text-xl text-brand-dark mb-2">Exosomas, PDRN & Polinucleótidos</h3>
+                        <p class="text-xs text-brand-dark/80 font-light leading-relaxed mb-4">
+                            Biotecnología celular regenerativa administrada mediante Microneedling y Pápulas. Estimulación de síntesis biológica de elastina y colágeno autólogo.
+                        </p>
+                        <ul class="space-y-2 text-xs text-brand-dark/70">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-rose"></i> Bioestimulación celular profunda</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-rose"></i> NCTF Anti-Aging Alta Gama</li>
+                        </ul>
+                    </div>
+                    <div class="mt-8 pt-4 border-t border-brand-sandDark/50">
+                        <button onclick="filterCategory('mesoterapia')" class="text-xs font-semibold uppercase tracking-wider text-brand-rose hover:text-brand-dark flex items-center gap-2">
+                            <span>Ver bioestimuladores e hidratantes</span>
+                            <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PLAN ANUAL DESTACADO -->
+    <section id="plan-anual" class="py-20 bg-brand-dark text-white relative overflow-hidden">
+        
+        <!-- Subtle Glow Backgrounds -->
+        <div class="absolute top-0 right-0 w-96 h-96 bg-brand-rose/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute bottom-0 left-0 w-96 h-96 bg-brand-roseLight/5 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Details -->
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-rose/20 text-brand-roseLight text-xs font-semibold tracking-wider uppercase border border-brand-rose/30">
+                        <i class="fa-solid fa-crown text-[10px]"></i>
+                        Protocolo Anual Exclusivo
+                    </div>
+
+                    <h2 class="font-serif-title text-3xl sm:text-5xl text-brand-cream leading-tight">
+                        Plan Anual de Rejuvenecimiento & Cuidado Continuo
+                    </h2>
+
+                    <p class="text-brand-sandDark text-sm sm:text-base font-light leading-relaxed">
+                        Un programa integral diseñado por la Dra. Laura Romaniello para mantener la piel firme, hidratada y radiante a lo largo de los 12 meses del año.
+                    </p>
+
+                    <!-- Inclusions List -->
+                    <div class="bg-white/5 rounded-2xl p-6 border border-white/10 space-y-4">
+                        <h4 class="text-xs uppercase tracking-widest text-brand-roseLight font-semibold">El Plan Anual Incluye:</h4>
+                        
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                            <div class="flex items-center gap-3 p-3 rounded-xl bg-white/5">
+                                <span class="w-7 h-7 rounded-full bg-brand-rose/30 flex items-center justify-center text-brand-roseLight text-xs font-bold">2</span>
+                                <span class="text-xs text-brand-cream font-medium">Sesiones de HIFU Facial</span>
+                            </div>
+
+                            <div class="flex items-center gap-3 p-3 rounded-xl bg-white/5">
+                                <span class="w-7 h-7 rounded-full bg-brand-rose/30 flex items-center justify-center text-brand-roseLight text-xs font-bold">3</span>
+                                <span class="text-xs text-brand-cream font-medium">Sesiones de Mesoterapia</span>
+                            </div>
+
+                            <div class="flex items-center gap-3 p-3 rounded-xl bg-white/5">
+                                <span class="w-7 h-7 rounded-full bg-brand-rose/30 flex items-center justify-center text-brand-roseLight text-xs font-bold">2</span>
+                                <span class="text-xs text-brand-cream font-medium">Toxina Botulínica (3 zonas)</span>
+                            </div>
+
+                            <div class="flex items-center gap-3 p-3 rounded-xl bg-white/5">
+                                <span class="w-7 h-7 rounded-full bg-brand-rose/30 flex items-center justify-center text-brand-roseLight text-xs font-bold">2</span>
+                                <span class="text-xs text-brand-cream font-medium">Sesiones de Exosomas</span>
+                            </div>
+
+                            <div class="flex items-center justify-between sm:col-span-2 p-3 rounded-xl bg-white/5">
+                                <div class="flex items-center gap-3">
+                                    <span class="w-7 h-7 rounded-full bg-brand-rose/30 flex items-center justify-center text-brand-roseLight text-xs font-bold">1</span>
+                                    <span class="text-xs text-brand-cream font-medium">Sesión de PDRN (Polidesoxirribonucleótido)</span>
+                                </div>
+                                <span class="text-[10px] uppercase text-brand-roseLight tracking-wider font-semibold">Alta Regeneración</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Price Card -->
+                <div class="lg:col-span-5">
+                    <div class="bg-gradient-to-b from-white/10 to-white/5 rounded-3xl p-8 border border-white/15 text-center shadow-2xl relative overflow-hidden">
+                        
+                        <div class="absolute top-0 right-0 transform translate-x-4 -translate-y-4">
+                            <span class="bg-brand-rose text-white text-[10px] uppercase font-bold tracking-widest px-8 py-2 rotate-45 inline-block shadow-md">
+                                Recom.
+                            </span>
+                        </div>
+
+                        <span class="text-xs uppercase tracking-[0.2em] text-brand-roseLight font-medium block mb-2">Arancel Total Plan Anual</span>
+                        
+                        <div class="font-serif-title text-4xl sm:text-5xl text-white font-bold my-4">
+                            $990.000 <span class="text-sm font-normal text-brand-sandDark">CLP</span>
+                        </div>
+
+                        <p class="text-xs text-brand-sandDark font-light mb-8 max-w-xs mx-auto">
+                            Tu plan integral de cuidado y rejuvenecimiento sostenido durante todo el año en la clínica de La Serena.
+                        </p>
+
+                        <button onclick="openBookingModal('Plan Anual $990.000 CLP')" class="w-full bg-brand-rose hover:bg-brand-roseHover text-white py-4 rounded-full text-xs uppercase tracking-widest font-semibold transition-all duration-300 shadow-lg flex items-center justify-center gap-2">
+                            <span>Solicitar Plan Anual</span>
+                            <i class="fa-brands fa-whatsapp text-base"></i>
+                        </button>
+
+                        <p class="text-[10px] text-white/50 mt-4">
+                            Sujeto a evaluación clínica previa · Cupos mensuales limitados
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SOBRE LA DRA. LAURA ROMANIELLO -->
+    <section id="sobre-mi" class="py-20 bg-brand-cream">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Editorial Image -->
+                <div class="lg:col-span-5">
+                    <div class="relative rounded-2xl overflow-hidden shadow-xl bg-brand-dark">
+                        <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=800&auto=format&fit=crop" 
+                             onerror="this.src='https://placehold.co/800x1000/191718/F6F1ED?text=Dra.+Laura+Romaniello'"
+                             alt="Dra. Laura Romaniello" 
+                             class="w-full h-[450px] object-cover img-editorial">
+                        
+                        <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-brand-dark via-brand-dark/70 to-transparent p-6 text-white">
+                            <h3 class="font-serif-title text-2xl text-brand-cream">Dra. Laura Romaniello</h3>
+                            <p class="text-xs uppercase tracking-widest text-brand-roseLight font-medium">Cirujano Dentista</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Text Info -->
+                <div class="lg:col-span-7 space-y-6">
+                    <span class="text-xs uppercase tracking-[0.25em] text-brand-rose font-semibold">Perfil Profesional</span>
+                    
+                    <h2 class="font-serif-title text-3xl sm:text-4xl text-brand-dark">
+                        Compromiso con la salud bucal y la estética facial armónica
+                    </h2>
+
+                    <div class="space-y-4 text-sm text-brand-dark/80 font-light leading-relaxed">
+                        <p>
+                            La <strong>Dra. Laura Romaniello</strong> es Cirujano Dentista especializada en ofrecer <strong>Odontología integral para adultos y niños</strong>, además de procedimientos de <strong>Armonización Facial y Estética Avanzada</strong>.
+                        </p>
+                        <p>
+                            Su práctica clínica combina el rigor técnico biomédico con una mirada estética editorial, asegurando que cada intervención —desde una consulta odontológica general hasta un tratamiento con toxina botulínica o hilos tensores— responda a estándares superiores de seguridad, naturalidad y confort para el paciente.
+                        </p>
+                    </div>
+
+                    <!-- Services Scope List -->
+                    <div class="pt-4 grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+                        <div class="flex items-center gap-3 p-3 rounded-xl bg-white border border-brand-sandDark/40">
+                            <i class="fa-solid fa-teeth text-brand-rose text-base"></i>
+                            <div>
+                                <span class="font-medium text-brand-dark block">Odontología Integral</span>
+                                <span class="text-brand-dark/60 text-[11px]">Niños y Adultos</span>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-3 p-3 rounded-xl bg-white border border-brand-sandDark/40">
+                            <i class="fa-solid fa-sparkles text-brand-rose text-base"></i>
+                            <div>
+                                <span class="font-medium text-brand-dark block">Armonización Facial</span>
+                                <span class="text-brand-dark/60 text-[11px]">Ácido Hialurónico & Hilos</span>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-3 p-3 rounded-xl bg-white border border-brand-sandDark/40">
+                            <i class="fa-solid fa-wand-magic-sparkles text-brand-rose text-base"></i>
+                            <div>
+                                <span class="font-medium text-brand-dark block">Bioestimulación & HIFU</span>
+                                <span class="text-brand-dark/60 text-[11px]">Radiesse, Sculptra & 12D</span>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-3 p-3 rounded-xl bg-white border border-brand-sandDark/40">
+                            <i class="fa-solid fa-user-check text-brand-rose text-base"></i>
+                            <div>
+                                <span class="font-medium text-brand-dark block">Consulta Personalizada</span>
+                                <span class="text-brand-dark/60 text-[11px]">Evaluación Diagnóstica</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACTO Y HORARIOS -->
+    <section id="contacto" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                
+                <!-- Info Column -->
+                <div class="lg:col-span-6 space-y-8">
+                    <div>
+                        <span class="text-xs uppercase tracking-[0.25em] text-brand-rose font-semibold">Ubicación & Atención</span>
+                        <h2 class="font-serif-title text-3xl sm:text-4xl text-brand-dark mt-1">Agenda tu visita</h2>
+                        <p class="text-xs sm:text-sm text-brand-dark/70 mt-2 font-light">
+                            Estamos listos para atenderte con la calidez y privacidad que mereces.
+                        </p>
+                    </div>
+
+                    <div class="space-y-5 text-sm">
+                        
+                        <!-- Address -->
+                        <div class="flex items-start gap-4 p-4 rounded-2xl bg-brand-cream border border-brand-sandDark/50">
+                            <div class="w-10 h-10 rounded-xl bg-brand-rose/10 text-brand-rose flex items-center justify-center shrink-0 text-lg">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-serif-title text-base text-brand-dark">Dirección de Consulta</h4>
+                                <p class="text-brand-dark/80 font-light mt-0.5">California 881, La Serena, Chile</p>
+                            </div>
+                        </div>
+
+                        <!-- Instagram -->
+                        <div class="flex items-start gap-4 p-4 rounded-2xl bg-brand-cream border border-brand-sandDark/50">
+                            <div class="w-10 h-10 rounded-xl bg-brand-rose/10 text-brand-rose flex items-center justify-center shrink-0 text-lg">
+                                <i class="fa-brands fa-instagram"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-serif-title text-base text-brand-dark">Instagram Oficial</h4>
+                                <a href="https://instagram.com/dra.lauraromaniello" target="_blank" class="text-brand-rose hover:underline font-medium text-xs mt-0.5 inline-block">
+                                    @dra.lauraromaniello
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Hours -->
+                        <div class="flex items-start gap-4 p-4 rounded-2xl bg-brand-cream border border-brand-sandDark/50">
+                            <div class="w-10 h-10 rounded-xl bg-brand-rose/10 text-brand-rose flex items-center justify-center shrink-0 text-lg">
+                                <i class="fa-regular fa-clock"></i>
+                            </div>
+                            <div class="w-full">
+                                <h4 class="font-serif-title text-base text-brand-dark mb-2">Horarios de Atención</h4>
+                                <div class="space-y-1 text-xs text-brand-dark/80 font-light">
+                                    <div class="flex justify-between py-1 border-b border-brand-sandDark/30">
+                                        <span>Lunes a Miércoles:</span>
+                                        <span class="font-medium text-brand-dark">17:20 a 19:00 hrs</span>
+                                    </div>
+                                    <div class="flex justify-between py-1 border-b border-brand-sandDark/30">
+                                        <span>Jueves:</span>
+                                        <span class="font-medium text-brand-dark">17:00 a 19:30 hrs</span>
+                                    </div>
+                                    <div class="flex justify-between py-1">
+                                        <span>Viernes:</span>
+                                        <span class="font-medium text-brand-dark">16:00 a 19:30 hrs</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Main WhatsApp CTA Button -->
+                    <a href="https://wa.me/?text=Hola%20Dra.%20Laura%20Romaniello,%20deseo%20reservar%20una%20hora%20de%20atenci%C3%B3n" target="_blank" class="w-full bg-brand-rose hover:bg-brand-roseHover text-white py-4 rounded-full text-xs uppercase tracking-widest font-semibold transition-all duration-300 shadow-md flex items-center justify-center gap-3">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        <span>Reservar directamente por WhatsApp</span>
+                    </a>
+                </div>
+
+                <!-- Google Maps iFrame Card -->
+                <div class="lg:col-span-6 flex flex-col space-y-4 justify-between">
+                    <div class="rounded-2xl overflow-hidden shadow-lg border border-brand-sandDark/60 h-[380px] lg:h-[420px] min-h-[320px] bg-brand-cream relative group">
+                        
+                        <!-- Map Embed iFrame -->
+                        <iframe 
+                            src="https://maps.google.com/maps?q=California%20881%2C%20La%20Serena%2C%20Coquimbo%2C%20Chile&t=&z=16&ie=UTF8&iwloc=&output=embed" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="Ubicación Dra. Laura Romaniello en California 881, La Serena">
+                        </iframe>
+
+                        <!-- Floating Overlay Badge -->
+                        <div class="absolute bottom-4 left-4 right-4 p-4 rounded-xl dark-glass text-white border border-white/10 shadow-lg flex flex-col sm:flex-row items-center justify-between gap-3">
+                            <div class="flex items-center gap-3 text-left w-full sm:w-auto">
+                                <div class="w-9 h-9 rounded-full bg-brand-rose/20 text-brand-roseLight flex items-center justify-center shrink-0 border border-brand-roseLight/30">
+                                    <i class="fa-solid fa-location-dot text-sm"></i>
+                                </div>
+                                <div>
+                                    <p class="font-serif-title text-sm text-brand-cream">Consulta La Serena</p>
+                                    <p class="text-[11px] text-brand-sandDark font-light">California 881, Coquimbo / La Serena</p>
+                                </div>
+                            </div>
+                            
+                            <a href="https://maps.google.com/?cid=3012521228512605310" 
+                               target="_blank" 
+                               class="w-full sm:w-auto bg-brand-rose hover:bg-brand-roseHover text-white px-4 py-2 rounded-lg text-[11px] font-semibold uppercase tracking-wider transition-all flex items-center justify-center gap-2 shrink-0 shadow-sm">
+                                <span>Abrir en Maps</span>
+                                <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Direct Navigation Action Buttons -->
+                    <div class="grid grid-cols-2 gap-3 text-xs">
+                        <a href="https://maps.google.com/?cid=3012521228512605310" target="_blank" class="flex items-center justify-center gap-2 p-3 rounded-xl bg-brand-cream border border-brand-sandDark/60 hover:border-brand-rose text-brand-dark font-medium transition-all shadow-sm">
+                            <i class="fa-solid fa-map-location-dot text-brand-rose"></i>
+                            <span>Google Maps</span>
+                        </a>
+                        <a href="https://waze.com/ul?q=California%20881%20La%20Serena" target="_blank" class="flex items-center justify-center gap-2 p-3 rounded-xl bg-brand-cream border border-brand-sandDark/60 hover:border-brand-rose text-brand-dark font-medium transition-all shadow-sm">
+                            <i class="fa-brands fa-waze text-sky-600"></i>
+                            <span>Abrir en Waze</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-brand-dark text-white pt-12 pb-8 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-white/10">
+                <div class="text-center md:text-left">
+                    <a href="#" class="font-serif-title text-xl tracking-wider text-brand-cream font-medium">
+                        DRA. LAURA ROMANIELLO
+                    </a>
+                    <p class="text-[10px] tracking-[0.25em] text-brand-roseLight uppercase font-medium mt-0.5">
+                        Estética & Armonización Facial · Odontología Integral
+                    </p>
+                </div>
+
+                <div class="flex flex-wrap justify-center items-center gap-6 text-xs uppercase tracking-wider text-brand-sandDark">
+                    <a href="#inicio" class="hover:text-brand-roseLight transition-colors">Inicio</a>
+                    <a href="#tratamientos" class="hover:text-brand-roseLight transition-colors">Tratamientos</a>
+                    <a href="#plan-anual" class="hover:text-brand-roseLight transition-colors">Plan Anual</a>
+                    <a href="#contacto" class="hover:text-brand-roseLight transition-colors">Contacto</a>
+                </div>
+
+                <a href="https://instagram.com/dra.lauraromaniello" target="_blank" class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-brand-roseLight hover:bg-brand-rose hover:text-white transition-all">
+                    <i class="fa-brands fa-instagram text-lg"></i>
+                </a>
+            </div>
+
+            <div class="pt-6 flex flex-col sm:flex-row items-center justify-between text-[11px] text-brand-sandDark/60 gap-4">
+                <p>© 2026 Dra. Laura Romaniello · Cirujano Dentista. Todos los derechos reservados.</p>
+                <p class="italic">California 881, La Serena, Chile</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WHATSAPP BOOKING MODAL -->
+    <div id="bookingModal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-black/60 backdrop-blur-sm transition-opacity">
+        <div class="bg-brand-cream rounded-3xl max-w-md w-full p-6 sm:p-8 border border-brand-sandDark shadow-2xl relative">
+            
+            <button onclick="closeBookingModal()" class="absolute top-5 right-5 text-brand-dark/50 hover:text-brand-dark text-xl p-1">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div class="text-center mb-6">
+                <div class="w-12 h-12 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto mb-3 text-2xl">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </div>
+                <h3 class="font-serif-title text-2xl text-brand-dark">Reserva por WhatsApp</h3>
+                <p class="text-xs text-brand-dark/70 mt-1 font-light">
+                    Confirma los detalles para comunicarte directamente con la consulta.
+                </p>
+            </div>
+
+            <form id="bookingForm" onsubmit="handleModalSubmit(event)" class="space-y-4 text-xs">
+                <div>
+                    <label class="block text-brand-dark font-medium mb-1">Nombre Completo</label>
+                    <input type="text" id="patientName" required placeholder="Ej: María González" class="w-full px-4 py-3 rounded-xl border border-brand-sandDark bg-white text-brand-dark focus:outline-none focus:border-brand-rose text-xs">
+                </div>
+
+                <div>
+                    <label class="block text-brand-dark font-medium mb-1">Tratamiento o Servicio Seleccionado</label>
+                    <input type="text" id="selectedService" readonly class="w-full px-4 py-3 rounded-xl border border-brand-sandDark bg-brand-sand/50 text-brand-dark font-semibold text-xs">
+                </div>
+
+                <div>
+                    <label class="block text-brand-dark font-medium mb-1">Día de preferencia (Lunes a Viernes)</label>
+                    <select id="preferredDay" class="w-full px-4 py-3 rounded-xl border border-brand-sandDark bg-white text-brand-dark focus:outline-none focus:border-brand-rose text-xs">
+                        <option value="Lunes a Miércoles (17:20 a 19:00)">Lunes a Miércoles (17:20 - 19:00 hrs)</option>
+                        <option value="Jueves (17:00 a 19:30)">Jueves (17:00 - 19:30 hrs)</option>
+                        <option value="Viernes (16:00 a 19:30)">Viernes (16:00 - 19:30 hrs)</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="block text-brand-dark font-medium mb-1">Mensaje opcional / Consulta adicional</label>
+                    <textarea id="additionalNote" rows="2" placeholder="Ej: Quisiera consultar si puedo combinar con una limpieza..." class="w-full px-4 py-3 rounded-xl border border-brand-sandDark bg-white text-brand-dark focus:outline-none focus:border-brand-rose text-xs"></textarea>
+                </div>
+
+                <button type="submit" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white py-3.5 rounded-full uppercase tracking-widest font-semibold transition-all shadow-md flex items-center justify-center gap-2 mt-2">
+                    <i class="fa-brands fa-whatsapp text-lg"></i>
+                    <span>Enviar WhatsApp</span>
+                </button>
+            </form>
+
+        </div>
+    </div>
+
+    <!-- FLOATING WHATSAPP BUTTON -->
+    <a href="https://wa.me/?text=Hola%20Dra.%20Laura%20Romaniello,%20quisiera%20solicitar%20informaci%C3%B3n" 
+       target="_blank" 
+       class="fixed bottom-6 right-6 z-40 bg-emerald-500 hover:bg-emerald-600 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-xl transition-all duration-300 hover:scale-110 group" 
+       title="Contactar por WhatsApp">
+        <i class="fa-brands fa-whatsapp text-2xl"></i>
+        <span class="absolute right-16 bg-brand-dark text-white text-[11px] font-medium py-1.5 px-3 rounded-xl whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-md pointer-events-none">
+            Agendar con la Dra. Laura
+        </span>
+    </a>
+
+    <!-- JAVASCRIPT APP LOGIC -->
+    <script>
+        const treatmentsData = [
+            // Consultas
+            { category: 'evaluacion', name: 'Consulta Profesional – Armonización Facial', time: '30 min', price: '$15.000 CLP', note: 'Evaluación facial personalizada' },
+            { category: 'evaluacion', name: 'Consulta Profesional – Odontología', time: '30 min', price: '$15.000 CLP', note: 'Evaluación clínica dental' },
+            { category: 'evaluacion', name: 'Evaluación HIFU Corporal / Facial', time: '30 min', price: '$15.000 CLP', note: 'Diagnóstico de firmeza' },
+            { category: 'evaluacion', name: 'Control Clínico', time: '15 min', price: 'Sin costo indicado', note: 'Revisión y seguimiento' },
+
+            // Mesoterapia e hidratación
+            { category: 'mesoterapia', name: '1 Sesión de Mesoterapia', time: '30 min', price: '$85.000 CLP', note: '' },
+            { category: 'mesoterapia', name: '3 Sesiones de Mesoterapia', time: '30 min', price: '$250.000 CLP', note: 'Pack recomendado' },
+            { category: 'mesoterapia', name: 'NCTF Mesoterapia Anti-Aging Alta Gama – 1 sesión', time: '30 min', price: '$100.000 CLP', note: '' },
+            { category: 'mesoterapia', name: 'NCTF Mesoterapia Anti-Aging Alta Gama – 3 sesiones', time: '30 min', price: '$350.000 CLP', note: '' },
+            { category: 'mesoterapia', name: 'NCTF Mesoterapia Anti-Aging Alta Gama – 5 sesiones', time: '30 min', price: '$550.000 CLP', note: '' },
+            { category: 'mesoterapia', name: 'Hidratación con Ácido Hialurónico 1 ml – Microneedling / Pápula', time: '30 min', price: '$200.000 CLP', note: '' },
+            { category: 'mesoterapia', name: 'Bioestimulador Facial PDRN – CA-PA', time: '30 min', price: '$250.000 CLP', note: '' },
+            { category: 'mesoterapia', name: 'Polinucleótidos con Microneedling – 2 sesiones', time: '30 min', price: '$250.000 CLP', note: '' },
+
+            // Ácido Hialurónico
+            { category: 'acido', name: 'Ácido Hialurónico Ojeras – 1 ml', time: '30 min', price: '$220.000 CLP', note: '' },
+            { category: 'acido', name: 'Anclaje Malar – 2 ml de Ácido Hialurónico', time: '30 min', price: '$180.000 CLP', note: '' },
+            { category: 'acido', name: 'Armonización de Mentón – 1 ml de Ácido Hialurónico', time: '30 min', price: '$180.000 CLP', note: '' },
+            { category: 'acido', name: 'Aumento de Labios – Ácido Hialurónico 1 ml', time: '30 min', price: '$180.000 CLP', note: '' },
+            { category: 'acido', name: 'Aumento de Labios – Ácido Hialurónico 2 ml', time: '30 min', price: '$340.000 CLP', note: '' },
+            { category: 'acido', name: 'Rinomodelación con Ácido Hialurónico – 1 ml', time: '30 min', price: '$180.000 CLP', note: '' },
+            { category: 'acido', name: 'Hialuronidasa – 1 aplicación / sesión', time: '30 min', price: '$65.000 CLP', note: '' },
+
+            // Bioestimuladores
+            { category: 'bioestimuladores', name: 'Radiesse – 1 sesión (1,5 ml)', time: '30 min', price: '$490.000 CLP', note: 'Bioestimulación de Colágeno' },
+            { category: 'bioestimuladores', name: 'Sculptra – 1 sesión', time: '30 min', price: '$560.000 CLP', note: 'Ácido Poli-L-Láctico' },
+
+            // Hilos Tensores
+            { category: 'hilos', name: 'Hilos Tensores Faciales – 6 unidades', time: '30 min', price: '$260.000 CLP', note: 'Efecto lifting inmediato' },
+
+            // Toxina Botulínica
+            { category: 'toxina', name: 'Toxina Botulínica – 1 zona', time: '30 min', price: '$155.000 CLP', note: '' },
+            { category: 'toxina', name: 'Toxina Botulínica – 2 zonas', time: '30 min', price: '$175.000 CLP', note: '' },
+            { category: 'toxina', name: 'Toxina Botulínica – 3 zonas', time: '30 min', price: '$200.000 CLP', note: 'Tratamiento popular' },
+            { category: 'toxina', name: 'Toxina Botulínica – Full Face', time: '30 min', price: '$450.000 CLP', note: 'Atención integral rostro completo' },
+
+            // HIFU Facial
+            { category: 'hifu-facial', name: 'HIFU Facial – Rostro Completo', time: '30 min', price: '$99.990 CLP', note: '' },
+            { category: 'hifu-facial', name: 'HIFU Facial – Rostro Completo + Papada', time: '30 min', price: '$135.990 CLP', note: '' },
+            { category: 'hifu-facial', name: 'HIFU Facial – Papada + Cuello + Escote', time: '30 min', price: '$120.990 CLP', note: '' },
+            { category: 'hifu-facial', name: 'HIFU Facial – Papada y Cuello', time: '30 min', price: '$75.990 CLP', note: '' },
+            { category: 'hifu-facial', name: 'HIFU Facial – Tercio Medio Inferior', time: '30 min', price: '$60.990 CLP', note: '' },
+            { category: 'hifu-facial', name: 'HIFU Facial – Tercio Medio Superior', time: '30 min', price: '$60.990 CLP', note: '' },
+
+            // HIFU Corporal
+            { category: 'hifu-corporal', name: 'HIFU Corporal – Abdomen Completo', time: '30 min', price: '$99.990 CLP', note: '' },
+            { category: 'hifu-corporal', name: 'HIFU Corporal – Abductores / Entrepiernas', time: '30 min', price: '$99.990 CLP', note: '' },
+            { category: 'hifu-corporal', name: 'HIFU Corporal – Abductores y Entrepierna', time: '30 min', price: '$135.990 CLP', note: '' },
+            { category: 'hifu-corporal', name: 'HIFU Corporal – Brazos / Tríceps', time: '30 min', price: '$82.990 CLP', note: '' },
+            { category: 'hifu-corporal', name: 'HIFU Corporal – Cadera', time: '30 min', price: '$82.990 CLP', note: '' },
+            { category: 'hifu-corporal', name: 'HIFU Corporal – Cara Interna de Rodillas', time: '30 min', price: '$82.990 CLP', note: '' },
+            { category: 'hifu-corporal', name: 'HIFU Corporal – Cintura', time: '30 min', price: '$75.990 CLP', note: '' },
+            { category: 'hifu-corporal', name: 'HIFU Corporal – Espalda y Zona del Sostén', time: '30 min', price: '$82.990 CLP', note: '' },
+            { category: 'hifu-corporal', name: 'HIFU Corporal – Glúteos / Cara Inferior', time: '30 min', price: '$120.990 CLP', note: '' },
+            { category: 'hifu-corporal', name: 'HIFU Corporal – Lifting de Pecho', time: '30 min', price: '$75.990 CLP', note: '' },
+            { category: 'hifu-corporal', name: 'HIFU Corporal – Muslos Delanteros y Traseros', time: '30 min', price: '$99.990 CLP', note: '' },
+            { category: 'hifu-corporal', name: 'HIFU Corporal – Muslos Externos', time: '30 min', price: '$135.990 CLP', note: '' },
+            { category: 'hifu-corporal', name: 'HIFU Corporal – Región Axilar', time: '30 min', price: '$75.990 CLP', note: '' },
+
+            // Otros tratamientos
+            { category: 'otros', name: 'Endolift Papada 360° + 1 sesión HIFU Papada', time: '60 min', price: '$480.000 CLP', note: 'Protocolo Combinado' },
+            { category: 'otros', name: 'Ultralift Facial – Técnica Brasileña', time: '30 min', price: '$150.000 CLP', note: 'Lifting de alta intensidad' }
+        ];
+
+        let currentCategory = 'todos';
+
+        function renderTreatments(category = 'todos', searchQuery = '') {
+            currentCategory = category;
+            const grid = document.getElementById('treatmentsGrid');
+            const noResults = document.getElementById('noResults');
+            grid.innerHTML = '';
+
+            let filtered = category === 'todos' 
+                ? treatmentsData 
+                : treatmentsData.filter(t => t.category === category);
+
+            if (searchQuery.trim() !== '') {
+                const q = searchQuery.toLowerCase();
+                filtered = filtered.filter(t => 
+                    t.name.toLowerCase().includes(q) || 
+                    t.note.toLowerCase().includes(q) || 
+                    t.price.toLowerCase().includes(q)
+                );
+            }
+
+            if (filtered.length === 0) {
+                noResults.classList.remove('hidden');
+            } else {
+                noResults.classList.add('hidden');
+            }
+
+            filtered.forEach(item => {
+                const card = document.createElement('div');
+                card.className = "bg-white p-6 rounded-2xl border border-brand-sandDark/50 shadow-sm hover:shadow-md hover:border-brand-rose/40 transition-all flex flex-col justify-between group";
+
+                const isPendingBadge = item.isPending 
+                    ? `<span class="block mt-2 text-[10px] text-amber-700 bg-amber-50 border border-amber-200 px-2.5 py-1 rounded-md font-medium"><i class="fa-solid fa-triangle-exclamation mr-1"></i> ${item.note}</span>` 
+                    : '';
+
+                card.innerHTML = `
+                    <div>
+                        <div class="flex items-center justify-between gap-2 mb-2">
+                            <span class="text-[10px] uppercase tracking-wider text-brand-rose font-semibold bg-brand-roseMuted px-2.5 py-1 rounded-full">
+                                <i class="fa-regular fa-clock mr-1"></i> ${item.time}
+                            </span>
+                            ${item.note && !item.isPending ? `<span class="text-[10px] text-brand-dark/60 italic">${item.note}</span>` : ''}
+                        </div>
+                        <h4 class="font-serif-title text-base text-brand-dark font-medium leading-snug mb-2 group-hover:text-brand-rose transition-colors">${item.name}</h4>
+                        ${isPendingBadge}
+                    </div>
+
+                    <div class="mt-6 pt-4 border-t border-brand-sandDark/30 flex items-center justify-between">
+                        <div>
+                            <span class="block text-[10px] uppercase text-brand-dark/50 font-medium">Arancel</span>
+                            <span class="font-serif-title text-lg font-bold ${item.isPending ? 'text-amber-800' : 'text-brand-dark'}">${item.price}</span>
+                        </div>
+
+                        <button onclick="openBookingModal('${item.name.replace(/'/g, "\\'")}')" class="bg-brand-cream hover:bg-brand-rose hover:text-white text-brand-dark px-3 py-2 rounded-xl text-xs font-semibold transition-all flex items-center gap-1.5 shadow-sm" title="Reservar este tratamiento">
+                            <i class="fa-brands fa-whatsapp text-sm"></i>
+                            <span class="hidden sm:inline">Agendar</span>
+                        </button>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        function filterCategory(cat) {
+            document.getElementById('searchInput').value = '';
+            const tabs = document.querySelectorAll('.tab-btn');
+            tabs.forEach(tab => tab.classList.remove('active'));
+            
+            const activeTab = Array.from(tabs).find(t => t.getAttribute('onclick') && t.getAttribute('onclick').includes(cat));
+            if (activeTab) activeTab.classList.add('active');
+
+            renderTreatments(cat);
+        }
+
+        function handleSearch() {
+            const query = document.getElementById('searchInput').value;
+            renderTreatments(currentCategory, query);
+        }
+
+        function openBookingModal(serviceName) {
+            document.getElementById('selectedService').value = serviceName;
+            const modal = document.getElementById('bookingModal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        function closeBookingModal() {
+            const modal = document.getElementById('bookingModal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+
+        function handleModalSubmit(e) {
+            e.preventDefault();
+            const name = document.getElementById('patientName').value;
+            const service = document.getElementById('selectedService').value;
+            const day = document.getElementById('preferredDay').value;
+            const note = document.getElementById('additionalNote').value;
+
+            let msg = `Hola Dra. Laura Romaniello,%0A%0A`;
+            msg += `Mi nombre es *${encodeURIComponent(name)}*.%0A`;
+            msg += `Quisiera agendar una hora para: *${encodeURIComponent(service)}*.%0A`;
+            msg += `Horario de preferencia: ${encodeURIComponent(day)}.%0A`;
+            if (note.trim() !== '') {
+                msg += `Consulta adicional: ${encodeURIComponent(note)}.%0A`;
+            }
+            msg += `%0AQuedo atenta/o a su confirmación de disponibilidad. ¡Muchas gracias!`;
+
+            window.open(`https://wa.me/?text=${msg}`, '_blank');
+            closeBookingModal();
+        }
+
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        if (mobileMenuBtn) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+
+        document.querySelectorAll('.mobile-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        /* Close modal on backdrop click */
+        document.getElementById('bookingModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeBookingModal();
+            }
+        });
+
+        /* Initial Render on Page Load */
+        window.onload = function() {
+            renderTreatments('todos');
+        };
+    </script>
+</body>
+</html>
