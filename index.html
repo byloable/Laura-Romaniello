@@ -129,14 +129,114 @@
         @media (min-width: 640px) { .hero-bg { height: 440px; } }
         /* Mobile-only tuning for #inicio (<640px). Desktop/tablet untouched. */
         @media (max-width: 639px) {
-            #inicio .hero-bg {
-                height: 460px;
-                background-size: auto 100%;
-                background-position: left top;
-                margin-bottom: 1.5rem;
+            #mainHeader > div:first-child {
+                height: 4.25rem;
             }
-            #inicio h1 { font-size: 2.125rem; }
-            #inicio .lg\:col-start-6 > * + * { margin-top: 1.75rem; }
+
+            #mobileMenu {
+                padding: 1rem 1.25rem;
+                row-gap: .75rem;
+            }
+
+            #inicio {
+                padding-bottom: 2.5rem;
+            }
+
+            #inicio .hero-bg {
+                height: clamp(220px, 62vw, 270px);
+                background-size: auto 100%;
+                background-position: left 18%;
+                margin-top: 4.25rem;
+                margin-bottom: .5rem;
+                -webkit-mask-image: linear-gradient(to bottom, #000 68%, transparent 100%);
+                mask-image: linear-gradient(to bottom, #000 68%, transparent 100%);
+            }
+
+            #inicio .relative.max-w-7xl {
+                padding-left: 1.25rem;
+                padding-right: 1.25rem;
+            }
+
+            #inicio .grid > div {
+                align-items: flex-start;
+            }
+
+            #inicio .grid > div > * + * {
+                margin-top: 1rem !important;
+            }
+
+            #inicio .lg\:col-start-6 > * + * {
+                margin-top: 1rem !important;
+            }
+
+            #inicio .grid > div > div:first-child {
+                max-width: 100%;
+                padding: .4rem .75rem;
+                gap: .4rem;
+                font-size: .65rem;
+                line-height: 1.25;
+                letter-spacing: .1em;
+            }
+
+            #inicio .grid > div > div:first-child .w-2 {
+                width: .4rem;
+                height: .4rem;
+                flex: 0 0 .4rem;
+            }
+
+            #inicio h1 {
+                max-width: 100%;
+                font-size: clamp(2rem, 9.5vw, 2.4rem);
+                line-height: 1;
+                letter-spacing: -.025em;
+            }
+
+            #inicio h1 br {
+                display: block !important;
+            }
+
+            #inicio h1 span {
+                display: inline-block;
+                margin-top: .18em;
+            }
+
+            #inicio h1 + p {
+                font-size: 1.65rem;
+                line-height: 1.05;
+                letter-spacing: .015em;
+            }
+
+            #inicio h1 + p + p {
+                max-width: 34rem;
+                font-size: .875rem;
+                line-height: 1.5;
+            }
+
+            #inicio .grid > div > div:nth-of-type(2) {
+                width: 100%;
+                padding-top: .15rem;
+                gap: .75rem;
+            }
+
+            #inicio .grid > div > div:nth-of-type(2) button,
+            #inicio .grid > div > div:nth-of-type(2) a {
+                width: 100%;
+                min-height: 3.25rem;
+                padding: .95rem 1.1rem;
+            }
+
+            #inicio .grid > div > div:last-child {
+                width: 100%;
+                padding-top: 1.15rem;
+                gap: .7rem;
+            }
+
+            body > a.fixed.bottom-6.right-6 {
+                right: 1rem;
+                bottom: calc(1rem + env(safe-area-inset-bottom));
+                width: 3.25rem;
+                height: 3.25rem;
+            }
         }
         @media (min-width: 1024px) {
             .hero-bg {
@@ -287,7 +387,7 @@
                         </div>
                         <div>
                             <span class="block text-xs uppercase tracking-wider text-brand-roseLight font-semibold">Resultados</span>
-                            <span class="text-xs text-brand-sandDark">a100% Naturales</span>
+                            <span class="text-xs text-brand-sandDark">100% Naturales</span>
                         </div>
                         <div>
                             <span class="block text-xs uppercase tracking-wider text-brand-roseLight font-semibold">Atención</span>
@@ -303,7 +403,7 @@
     <section class="py-16 bg-brand-cream text-brand-dark border-y border-brand-sandDark/60">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="max-w-3xl mx-auto text-center space-y-4">
-                <span class="text-xs uppercase tracking-[0.a] text-brand-rose font-semibold">Atención Médica Odontológica & Estética</span>
+                <span class="text-xs uppercase tracking-[0.25em] text-brand-rose font-semibold">Atención Médica Odontológica & Estética</span>
                 <h2 class="font-serif-title text-2xl sm:text-3xl text-brand-dark">
                     Salud bucal y armonización facial bajo un solo estándar de excelencia
                 </h2>
