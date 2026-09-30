@@ -305,7 +305,7 @@
                         <i class="fa-solid fa-shield-halved"></i>
                     </div>
                     <h3 class="font-serif-title text-lg text-brand-dark mb-1">Seguridad médica</h3>
-                    <p class="text-xs text-brand-dark/70 font-light leading-relaxed">Protocolos estrictos con insumos biológicos y estéticos de primera categoría internacional.</p>
+                    <p class="text-xs text-brand-dark/70 font-light leading-relaxed">Protocolos strictly con insumos biológicos y estéticos de primera categoría internacional.</p>
                 </div>
             </div>
         </div>
@@ -905,69 +905,69 @@
 
         const treatmentsData = [
             // Consultas
-            { category: 'evaluacion', name: 'Consulta Profesional – Armonización Facial', time: '30 min', price: '$15.000 CLP', note: 'Evaluación facial personalizada' },
-            { category: 'evaluacion', name: 'Consulta Profesional – Odontología', time: '30 min', price: '$15.000 CLP', note: 'Evaluación clínica dental' },
-            { category: 'evaluacion', name: 'Evaluación HIFU Corporal / Facial', time: '30 min', price: '$15.000 CLP', note: 'Diagnóstico de firmeza' },
-            { category: 'evaluacion', name: 'Control Clínico', time: '15 min', price: 'Sin costo indicado', note: 'Revisión y seguimiento' },
+            { category: 'evaluacion', name: 'Consulta Profesional – Armonización Facial', time: '30 min', price: '$15.000 CLP', note: 'Evaluación facial personalizada', desc: 'Evaluación de tu rostro para conocer tus objetivos y definir qué tratamientos podrían ser adecuados para ti.' },
+            { category: 'evaluacion', name: 'Consulta Profesional – Odontología', time: '30 min', price: '$15.000 CLP', note: 'Evaluación clínica dental', desc: 'Revisión clínica de tu salud bucal para evaluar tu situación y orientar el tratamiento dental que necesites.' },
+            { category: 'evaluacion', name: 'Evaluación HIFU Corporal / Facial', time: '30 min', price: '$15.000 CLP', note: 'Diagnóstico de firmeza', desc: 'Evaluación de la firmeza de tu piel para determinar si el HIFU es una opción adecuada y en qué zonas aplicarlo.' },
+            { category: 'evaluacion', name: 'Control Clínico', time: '15 min', price: 'Sin costo indicado', note: 'Revisión y seguimiento', desc: 'Revisión breve para dar seguimiento a tu tratamiento y resolver dudas sobre tu evolución.' },
 
             // Mesoterapia e hidratación
-            { category: 'mesoterapia', name: '1 Sesión de Mesoterapia', time: '30 min', price: '$85.000 CLP', note: '' },
-            { category: 'mesoterapia', name: '3 Sesiones de Mesoterapia', time: '30 min', price: '$250.000 CLP', note: 'Pack recomendado' },
-            { category: 'mesoterapia', name: 'NCTF Mesoterapia Anti-Aging Alta Gama – 1 sesión', time: '30 min', price: '$100.000 CLP', note: '' },
-            { category: 'mesoterapia', name: 'NCTF Mesoterapia Anti-Aging Alta Gama – 3 sesiones', time: '30 min', price: '$350.000 CLP', note: '' },
-            { category: 'mesoterapia', name: 'NCTF Mesoterapia Anti-Aging Alta Gama – 5 sesiones', time: '30 min', price: '$550.000 CLP', note: '' },
-            { category: 'mesoterapia', name: 'Hidratación con Ácido Hialurónico 1 ml – Microneedling / Pápula', time: '30 min', price: '$200.000 CLP', note: '' },
-            { category: 'mesoterapia', name: 'Bioestimulador Facial PDRN – CA-PA', time: '30 min', price: '$250.000 CLP', note: '' },
-            { category: 'mesoterapia', name: 'Polinucleótidos con Microneedling – 2 sesiones', time: '30 min', price: '$250.000 CLP', note: '' },
+            { category: 'mesoterapia', name: '1 Sesión de Mesoterapia', time: '30 min', price: '$85.000 CLP', note: '', desc: 'Sesión de microinyecciones en la piel con activos formulados para cuidar su hidratación y su aspecto general.' },
+            { category: 'mesoterapia', name: '3 Sesiones de Mesoterapia', time: '30 min', price: '$250.000 CLP', note: 'Pack recomendado', desc: 'Pack de tres sesiones de mesoterapia para trabajar la piel de forma progresiva a lo largo del tratamiento.' },
+            { category: 'mesoterapia', name: 'NCTF Mesoterapia Anti-Aging Alta Gama – 1 sesión', time: '30 min', price: '$100.000 CLP', note: '', desc: 'Mesoterapia con NCTF, una fórmula que combina ácido hialurónico, vitaminas y aminoácidos, pensada para el cuidado de la piel con signos de envejecimiento.' },
+            { category: 'mesoterapia', name: 'NCTF Mesoterapia Anti-Aging Alta Gama – 3 sesiones', time: '30 min', price: '$350.000 CLP', note: '', desc: 'Pack de tres sesiones de mesoterapia NCTF para un trabajo gradual sobre la piel con signos de envejecimiento.' },
+            { category: 'mesoterapia', name: 'NCTF Mesoterapia Anti-Aging Alta Gama – 5 sesiones', time: '30 min', price: '$550.000 CLP', note: '', desc: 'Pack de cinco sesiones de mesoterapia NCTF para un plan de cuidado de la piel más prolongado.' },
+            { category: 'mesoterapia', name: 'Hidratación con Ácido Hialurónico 1 ml – Microneedling / Pápula', time: '30 min', price: '$200.000 CLP', note: '', desc: 'Aplicación de ácido hialurónico en la piel mediante microneedling o pápulas, orientada a mejorar su hidratación.' },
+            { category: 'mesoterapia', name: 'Bioestimulador Facial PDRN – CA-PA', time: '30 min', price: '$250.000 CLP', note: '', desc: 'Tratamiento con PDRN (polinucleótidos) orientado a mejorar la calidad de la piel del rostro.' },
+            { category: 'mesoterapia', name: 'Polinucleótidos con Microneedling – 2 sesiones', time: '30 min', price: '$250.000 CLP', note: '', desc: 'Dos sesiones que combinan polinucleótidos con microneedling para trabajar la calidad y la textura de la piel.' },
 
             // Ácido Hialurónico
-            { category: 'acido', name: 'Ácido Hialurónico Ojeras – 1 ml', time: '30 min', price: '$220.000 CLP', note: '' },
-            { category: 'acido', name: 'Anclaje Malar – 2 ml de Ácido Hialurónico', time: '30 min', price: '$180.000 CLP', note: '' },
-            { category: 'acido', name: 'Armonización de Mentón – 1 ml de Ácido Hialurónico', time: '30 min', price: '$180.000 CLP', note: '' },
-            { category: 'acido', name: 'Aumento de Labios – Ácido Hialurónico 1 ml', time: '30 min', price: '$180.000 CLP', note: '' },
-            { category: 'acido', name: 'Aumento de Labios – Ácido Hialurónico 2 ml', time: '30 min', price: '$340.000 CLP', note: '' },
-            { category: 'acido', name: 'Rinomodelación con Ácido Hialurónico – 1 ml', time: '30 min', price: '$180.000 CLP', note: '' },
-            { category: 'acido', name: 'Hialuronidasa – 1 aplicación / sesión', time: '30 min', price: '$65.000 CLP', note: '' },
+            { category: 'acido', name: 'Ácido Hialurónico Ojeras – 1 ml', time: '30 min', price: '$220.000 CLP', note: '', desc: 'Ácido hialurónico aplicado en el surco bajo los ojos, orientado a suavizar el aspecto de las ojeras.' },
+            { category: 'acido', name: 'Anclaje Malar – 2 ml de Ácido Hialurónico', time: '30 min', price: '$180.000 CLP', note: '', desc: 'Ácido hialurónico en la zona de los pómulos para aportar soporte y volumen al tercio medio del rostro.' },
+            { category: 'acido', name: 'Armonización de Mentón – 1 ml de Ácido Hialurónico', time: '30 min', price: '$180.000 CLP', note: '', desc: 'Ácido hialurónico aplicado en el mentón para armonizar su proyección y su proporción con el resto del rostro.' },
+            { category: 'acido', name: 'Aumento de Labios – Ácido Hialurónico 1 ml', time: '30 min', price: '$180.000 CLP', note: '', desc: 'Aplicación de 1 ml de ácido hialurónico para dar volumen y definir los labios de forma armónica.' },
+            { category: 'acido', name: 'Aumento de Labios – Ácido Hialurónico 2 ml', time: '30 min', price: '$340.000 CLP', note: '', desc: 'Aplicación de 2 ml de ácido hialurónico para trabajar el volumen y el contorno de los labios.' },
+            { category: 'acido', name: 'Rinomodelación con Ácido Hialurónico – 1 ml', time: '30 min', price: '$180.000 CLP', note: '', desc: 'Procedimiento sin cirugía que utiliza ácido hialurónico para armonizar visualmente el perfil de la nariz.' },
+            { category: 'acido', name: 'Hialuronidasa – 1 aplicación / sesión', time: '30 min', price: '$65.000 CLP', note: '', desc: 'Aplicación de una enzima que disuelve el ácido hialurónico, utilizada cuando se necesita corregir o retirar un relleno previo.' },
 
             // Bioestimuladores
-            { category: 'bioestimuladores', name: 'Radiesse – 1 sesión (1,5 ml)', time: '30 min', price: '$490.000 CLP', note: 'Bioestimulación de Colágeno' },
-            { category: 'bioestimuladores', name: 'Sculptra – 1 sesión', time: '30 min', price: '$560.000 CLP', note: 'Ácido Poli-L-Láctico' },
+            { category: 'bioestimuladores', name: 'Radiesse – 1 sesión (1,5 ml)', time: '30 min', price: '$490.000 CLP', note: 'Bioestimulación de Colágeno', desc: 'Bioestimulador de hidroxiapatita de calcio, orientado a estimular el colágeno y mejorar el soporte de la piel.' },
+            { category: 'bioestimuladores', name: 'Sculptra – 1 sesión', time: '30 min', price: '$560.000 CLP', note: 'Ácido Poli-L-Láctico', desc: 'Bioestimulador de ácido poli-L-láctico que busca estimular la producción de colágeno de forma gradual.' },
 
             // Hilos Tensores
-            { category: 'hilos', name: 'Hilos Tensores Faciales – 6 unidades', time: '30 min', price: '$260.000 CLP', note: 'Efecto lifting inmediato' },
+            { category: 'hilos', name: 'Hilos Tensores Faciales – 6 unidades', time: '30 min', price: '$260.000 CLP', note: 'Efecto lifting inmediato', desc: 'Hilos que se colocan bajo la piel para dar soporte y reposicionar suavemente los tejidos del rostro.' },
 
             // Toxina Botulínica
-            { category: 'toxina', name: 'Toxina Botulínica – 1 zona', time: '30 min', price: '$155.000 CLP', note: '' },
-            { category: 'toxina', name: 'Toxina Botulínica – 2 zonas', time: '30 min', price: '$175.000 CLP', note: '' },
-            { category: 'toxina', name: 'Toxina Botulínica – 3 zonas', time: '30 min', price: '$200.000 CLP', note: 'Tratamiento popular' },
-            { category: 'toxina', name: 'Toxina Botulínica – Full Face', time: '30 min', price: '$450.000 CLP', note: 'Atención integral rostro completo' },
+            { category: 'toxina', name: 'Toxina Botulínica – 1 zona', time: '30 min', price: '$155.000 CLP', note: '', desc: 'Aplicación de toxina botulínica en una zona del rostro para suavizar las arrugas de expresión.' },
+            { category: 'toxina', name: 'Toxina Botulínica – 2 zonas', time: '30 min', price: '$175.000 CLP', note: '', desc: 'Aplicación de toxina botulínica en dos zonas del rostro para suavizar las arrugas de expresión.' },
+            { category: 'toxina', name: 'Toxina Botulínica – 3 zonas', time: '30 min', price: '$200.000 CLP', note: 'Tratamiento popular', desc: 'Aplicación de toxina botulínica en tres zonas del rostro, definidas en la evaluación según cada caso.' },
+            { category: 'toxina', name: 'Toxina Botulínica – Full Face', time: '30 min', price: '$450.000 CLP', note: 'Atención integral rostro completo', desc: 'Aplicación de toxina botulínica en múltiples zonas para un abordaje integral de las arrugas de expresión del rostro.' },
 
             // HIFU Facial
-            { category: 'hifu-facial', name: 'HIFU Facial – Rostro Completo', time: '30 min', price: '$99.990 CLP', note: '' },
-            { category: 'hifu-facial', name: 'HIFU Facial – Rostro Completo + Papada', time: '30 min', price: '$135.990 CLP', note: '' },
-            { category: 'hifu-facial', name: 'HIFU Facial – Papada + Cuello + Escote', time: '30 min', price: '$120.990 CLP', note: '' },
-            { category: 'hifu-facial', name: 'HIFU Facial – Papada y Cuello', time: '30 min', price: '$75.990 CLP', note: '' },
-            { category: 'hifu-facial', name: 'HIFU Facial – Tercio Medio Inferior', time: '30 min', price: '$60.990 CLP', note: '' },
-            { category: 'hifu-facial', name: 'HIFU Facial – Tercio Medio Superior', time: '30 min', price: '$60.990 CLP', note: '' },
+            { category: 'hifu-facial', name: 'HIFU Facial – Rostro Completo', time: '30 min', price: '$99.990 CLP', note: '', desc: 'Ultrasonido focalizado aplicado en todo el rostro, orientado a mejorar la firmeza de la piel.' },
+            { category: 'hifu-facial', name: 'HIFU Facial – Rostro Completo + Papada', time: '30 min', price: '$135.990 CLP', note: '', desc: 'Sesión de HIFU que abarca el rostro completo y la zona de la papada para trabajar la firmeza de la piel.' },
+            { category: 'hifu-facial', name: 'HIFU Facial – Papada + Cuello + Escote', time: '30 min', price: '$120.990 CLP', note: '', desc: 'HIFU dirigido a papada, cuello y escote para trabajar la firmeza de la piel en esta zona.' },
+            { category: 'hifu-facial', name: 'HIFU Facial – Papada y Cuello', time: '30 min', price: '$75.990 CLP', note: '', desc: 'HIFU enfocado en la papada y el cuello, orientado a mejorar la firmeza de la piel en esta zona.' },
+            { category: 'hifu-facial', name: 'HIFU Facial – Tercio Medio Inferior', time: '30 min', price: '$60.990 CLP', note: '', desc: 'HIFU dirigido a la parte inferior del tercio medio del rostro, orientado a mejorar la firmeza de la piel en esa zona.' },
+            { category: 'hifu-facial', name: 'HIFU Facial – Tercio Medio Superior', time: '30 min', price: '$60.990 CLP', note: '', desc: 'HIFU dirigido a la parte superior del tercio medio del rostro, orientado a mejorar la firmeza de la piel en esa zona.' },
 
             // HIFU Corporal
-            { category: 'hifu-corporal', name: 'HIFU Corporal – Abdomen Completo', time: '30 min', price: '$99.990 CLP', note: '' },
-            { category: 'hifu-corporal', name: 'HIFU Corporal – Abductores / Entrepiernas', time: '30 min', price: '$99.990 CLP', note: '' },
-            { category: 'hifu-corporal', name: 'HIFU Corporal – Abductores y Entrepierna', time: '30 min', price: '$135.990 CLP', note: '' },
-            { category: 'hifu-corporal', name: 'HIFU Corporal – Brazos / Tríceps', time: '30 min', price: '$82.990 CLP', note: '' },
-            { category: 'hifu-corporal', name: 'HIFU Corporal – Cadera', time: '30 min', price: '$82.990 CLP', note: '' },
-            { category: 'hifu-corporal', name: 'HIFU Corporal – Cara Interna de Rodillas', time: '30 min', price: '$82.990 CLP', note: '' },
-            { category: 'hifu-corporal', name: 'HIFU Corporal – Cintura', time: '30 min', price: '$75.990 CLP', note: '' },
-            { category: 'hifu-corporal', name: 'HIFU Corporal – Espalda y Zona del Sostén', time: '30 min', price: '$82.990 CLP', note: '' },
-            { category: 'hifu-corporal', name: 'HIFU Corporal – Glúteos / Cara Inferior', time: '30 min', price: '$120.990 CLP', note: '' },
-            { category: 'hifu-corporal', name: 'HIFU Corporal – Lifting de Pecho', time: '30 min', price: '$75.990 CLP', note: '' },
-            { category: 'hifu-corporal', name: 'HIFU Corporal – Muslos Delanteros y Traseros', time: '30 min', price: '$99.990 CLP', note: '' },
-            { category: 'hifu-corporal', name: 'HIFU Corporal – Muslos Externos', time: '30 min', price: '$135.990 CLP', note: '' },
-            { category: 'hifu-corporal', name: 'HIFU Corporal – Región Axilar', time: '30 min', price: '$75.990 CLP', note: '' },
+            { category: 'hifu-corporal', name: 'HIFU Corporal – Abdomen Completo', time: '30 min', price: '$99.990 CLP', note: '', desc: 'Ultrasonido focalizado aplicado en toda la zona abdominal, orientado a mejorar la firmeza de la piel.' },
+            { category: 'hifu-corporal', name: 'HIFU Corporal – Abductores / Entrepiernas', time: '30 min', price: '$99.990 CLP', note: '', desc: 'HIFU en abductores y cara interna de los muslos para trabajar la firmeza de la piel de esta zona.' },
+            { category: 'hifu-corporal', name: 'HIFU Corporal – Abductores y Entrepierna', time: '30 min', price: '$135.990 CLP', note: '', desc: 'Sesión que combina abductores y entrepierna para trabajar la firmeza de la piel en ambas zonas.' },
+            { category: 'hifu-corporal', name: 'HIFU Corporal – Brazos / Tríceps', time: '30 min', price: '$82.990 CLP', note: '', desc: 'HIFU aplicado en la parte posterior de los brazos, orientado a mejorar la firmeza de la piel.' },
+            { category: 'hifu-corporal', name: 'HIFU Corporal – Cadera', time: '30 min', price: '$82.990 CLP', note: '', desc: 'HIFU en la zona de la cadera, orientado a trabajar la firmeza de la piel del área.' },
+            { category: 'hifu-corporal', name: 'HIFU Corporal – Cara Interna de Rodillas', time: '30 min', price: '$82.990 CLP', note: '', desc: 'HIFU en la cara interna de las rodillas, una zona donde la piel suele perder firmeza.' },
+            { category: 'hifu-corporal', name: 'HIFU Corporal – Cintura', time: '30 min', price: '$75.990 CLP', note: '', desc: 'HIFU aplicado en la cintura, orientado a trabajar la firmeza de la piel de la zona.' },
+            { category: 'hifu-corporal', name: 'HIFU Corporal – Espalda y Zona del Sostén', time: '30 min', price: '$82.990 CLP', note: '', desc: 'HIFU en la espalda y la zona del sostén, orientado a mejorar la firmeza de la piel del área.' },
+            { category: 'hifu-corporal', name: 'HIFU Corporal – Glúteos / Cara Inferior', time: '30 min', price: '$120.990 CLP', note: '', desc: 'HIFU en la zona baja de los glúteos, orientado a mejorar la firmeza de la piel.' },
+            { category: 'hifu-corporal', name: 'HIFU Corporal – Lifting de Pecho', time: '30 min', price: '$75.990 CLP', note: '', desc: 'HIFU aplicado en la zona del busto, orientado a trabajar la firmeza de la piel del área.' },
+            { category: 'hifu-corporal', name: 'HIFU Corporal – Muslos Delanteros y Traseros', time: '30 min', price: '$99.990 CLP', note: '', desc: 'HIFU en la cara anterior y posterior de los muslos, orientado a mejorar la firmeza de la piel.' },
+            { category: 'hifu-corporal', name: 'HIFU Corporal – Muslos Externos', time: '30 min', price: '$135.990 CLP', note: '', desc: 'HIFU aplicado en la cara externa de los muslos, orientado a trabajar la firmeza de la piel.' },
+            { category: 'hifu-corporal', name: 'HIFU Corporal – Región Axilar', time: '30 min', price: '$75.990 CLP', note: '', desc: 'HIFU en la zona de las axilas, orientado a mejorar la firmeza de la piel del área.' },
 
             // Otros tratamientos
-            { category: 'otros', name: 'Endolift Papada 360° + 1 sesión HIFU Papada', time: '60 min', price: '$480.000 CLP', note: 'Protocolo Combinado' },
-            { category: 'otros', name: 'Ultralift Facial – Técnica Brasileña', time: '30 min', price: '$150.000 CLP', note: 'Lifting de alta intensidad' }
+            { category: 'otros', name: 'Endolift Papada 360° + 1 sesión HIFU Papada', time: '60 min', price: '$480.000 CLP', note: 'Protocolo Combinado', desc: 'Protocolo combinado que suma Endolift (fibra láser bajo la piel) con una sesión de HIFU en la papada, orientado a mejorar su contorno.' },
+            { category: 'otros', name: 'Ultralift Facial – Técnica Brasileña', time: '30 min', price: '$150.000 CLP', note: 'Lifting de alta intensidad', desc: 'Tratamiento de lifting facial de alta intensidad, en su versión conocida como técnica brasileña, orientado a reafirmar el rostro.' }
         ];
 
         let currentCategory = 'todos';
@@ -1007,6 +1007,7 @@
                             ${item.note && !item.isPending ? `<span class="text-[10px] text-brand-dark/60 italic">${item.note}</span>` : ''}
                         </div>
                         <h4 class="font-serif-title text-base text-brand-dark font-medium leading-snug mb-2 group-hover:text-brand-rose transition-colors">${item.name}</h4>
+                        ${item.desc ? `<p class="text-xs text-brand-dark/70 font-light leading-relaxed mb-2">${item.desc}</p>` : ''}
                         ${isPendingBadge}
                     </div>
 
