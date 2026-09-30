@@ -27,7 +27,7 @@
                             sand: '#EAE3DC',       // Warm Neutral
                             sandDark: '#D6CEC9',   // Moodboard Neutral
                             rose: '#A85C70',       // Dusty Rose Accent
-                            roseLight: '#D98BBC',  // Soft Pink Accent
+                            roseLight: '#D9B8BC',  // Soft Pink Accent
                             roseHover: '#8E4A5C',  // Darker Rose for hover
                             roseMuted: '#F4E8EC'   // Gentle Rose tint
                         }
@@ -43,8 +43,8 @@
 
     <style>
         body {
-            background-color: #F6F1ED;
-            color: #191718;
+            background-color: #191718;
+            color: #F6F1ED;
             font-family: 'Montserrat', sans-serif;
             overflow-x: hidden;
         }
@@ -55,9 +55,9 @@
 
         /* Glassmorphism & Custom Elements */
         .glass-nav {
-            background: rgba(246, 241, 237, 0.94);
+            background: rgba(25, 23, 24, 0.94);
             backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(214, 206, 201, 0.5);
+            border-bottom: 1px solid rgba(214, 206, 201, 0.2);
         }
 
         .dark-glass {
@@ -71,7 +71,7 @@
             height: 8px;
         }
         ::-webkit-scrollbar-track {
-            background: #F6F1ED;
+            background: #191718;
         }
         ::-webkit-scrollbar-thumb {
             background: #D6CEC9;
@@ -92,9 +92,9 @@
         }
 
         .badge-rose {
-            background-color: rgba(168, 92, 112, 0.1);
-            color: #A85C70;
-            border: 1px solid rgba(168, 92, 112, 0.3);
+            background-color: rgba(168, 92, 112, 0.15);
+            color: #D9B8BC;
+            border: 1px solid rgba(168, 92, 112, 0.35);
         }
 
         /* Tab Transition */
@@ -124,22 +124,22 @@
             
             <!-- Logo -->
             <a href="#" class="flex flex-col group">
-                <span class="font-serif-title text-xl sm:text-2xl tracking-wider text-brand-dark font-medium group-hover:text-brand-rose transition-colors">
+                <span class="font-serif-title text-xl sm:text-2xl tracking-wider text-brand-cream font-medium group-hover:text-brand-roseLight transition-colors">
                     DRA. LAURA ROMANIELLO
                 </span>
-                <span class="text-[10px] sm:text-xs tracking-[0.25em] text-brand-rose uppercase font-semibold">
+                <span class="text-[10px] sm:text-xs tracking-[0.25em] text-brand-roseLight uppercase font-semibold">
                     Estética & Armonización Facial
                 </span>
             </a>
 
             <!-- Desktop Nav Links -->
-            <nav class="hidden lg:flex items-center space-x-7 text-xs font-medium tracking-wider uppercase text-brand-dark/80">
-                <a href="#inicio" class="hover:text-brand-rose transition-colors py-2 border-b-2 border-transparent hover:border-brand-rose">Inicio</a>
-                <a href="#tratamientos" class="hover:text-brand-rose transition-colors py-2 border-b-2 border-transparent hover:border-brand-rose">Tratamientos</a>
-                <a href="#tecnologia" class="hover:text-brand-rose transition-colors py-2 border-b-2 border-transparent hover:border-brand-rose">Tecnología</a>
-                <a href="#plan-anual" class="hover:text-brand-rose transition-colors py-2 border-b-2 border-transparent hover:border-brand-rose">Plan Anual</a>
-                <a href="#sobre-mi" class="hover:text-brand-rose transition-colors py-2 border-b-2 border-transparent hover:border-brand-rose">Sobre Mí</a>
-                <a href="#contacto" class="hover:text-brand-rose transition-colors py-2 border-b-2 border-transparent hover:border-brand-rose">Contacto</a>
+            <nav class="hidden lg:flex items-center space-x-7 text-xs font-medium tracking-wider uppercase text-brand-cream/80">
+                <a href="#inicio" class="hover:text-brand-roseLight transition-colors py-2 border-b-2 border-transparent hover:border-brand-roseLight">Inicio</a>
+                <a href="#tratamientos" class="hover:text-brand-roseLight transition-colors py-2 border-b-2 border-transparent hover:border-brand-roseLight">Tratamientos</a>
+                <a href="#tecnologia" class="hover:text-brand-roseLight transition-colors py-2 border-b-2 border-transparent hover:border-brand-roseLight">Tecnología</a>
+                <a href="#plan-anual" class="hover:text-brand-roseLight transition-colors py-2 border-b-2 border-transparent hover:border-brand-roseLight">Plan Anual</a>
+                <a href="#sobre-mi" class="hover:text-brand-roseLight transition-colors py-2 border-b-2 border-transparent hover:border-brand-roseLight">Sobre Mí</a>
+                <a href="#contacto" class="hover:text-brand-roseLight transition-colors py-2 border-b-2 border-transparent hover:border-brand-roseLight">Contacto</a>
             </nav>
 
             <!-- CTA Button -->
@@ -151,19 +151,19 @@
             </div>
 
             <!-- Mobile Hamburger Button -->
-            <button id="mobileMenuBtn" class="lg:hidden text-brand-dark p-2 focus:outline-none" aria-label="Abrir Menú">
+            <button id="mobileMenuBtn" class="lg:hidden text-brand-cream p-2 focus:outline-none" aria-label="Abrir Menú">
                 <i class="fa-solid fa-bars text-xl" id="menuIcon"></i>
             </button>
         </div>
 
-        <div id="mobileMenu" class="hidden lg:hidden bg-brand-cream border-b border-brand-sandDark px-6 py-6 space-y-4 shadow-xl">
-            <a href="#inicio" class="mobile-link block text-xs uppercase tracking-wider font-semibold text-brand-dark hover:text-brand-rose">Inicio</a>
-            <a href="#tratamientos" class="mobile-link block text-xs uppercase tracking-wider font-semibold text-brand-dark hover:text-brand-rose">Tratamientos & Precios</a>
-            <a href="#tecnologia" class="mobile-link block text-xs uppercase tracking-wider font-semibold text-brand-dark hover:text-brand-rose">Tecnología</a>
-            <a href="#plan-anual" class="mobile-link block text-xs uppercase tracking-wider font-semibold text-brand-dark hover:text-brand-rose">Plan Anual</a>
-            <a href="#sobre-mi" class="mobile-link block text-xs uppercase tracking-wider font-semibold text-brand-dark hover:text-brand-rose">Sobre Mí</a>
-            <a href="#contacto" class="mobile-link block text-xs uppercase tracking-wider font-semibold text-brand-dark hover:text-brand-rose">Contacto & Ubicación</a>
-            <div class="pt-4 border-t border-brand-sandDark/50">
+        <div id="mobileMenu" class="hidden lg:hidden bg-brand-dark border-b border-white/10 px-6 py-6 space-y-4 shadow-xl">
+            <a href="#inicio" class="mobile-link block text-xs uppercase tracking-wider font-semibold text-brand-cream hover:text-brand-roseLight">Inicio</a>
+            <a href="#tratamientos" class="mobile-link block text-xs uppercase tracking-wider font-semibold text-brand-cream hover:text-brand-roseLight">Tratamientos & Precios</a>
+            <a href="#tecnologia" class="mobile-link block text-xs uppercase tracking-wider font-semibold text-brand-cream hover:text-brand-roseLight">Tecnología</a>
+            <a href="#plan-anual" class="mobile-link block text-xs uppercase tracking-wider font-semibold text-brand-cream hover:text-brand-roseLight">Plan Anual</a>
+            <a href="#sobre-mi" class="mobile-link block text-xs uppercase tracking-wider font-semibold text-brand-cream hover:text-brand-roseLight">Sobre Mí</a>
+            <a href="#contacto" class="mobile-link block text-xs uppercase tracking-wider font-semibold text-brand-cream hover:text-brand-roseLight">Contacto & Ubicación</a>
+            <div class="pt-4 border-t border-white/10">
                 <button onclick="openBookingModal('Evaluación General')" class="w-full bg-brand-rose text-white py-3 rounded-full text-xs uppercase tracking-widest font-semibold text-center flex items-center justify-center gap-2">
                     <span>Reservar Evaluación</span>
                     <i class="fa-brands fa-whatsapp text-sm"></i>
@@ -172,27 +172,27 @@
         </div>
     </header>
 
-    <section id="inicio" class="relative pt-28 sm:pt-36 pb-16 lg:pb-24 overflow-hidden">
+    <section id="inicio" class="relative pt-28 sm:pt-36 pb-16 lg:pb-24 overflow-hidden bg-brand-dark text-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
                 
                 <!-- Left Text Column -->
                 <div class="lg:col-span-7 space-y-6 lg:pr-6">
                     <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full badge-rose text-xs font-semibold tracking-wider uppercase">
-                        <span class="w-2 h-2 rounded-full bg-brand-rose animate-pulse"></span>
+                        <span class="w-2 h-2 rounded-full bg-brand-roseLight animate-pulse"></span>
                         Cirujano Dentista · Estética Facial Avanzada
                     </div>
 
-                    <h1 class="font-serif-title text-4xl sm:text-5xl lg:text-6xl text-brand-dark leading-[1.15] font-normal">
+                    <h1 class="font-serif-title text-4xl sm:text-5xl lg:text-6xl text-brand-cream leading-[1.15] font-normal">
                         Armonización Facial <br class="hidden sm:inline">
-                        <span class="italic font-light text-brand-dark/90">& Estética Avanzada</span>
+                        <span class="italic font-light text-brand-sandDark">& Estética Avanzada</span>
                     </h1>
 
-                    <p class="font-serif-title text-2xl sm:text-3xl text-brand-rose italic font-light tracking-wide">
+                    <p class="font-serif-title text-2xl sm:text-3xl text-brand-roseLight italic font-light tracking-wide">
                         Ciencia. Arte. Armonía.
                     </p>
 
-                    <p class="text-brand-dark/80 text-sm sm:text-base leading-relaxed max-w-xl font-light">
+                    <p class="text-brand-sandDark text-sm sm:text-base leading-relaxed max-w-xl font-light">
                         Odontología integral para adultos y niños. Tratamientos médicos personalizados que realzan tu belleza natural con la más avanzada tecnología y máxima precisión clínica en La Serena.
                     </p>
 
@@ -203,29 +203,29 @@
                             <i class="fa-solid fa-calendar-check text-sm"></i>
                         </button>
                         
-                        <a href="https://wa.me/56996341132?text=Hola%20Dra.%20Laura,%20quisiera%20recibir%20m%C3%A1s%20informaci%C3%B3n%20sobre%20los%20tratamientos%20y%20consultar%20por%20disponibilidad%20de%20horas.%20%C2%BFPodr%C3%ADan%20orientarme%3F" target="_blank" class="border border-brand-dark/20 hover:border-brand-rose hover:text-brand-rose bg-white/70 hover:bg-white text-brand-dark px-7 py-4 rounded-full text-xs uppercase tracking-widest font-semibold transition-all duration-300 text-center flex items-center justify-center gap-2">
-                            <i class="fa-brands fa-whatsapp text-lg text-emerald-600"></i>
+                        <a href="https://wa.me/56996341132?text=Hola%20Dra.%20Laura,%20quisiera%20recibir%20m%C3%A1s%20informaci%C3%B3n%20sobre%20los%20tratamientos%20y%20consultar%20por%20disponibilidad%20de%20horas.%20%C2%BFPodr%C3%ADan%20orientarme%3F" target="_blank" class="border border-white/20 hover:border-brand-roseLight hover:text-brand-roseLight bg-white/5 hover:bg-white/10 text-brand-cream px-7 py-4 rounded-full text-xs uppercase tracking-widest font-semibold transition-all duration-300 text-center flex items-center justify-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-lg text-emerald-400"></i>
                             <span>por WhatsApp</span>
                         </a>
                     </div>
 
                     <!-- Micro Highlights -->
-                    <div class="pt-8 grid grid-cols-2 sm:grid-cols-4 gap-4 border-t border-brand-sandDark/60">
+                    <div class="pt-8 grid grid-cols-2 sm:grid-cols-4 gap-4 border-t border-white/10">
                         <div>
-                            <span class="block text-xs uppercase tracking-wider text-brand-rose font-semibold">Evaluación</span>
-                            <span class="text-xs text-brand-dark/70">Personalizada</span>
+                            <span class="block text-xs uppercase tracking-wider text-brand-roseLight font-semibold">Evaluación</span>
+                            <span class="text-xs text-brand-sandDark">Personalizada</span>
                         </div>
                         <div>
-                            <span class="block text-xs uppercase tracking-wider text-brand-rose font-semibold">Tecnología</span>
-                            <span class="text-xs text-brand-dark/70">Última Generación</span>
+                            <span class="block text-xs uppercase tracking-wider text-brand-roseLight font-semibold">Tecnología</span>
+                            <span class="text-xs text-brand-sandDark">Última Generación</span>
                         </div>
                         <div>
-                            <span class="block text-xs uppercase tracking-wider text-brand-rose font-semibold">Resultados</span>
-                            <span class="text-xs text-brand-dark/70">100% Naturales</span>
+                            <span class="block text-xs uppercase tracking-wider text-brand-roseLight font-semibold">Resultados</span>
+                            <span class="text-xs text-brand-sandDark">100% Naturales</span>
                         </div>
                         <div>
-                            <span class="block text-xs uppercase tracking-wider text-brand-rose font-semibold">Atención</span>
-                            <span class="text-xs text-brand-dark/70">Integral & Segura</span>
+                            <span class="block text-xs uppercase tracking-wider text-brand-roseLight font-semibold">Atención</span>
+                            <span class="text-xs text-brand-sandDark">Integral & Segura</span>
                         </div>
                     </div>
                 </div>
@@ -234,7 +234,7 @@
                 <div class="lg:col-span-5 relative">
                     <div class="relative mx-auto max-w-md lg:max-w-none">
                         <!-- Decorative Frame -->
-                        <div class="absolute -inset-3 rounded-2xl border border-brand-rose/20 transform rotate-1 scale-95"></div>
+                        <div class="absolute -inset-3 rounded-2xl border border-brand-rose/30 transform rotate-1 scale-95"></div>
                         
                         <div class="relative rounded-2xl overflow-hidden shadow-2xl bg-brand-dark">
                             <img src="https://images.unsplash.com/photo-1512290900673-7002fda01373?q=80&w=1000&auto=format&fit=crop" 
@@ -262,7 +262,7 @@
         </div>
     </section>
 
-    <section class="py-16 bg-white/70 border-y border-brand-sandDark/40">
+    <section class="py-16 bg-brand-cream text-brand-dark border-y border-brand-sandDark/60">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="max-w-3xl mx-auto text-center space-y-4">
                 <span class="text-xs uppercase tracking-[0.25em] text-brand-rose font-semibold">Atención Médica Odontológica & Estética</span>
@@ -276,42 +276,42 @@
 
             <!-- Pillars Grid -->
             <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mt-12">
-                <div class="p-6 rounded-2xl bg-brand-cream border border-brand-sandDark/50 hover:border-brand-rose/40 transition-all">
+                <div class="p-6 rounded-2xl bg-brand-sand/60 border border-brand-sandDark/70 hover:border-brand-rose/60 transition-all">
                     <div class="w-10 h-10 rounded-xl bg-brand-rose/10 text-brand-rose flex items-center justify-center mb-4 text-lg">
                         <i class="fa-solid fa-user-doctor"></i>
                     </div>
                     <h3 class="font-serif-title text-lg text-brand-dark mb-1">Evaluación personalizada</h3>
-                    <p class="text-xs text-brand-dark/70 font-light leading-relaxed">Diseñamos tu plan según las necesidades únicas de tu rostro y estructura bucal.</p>
+                    <p class="text-xs text-brand-dark/80 font-light leading-relaxed">Diseñamos tu plan según las necesidades únicas de tu rostro y estructura bucal.</p>
                 </div>
 
-                <div class="p-6 rounded-2xl bg-brand-cream border border-brand-sandDark/50 hover:border-brand-rose/40 transition-all">
+                <div class="p-6 rounded-2xl bg-brand-sand/60 border border-brand-sandDark/70 hover:border-brand-rose/60 transition-all">
                     <div class="w-10 h-10 rounded-xl bg-brand-rose/10 text-brand-rose flex items-center justify-center mb-4 text-lg">
                         <i class="fa-solid fa-microchip"></i>
                     </div>
                     <h3 class="font-serif-title text-lg text-brand-dark mb-1">Tecnología de vanguardia</h3>
-                    <p class="text-xs text-brand-dark/70 font-light leading-relaxed">Equipos de precisión como HIFU 12D, Ultralift y Endoláser para resultados superiores.</p>
+                    <p class="text-xs text-brand-dark/80 font-light leading-relaxed">Equipos de precisión como HIFU 12D, Ultralift y Endoláser para resultados superiores.</p>
                 </div>
 
-                <div class="p-6 rounded-2xl bg-brand-cream border border-brand-sandDark/50 hover:border-brand-rose/40 transition-all">
+                <div class="p-6 rounded-2xl bg-brand-sand/60 border border-brand-sandDark/70 hover:border-brand-rose/60 transition-all">
                     <div class="w-10 h-10 rounded-xl bg-brand-rose/10 text-brand-rose flex items-center justify-center mb-4 text-lg">
                         <i class="fa-solid fa-leaf"></i>
                     </div>
                     <h3 class="font-serif-title text-lg text-brand-dark mb-1">Resultados naturales</h3>
-                    <p class="text-xs text-brand-dark/70 font-light leading-relaxed">Buscamos potenciar la frescura y armonía sin alterar las facciones esenciales.</p>
+                    <p class="text-xs text-brand-dark/80 font-light leading-relaxed">Buscamos potenciar la frescura y armonía sin alterar las facciones esenciales.</p>
                 </div>
 
-                <div class="p-6 rounded-2xl bg-brand-cream border border-brand-sandDark/50 hover:border-brand-rose/40 transition-all">
+                <div class="p-6 rounded-2xl bg-brand-sand/60 border border-brand-sandDark/70 hover:border-brand-rose/60 transition-all">
                     <div class="w-10 h-10 rounded-xl bg-brand-rose/10 text-brand-rose flex items-center justify-center mb-4 text-lg">
                         <i class="fa-solid fa-shield-halved"></i>
                     </div>
                     <h3 class="font-serif-title text-lg text-brand-dark mb-1">Seguridad médica</h3>
-                    <p class="text-xs text-brand-dark/70 font-light leading-relaxed">Protocolos strictly con insumos biológicos y estéticos de primera categoría internacional.</p>
+                    <p class="text-xs text-brand-dark/80 font-light leading-relaxed">Protocolos strictly con insumos biológicos y estéticos de primera categoría internacional.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="tratamientos" class="py-20 bg-brand-cream relative">
+    <section id="tratamientos" class="py-20 bg-brand-cream text-brand-dark relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
             <div class="mb-8">
@@ -326,7 +326,7 @@
                 
                 <!-- Left Arrow Button (Desktop) -->
                 <button id="catArrowLeft" onclick="scrollCategories(-250)" aria-label="Anterior categoría" 
-                        class="hidden sm:flex absolute -left-3 top-1/2 -translate-y-1/2 z-20 w-8 h-8 rounded-full bg-white/90 backdrop-blur-sm shadow-md border border-brand-sandDark/70 text-brand-dark hover:bg-brand-rose hover:text-white hover:border-brand-rose transition-all duration-300 items-center justify-center text-xs opacity-0 pointer-events-none">
+                        class="hidden sm:flex absolute -left-3 top-1/2 -translate-y-1/2 z-20 w-8 h-8 rounded-full bg-brand-dark shadow-md border border-brand-sandDark text-brand-cream hover:bg-brand-rose hover:border-brand-rose transition-all duration-300 items-center justify-center text-xs opacity-0 pointer-events-none">
                     <i class="fa-solid fa-chevron-left text-[11px]"></i>
                 </button>
 
@@ -366,7 +366,7 @@
 
                 <!-- Right Arrow Button (Desktop) -->
                 <button id="catArrowRight" onclick="scrollCategories(250)" aria-label="Siguiente categoría" 
-                        class="hidden sm:flex absolute -right-3 top-1/2 -translate-y-1/2 z-20 w-8 h-8 rounded-full bg-white/90 backdrop-blur-sm shadow-md border border-brand-sandDark/70 text-brand-dark hover:bg-brand-rose hover:text-white hover:border-brand-rose transition-all duration-300 items-center justify-center text-xs">
+                        class="hidden sm:flex absolute -right-3 top-1/2 -translate-y-1/2 z-20 w-8 h-8 rounded-full bg-brand-dark shadow-md border border-brand-sandDark text-brand-cream hover:bg-brand-rose hover:border-brand-rose transition-all duration-300 items-center justify-center text-xs">
                     <i class="fa-solid fa-chevron-right text-[11px]"></i>
                 </button>
 
@@ -395,7 +395,7 @@
                 
                 <div class="lg:col-span-8 space-y-3">
                     <span class="text-xs uppercase tracking-[0.25em] text-brand-sand font-semibold">Asesoramiento Profesional</span>
-                    <h2 class="font-serif-title text-3xl sm:text-4xl">¿No sabes qué tratamiento necesitas?</h2>
+                    <h2 class="font-serif-title text-3xl sm:text-4xl text-white">¿No sabes qué tratamiento necesitas?</h2>
                     <p class="text-white/90 text-sm sm:text-base font-light max-w-2xl leading-relaxed">
                         Inicia con una evaluación médica integral. La Dra. Laura Romaniello analizará la estructura de tu rostro y la calidad de tu piel para entregarte una recomendación personalizada de acuerdo a tus metas estéticas.
                     </p>
@@ -417,34 +417,34 @@
     </section>
 
     <!-- TECNOLOGÍA SECTION -->
-    <section id="tecnologia" class="py-20 bg-white">
+    <section id="tecnologia" class="py-20 bg-brand-dark text-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-2xl mx-auto mb-16">
-                <span class="text-xs uppercase tracking-[0.25em] text-brand-rose font-semibold">Innovación Estética & Dental</span>
-                <h2 class="font-serif-title text-3xl sm:text-4xl text-brand-dark mt-1">Tecnología de Vanguardia</h2>
-                <p class="text-xs sm:text-sm text-brand-dark/70 mt-3 font-light">
+                <span class="text-xs uppercase tracking-[0.25em] text-brand-roseLight font-semibold">Innovación Estética & Dental</span>
+                <h2 class="font-serif-title text-3xl sm:text-4xl text-brand-cream mt-1">Tecnología de Vanguardia</h2>
+                <p class="text-xs sm:text-sm text-brand-sandDark mt-3 font-light">
                     Equipamiento avanzado y biotecnología médica aplicada para estimular colágeno, tensar tejidos y rejuvenecer con mínima invasión.
                 </p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <!-- Tech Card 1 -->
-                <div class="bg-brand-cream rounded-2xl p-8 border border-brand-sandDark/40 flex flex-col justify-between hover:shadow-lg transition-all">
+                <div class="bg-white/5 rounded-2xl p-8 border border-white/10 flex flex-col justify-between hover:border-brand-rose/50 transition-all">
                     <div>
-                        <div class="w-12 h-12 rounded-xl bg-brand-dark text-white flex items-center justify-center mb-6 text-xl">
+                        <div class="w-12 h-12 rounded-xl bg-brand-rose/20 text-brand-roseLight border border-brand-roseLight/30 flex items-center justify-center mb-6 text-xl">
                             <i class="fa-solid fa-wave-square"></i>
                         </div>
-                        <h3 class="font-serif-title text-xl text-brand-dark mb-2">HIFU 12D Ultralift</h3>
-                        <p class="text-xs text-brand-dark/80 font-light leading-relaxed mb-4">
+                        <h3 class="font-serif-title text-xl text-brand-cream mb-2">HIFU 12D Ultralift</h3>
+                        <p class="text-xs text-brand-sandDark font-light leading-relaxed mb-4">
                             Ultrasonido Focalizado de Alta Intensidad de doce dimensiones. Logra un tensado cutáneo profundo y estimulación del SMAS sin tiempo de recuperación.
                         </p>
-                        <ul class="space-y-2 text-xs text-brand-dark/70">
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-rose"></i> Zonas Faciales y Corporales</li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-rose"></i> Efecto Lifting sin Cirugía</li>
+                        <ul class="space-y-2 text-xs text-brand-cream/80">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-roseLight"></i> Zonas Faciales y Corporales</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-roseLight"></i> Efecto Lifting sin Cirugía</li>
                         </ul>
                     </div>
-                    <div class="mt-8 pt-4 border-t border-brand-sandDark/50">
-                        <button onclick="filterCategory('hifu-facial')" class="text-xs font-semibold uppercase tracking-wider text-brand-rose hover:text-brand-dark flex items-center gap-2">
+                    <div class="mt-8 pt-4 border-t border-white/10">
+                        <button onclick="filterCategory('hifu-facial')" class="text-xs font-semibold uppercase tracking-wider text-brand-roseLight hover:text-brand-cream flex items-center gap-2">
                             <span>Ver aranceles HIFU</span>
                             <i class="fa-solid fa-arrow-right text-[10px]"></i>
                         </button>
@@ -452,22 +452,22 @@
                 </div>
 
                 <!-- Tech Card 2 -->
-                <div class="bg-brand-cream rounded-2xl p-8 border border-brand-sandDark/40 flex flex-col justify-between hover:shadow-lg transition-all">
+                <div class="bg-white/5 rounded-2xl p-8 border border-white/10 flex flex-col justify-between hover:border-brand-rose/50 transition-all">
                     <div>
-                        <div class="w-12 h-12 rounded-xl bg-brand-dark text-white flex items-center justify-center mb-6 text-xl">
+                        <div class="w-12 h-12 rounded-xl bg-brand-rose/20 text-brand-roseLight border border-brand-roseLight/30 flex items-center justify-center mb-6 text-xl">
                             <i class="fa-solid fa-bolt"></i>
                         </div>
-                        <h3 class="font-serif-title text-xl text-brand-dark mb-2">Endoláser & Técnica Brasileña</h3>
-                        <p class="text-xs text-brand-dark/80 font-light leading-relaxed mb-4">
+                        <h3 class="font-serif-title text-xl text-brand-cream mb-2">Endoláser & Técnica Brasileña</h3>
+                        <p class="text-xs text-brand-sandDark font-light leading-relaxed mb-4">
                             Procedimientos avanzados para refinamiento de contorno facial, reducción de papada 360° y remodelación estructural como Ultralift Técnica Brasileña.
                         </p>
-                        <ul class="space-y-2 text-xs text-brand-dark/70">
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-rose"></i> Endolift Papada 360°</li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-rose"></i> Definición de óvalo facial</li>
+                        <ul class="space-y-2 text-xs text-brand-cream/80">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-roseLight"></i> Endolift Papada 360°</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-roseLight"></i> Definición de óvalo facial</li>
                         </ul>
                     </div>
-                    <div class="mt-8 pt-4 border-t border-brand-sandDark/50">
-                        <button onclick="filterCategory('otros')" class="text-xs font-semibold uppercase tracking-wider text-brand-rose hover:text-brand-dark flex items-center gap-2">
+                    <div class="mt-8 pt-4 border-t border-white/10">
+                        <button onclick="filterCategory('otros')" class="text-xs font-semibold uppercase tracking-wider text-brand-roseLight hover:text-brand-cream flex items-center gap-2">
                             <span>Ver tratamientos especiales</span>
                             <i class="fa-solid fa-arrow-right text-[10px]"></i>
                         </button>
@@ -475,22 +475,22 @@
                 </div>
 
                 <!-- Tech Card 3 -->
-                <div class="bg-brand-cream rounded-2xl p-8 border border-brand-sandDark/40 flex flex-col justify-between hover:shadow-lg transition-all">
+                <div class="bg-white/5 rounded-2xl p-8 border border-white/10 flex flex-col justify-between hover:border-brand-rose/50 transition-all">
                     <div>
-                        <div class="w-12 h-12 rounded-xl bg-brand-dark text-white flex items-center justify-center mb-6 text-xl">
+                        <div class="w-12 h-12 rounded-xl bg-brand-rose/20 text-brand-roseLight border border-brand-roseLight/30 flex items-center justify-center mb-6 text-xl">
                             <i class="fa-solid fa-vial-virus"></i>
                         </div>
-                        <h3 class="font-serif-title text-xl text-brand-dark mb-2">Exosomas, PDRN & Polinucleótidos</h3>
-                        <p class="text-xs text-brand-dark/80 font-light leading-relaxed mb-4">
+                        <h3 class="font-serif-title text-xl text-brand-cream mb-2">Exosomas, PDRN & Polinucleótidos</h3>
+                        <p class="text-xs text-brand-sandDark font-light leading-relaxed mb-4">
                             Biotecnología celular regenerativa administrada mediante Microneedling y Pápulas. Estimulación de síntesis biológica de elastina y colágeno autólogo.
                         </p>
-                        <ul class="space-y-2 text-xs text-brand-dark/70">
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-rose"></i> Bioestimulación celular profunda</li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-rose"></i> NCTF Anti-Aging Alta Gama</li>
+                        <ul class="space-y-2 text-xs text-brand-cream/80">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-roseLight"></i> Bioestimulación celular profunda</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-roseLight"></i> NCTF Anti-Aging Alta Gama</li>
                         </ul>
                     </div>
-                    <div class="mt-8 pt-4 border-t border-brand-sandDark/50">
-                        <button onclick="filterCategory('mesoterapia')" class="text-xs font-semibold uppercase tracking-wider text-brand-rose hover:text-brand-dark flex items-center gap-2">
+                    <div class="mt-8 pt-4 border-t border-white/10">
+                        <button onclick="filterCategory('mesoterapia')" class="text-xs font-semibold uppercase tracking-wider text-brand-roseLight hover:text-brand-cream flex items-center gap-2">
                             <span>Ver bioestimuladores e hidratantes</span>
                             <i class="fa-solid fa-arrow-right text-[10px]"></i>
                         </button>
@@ -500,7 +500,7 @@
         </div>
     </section>
 
-    <section id="plan-anual" class="py-20 bg-brand-dark text-white relative overflow-hidden">
+    <section id="plan-anual" class="py-20 bg-brand-dark text-white relative overflow-hidden border-t border-white/10">
         
         <!-- Subtle Glow Backgrounds -->
         <div class="absolute top-0 right-0 w-96 h-96 bg-brand-rose/10 rounded-full blur-3xl pointer-events-none"></div>
@@ -590,21 +590,21 @@
     </section>
 
     <!-- SECCIÓN DE RESEÑAS DE PACIENTES -->
-    <section id="opiniones" class="py-20 bg-white/70 border-y border-brand-sandDark/40 relative overflow-hidden">
+    <section id="opiniones" class="py-20 bg-brand-cream text-brand-dark border-y border-brand-sandDark/60 relative overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
             <!-- Section Header -->
             <div class="text-center max-w-3xl mx-auto mb-12 space-y-3">
                 <span class="text-xs uppercase tracking-[0.25em] text-brand-rose font-semibold">Opiniones de pacientes</span>
                 <h2 class="font-serif-title text-3xl sm:text-4xl text-brand-dark">La experiencia de nuestros pacientes</h2>
-                <p class="text-xs sm:text-sm text-brand-dark/70 font-light leading-relaxed">
+                <p class="text-xs sm:text-sm text-brand-dark/80 font-light leading-relaxed">
                     La confianza, la calidez y los resultados de excelencia médica definen cada atención. Conoce los testimonios reales de quienes han confiado su sonrisa y salud facial en nuestra consulta.
                 </p>
             </div>
 
             <!-- Global Rating & Verified Badge Container -->
-            <div class="max-w-xl mx-auto mb-12 p-6 rounded-2xl bg-brand-cream border border-brand-sandDark/60 shadow-sm text-center">
-                <div class="flex justify-center items-center gap-1 text-amber-400 text-lg mb-2">
+            <div class="max-w-xl mx-auto mb-12 p-6 rounded-2xl bg-brand-sand/60 border border-brand-sandDark shadow-sm text-center">
+                <div class="flex justify-center items-center gap-1 text-amber-500 text-lg mb-2">
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
@@ -617,11 +617,11 @@
                 </div>
 
                 <div class="flex flex-wrap items-center justify-center gap-3 sm:gap-6 mt-3 text-xs text-brand-dark/80 font-medium">
-                    <span class="flex items-center gap-1.5 text-emerald-700 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200/60">
-                        <i class="fa-solid fa-circle-check text-emerald-600"></i>
+                    <span class="flex items-center gap-1.5 text-emerald-800 bg-emerald-100/80 px-3 py-1 rounded-full border border-emerald-300">
+                        <i class="fa-solid fa-circle-check text-emerald-700"></i>
                         <span>100% de satisfacción global</span>
                     </span>
-                    <span class="flex items-center gap-1.5 text-brand-dark/70">
+                    <span class="flex items-center gap-1.5 text-brand-dark/80">
                         <i class="fa-solid fa-user-check text-brand-rose"></i>
                         <span>21 opiniones verificadas</span>
                     </span>
@@ -632,17 +632,17 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
                 
                 <!-- Review 1: Tabatha Jiménez -->
-                <div class="bg-white p-7 rounded-2xl border border-brand-sandDark/50 shadow-sm hover:shadow-md transition-all flex flex-col justify-between space-y-4">
+                <div class="bg-brand-sand/40 p-7 rounded-2xl border border-brand-sandDark/70 shadow-sm hover:shadow-md transition-all flex flex-col justify-between space-y-4">
                     <div class="space-y-3">
                         <div class="flex items-center justify-between">
-                            <div class="flex text-amber-400 text-xs gap-1">
+                            <div class="flex text-amber-500 text-xs gap-1">
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
                             </div>
-                            <span class="text-[10px] uppercase tracking-wider text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-md font-semibold border border-emerald-200/50">
+                            <span class="text-[10px] uppercase tracking-wider text-emerald-800 bg-emerald-100/80 px-2 py-0.5 rounded-md font-semibold border border-emerald-300">
                                 <i class="fa-solid fa-check text-[9px] mr-1"></i> Cita Verificada
                             </span>
                         </div>
@@ -650,24 +650,24 @@
                             "La mejor dentista de la región, hace más de 7 años que nos atendemos con ella por un trabajo mal realizado en otro lugar y ya no la cambio por nada del mundo, tiene una paciencia a otro nivel con niños, profesional empática, simpática, muy amorosa y accesible en sus valores."
                         </p>
                     </div>
-                    <div class="pt-3 border-t border-brand-sandDark/30 flex items-center justify-between text-xs">
+                    <div class="pt-3 border-t border-brand-sandDark/40 flex items-center justify-between text-xs">
                         <span class="font-semibold text-brand-dark">Tabatha Jiménez</span>
-                        <span class="text-[11px] text-brand-dark/50">19 de junio de 2024</span>
+                        <span class="text-[11px] text-brand-dark/60">19 de junio de 2024</span>
                     </div>
                 </div>
 
                 <!-- Review 2: Josefa Andrade -->
-                <div class="bg-white p-7 rounded-2xl border border-brand-sandDark/50 shadow-sm hover:shadow-md transition-all flex flex-col justify-between space-y-4">
+                <div class="bg-brand-sand/40 p-7 rounded-2xl border border-brand-sandDark/70 shadow-sm hover:shadow-md transition-all flex flex-col justify-between space-y-4">
                     <div class="space-y-3">
                         <div class="flex items-center justify-between">
-                            <div class="flex text-amber-400 text-xs gap-1">
+                            <div class="flex text-amber-500 text-xs gap-1">
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
                             </div>
-                            <span class="text-[10px] uppercase tracking-wider text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-md font-semibold border border-emerald-200/50">
+                            <span class="text-[10px] uppercase tracking-wider text-emerald-800 bg-emerald-100/80 px-2 py-0.5 rounded-md font-semibold border border-emerald-300">
                                 <i class="fa-solid fa-check text-[9px] mr-1"></i> Cita Verificada
                             </span>
                         </div>
@@ -675,24 +675,24 @@
                             "La mejor de la región! Quede muy contenta con el tratamiento; me había realizado botox con otros pero la técnica de la doctora es de otro planeta"
                         </p>
                     </div>
-                    <div class="pt-3 border-t border-brand-sandDark/30 flex items-center justify-between text-xs">
+                    <div class="pt-3 border-t border-brand-sandDark/40 flex items-center justify-between text-xs">
                         <span class="font-semibold text-brand-dark">Josefa Andrade</span>
-                        <span class="text-[11px] text-brand-dark/50">11 de junio de 2024</span>
+                        <span class="text-[11px] text-brand-dark/60">11 de junio de 2024</span>
                     </div>
                 </div>
 
                 <!-- Review 3: Briana Castro -->
-                <div class="bg-white p-7 rounded-2xl border border-brand-sandDark/50 shadow-sm hover:shadow-md transition-all flex flex-col justify-between space-y-4">
+                <div class="bg-brand-sand/40 p-7 rounded-2xl border border-brand-sandDark/70 shadow-sm hover:shadow-md transition-all flex flex-col justify-between space-y-4">
                     <div class="space-y-3">
                         <div class="flex items-center justify-between">
-                            <div class="flex text-amber-400 text-xs gap-1">
+                            <div class="flex text-amber-500 text-xs gap-1">
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
                             </div>
-                            <span class="text-[10px] uppercase tracking-wider text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-md font-semibold border border-emerald-200/50">
+                            <span class="text-[10px] uppercase tracking-wider text-emerald-800 bg-emerald-100/80 px-2 py-0.5 rounded-md font-semibold border border-emerald-300">
                                 <i class="fa-solid fa-check text-[9px] mr-1"></i> Cita Verificada
                             </span>
                         </div>
@@ -700,24 +700,24 @@
                             "Es muy importante la comunicación entre médico y paciente y Laura provoca un ambiente muy agradable volveré de todas maneras aparte de estar 100% conforme con el tratamiento."
                         </p>
                     </div>
-                    <div class="pt-3 border-t border-brand-sandDark/30 flex items-center justify-between text-xs">
+                    <div class="pt-3 border-t border-brand-sandDark/40 flex items-center justify-between text-xs">
                         <span class="font-semibold text-brand-dark">Briana Castro</span>
-                        <span class="text-[11px] text-brand-dark/50">12 de octubre de 2024</span>
+                        <span class="text-[11px] text-brand-dark/60">12 de octubre de 2024</span>
                     </div>
                 </div>
 
                 <!-- Review 4: Fernanda Fuente-Alba -->
-                <div class="bg-white p-7 rounded-2xl border border-brand-sandDark/50 shadow-sm hover:shadow-md transition-all flex flex-col justify-between space-y-4">
+                <div class="bg-brand-sand/40 p-7 rounded-2xl border border-brand-sandDark/70 shadow-sm hover:shadow-md transition-all flex flex-col justify-between space-y-4">
                     <div class="space-y-3">
                         <div class="flex items-center justify-between">
-                            <div class="flex text-amber-400 text-xs gap-1">
+                            <div class="flex text-amber-500 text-xs gap-1">
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
                             </div>
-                            <span class="text-[10px] uppercase tracking-wider text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-md font-semibold border border-emerald-200/50">
+                            <span class="text-[10px] uppercase tracking-wider text-emerald-800 bg-emerald-100/80 px-2 py-0.5 rounded-md font-semibold border border-emerald-300">
                                 <i class="fa-solid fa-check text-[9px] mr-1"></i> Cita Verificada
                             </span>
                         </div>
@@ -725,9 +725,9 @@
                             "Excelente profesional, detallista me explicó paso por paso y resultó un excelente trabajo estético"
                         </p>
                     </div>
-                    <div class="pt-3 border-t border-brand-sandDark/30 flex items-center justify-between text-xs">
+                    <div class="pt-3 border-t border-brand-sandDark/40 flex items-center justify-between text-xs">
                         <span class="font-semibold text-brand-dark">Fernanda Fuente-Alba</span>
-                        <span class="text-[11px] text-brand-dark/50">19 de julio de 2024</span>
+                        <span class="text-[11px] text-brand-dark/60">19 de julio de 2024</span>
                     </div>
                 </div>
 
@@ -747,19 +747,19 @@
         </div>
     </section>
 
-    <section id="sobre-mi" class="py-20 bg-brand-cream">
+    <section id="sobre-mi" class="py-20 bg-brand-dark text-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                 
                 <!-- Editorial Image -->
                 <div class="lg:col-span-5">
-                    <div class="relative rounded-2xl overflow-hidden shadow-xl bg-brand-dark">
+                    <div class="relative rounded-2xl overflow-hidden shadow-xl bg-brand-dark border border-white/10">
                         <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=800&auto=format&fit=crop" 
                              onerror="this.src='https://placehold.co/800x1000/191718/F6F1ED?text=Dra.+Laura+Romaniello'"
                              alt="Dra. Laura Romaniello" 
                              class="w-full h-[450px] object-cover img-editorial">
                         
-                        <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-brand-dark via-brand-dark/70 to-transparent p-6 text-white">
+                        <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-brand-dark via-brand-dark/80 to-transparent p-6 text-white">
                             <h3 class="font-serif-title text-2xl text-brand-cream">Dra. Laura Romaniello</h3>
                             <p class="text-xs uppercase tracking-widest text-brand-roseLight font-medium">Cirujano Dentista</p>
                         </div>
@@ -768,13 +768,13 @@
 
                 <!-- Text Info -->
                 <div class="lg:col-span-7 space-y-6">
-                    <span class="text-xs uppercase tracking-[0.25em] text-brand-rose font-semibold">Perfil Profesional</span>
+                    <span class="text-xs uppercase tracking-[0.25em] text-brand-roseLight font-semibold">Perfil Profesional</span>
                     
-                    <h2 class="font-serif-title text-3xl sm:text-4xl text-brand-dark">
+                    <h2 class="font-serif-title text-3xl sm:text-4xl text-brand-cream">
                         Compromiso con la salud bucal y la estética facial armónica
                     </h2>
 
-                    <div class="space-y-4 text-sm text-brand-dark/80 font-light leading-relaxed">
+                    <div class="space-y-4 text-sm text-brand-sandDark font-light leading-relaxed">
                         <p>
                             La <strong>Dra. Laura Romaniello</strong> es Cirujano Dentista especializada en ofrecer <strong>Odontología integral para adultos y niños</strong>, además de procedimientos de <strong>Armonización Facial y Estética Avanzada</strong>.
                         </p>
@@ -785,35 +785,35 @@
 
                     <!-- Services Scope List -->
                     <div class="pt-4 grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
-                        <div class="flex items-center gap-3 p-3 rounded-xl bg-white border border-brand-sandDark/40">
-                            <i class="fa-solid fa-teeth text-brand-rose text-base"></i>
+                        <div class="flex items-center gap-3 p-3 rounded-xl bg-white/5 border border-white/10">
+                            <i class="fa-solid fa-teeth text-brand-roseLight text-base"></i>
                             <div>
-                                <span class="font-medium text-brand-dark block">Odontología Integral</span>
-                                <span class="text-brand-dark/60 text-[11px]">Niños y Adultos</span>
+                                <span class="font-medium text-brand-cream block">Odontología Integral</span>
+                                <span class="text-brand-sandDark text-[11px]">Niños y Adultos</span>
                             </div>
                         </div>
 
-                        <div class="flex items-center gap-3 p-3 rounded-xl bg-white border border-brand-sandDark/40">
-                            <i class="fa-solid fa-syringe text-brand-rose text-base"></i>
+                        <div class="flex items-center gap-3 p-3 rounded-xl bg-white/5 border border-white/10">
+                            <i class="fa-solid fa-syringe text-brand-roseLight text-base"></i>
                             <div>
-                                <span class="font-medium text-brand-dark block">Armonización Facial</span>
-                                <span class="text-brand-dark/60 text-[11px]">Ácido Hialurónico & Hilos</span>
+                                <span class="font-medium text-brand-cream block">Armonización Facial</span>
+                                <span class="text-brand-sandDark text-[11px]">Ácido Hialurónico & Hilos</span>
                             </div>
                         </div>
 
-                        <div class="flex items-center gap-3 p-3 rounded-xl bg-white border border-brand-sandDark/40">
-                            <i class="fa-solid fa-wand-magic-sparkles text-brand-rose text-base"></i>
+                        <div class="flex items-center gap-3 p-3 rounded-xl bg-white/5 border border-white/10">
+                            <i class="fa-solid fa-wand-magic-sparkles text-brand-roseLight text-base"></i>
                             <div>
-                                <span class="font-medium text-brand-dark block">Bioestimulación & HIFU</span>
-                                <span class="text-brand-dark/60 text-[11px]">Radiesse, Sculptra & 12D</span>
+                                <span class="font-medium text-brand-cream block">Bioestimulación & HIFU</span>
+                                <span class="text-brand-sandDark text-[11px]">Radiesse, Sculptra & 12D</span>
                             </div>
                         </div>
 
-                        <div class="flex items-center gap-3 p-3 rounded-xl bg-white border border-brand-sandDark/40">
-                            <i class="fa-solid fa-user-check text-brand-rose text-base"></i>
+                        <div class="flex items-center gap-3 p-3 rounded-xl bg-white/5 border border-white/10">
+                            <i class="fa-solid fa-user-check text-brand-roseLight text-base"></i>
                             <div>
-                                <span class="font-medium text-brand-dark block">Consulta Personalizada</span>
-                                <span class="text-brand-dark/60 text-[11px]">Evaluación Diagnóstica</span>
+                                <span class="font-medium text-brand-cream block">Consulta Personalizada</span>
+                                <span class="text-brand-sandDark text-[11px]">Evaluación Diagnóstica</span>
                             </div>
                         </div>
                     </div>
@@ -824,7 +824,7 @@
         </div>
     </section>
 
-    <section id="contacto" class="py-20 bg-white">
+    <section id="contacto" class="py-20 bg-brand-cream text-brand-dark border-t border-brand-sandDark/60">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
                 
@@ -833,7 +833,7 @@
                     <div>
                         <span class="text-xs uppercase tracking-[0.25em] text-brand-rose font-semibold">Ubicación & Atención</span>
                         <h2 class="font-serif-title text-3xl sm:text-4xl text-brand-dark mt-1">Agenda tu visita</h2>
-                        <p class="text-xs sm:text-sm text-brand-dark/70 mt-2 font-light">
+                        <p class="text-xs sm:text-sm text-brand-dark/80 mt-2 font-light">
                             Estamos listos para atenderte con la calidez y privacidad que mereces.
                         </p>
                     </div>
@@ -841,7 +841,7 @@
                     <div class="space-y-5 text-sm">
                         
                         <!-- Address -->
-                        <div class="flex items-start gap-4 p-4 rounded-2xl bg-brand-cream border border-brand-sandDark/50">
+                        <div class="flex items-start gap-4 p-4 rounded-2xl bg-brand-sand/50 border border-brand-sandDark/60">
                             <div class="w-10 h-10 rounded-xl bg-brand-rose/10 text-brand-rose flex items-center justify-center shrink-0 text-lg">
                                 <i class="fa-solid fa-location-dot"></i>
                             </div>
@@ -852,7 +852,7 @@
                         </div>
 
                         <!-- Instagram -->
-                        <div class="flex items-start gap-4 p-4 rounded-2xl bg-brand-cream border border-brand-sandDark/50">
+                        <div class="flex items-start gap-4 p-4 rounded-2xl bg-brand-sand/50 border border-brand-sandDark/60">
                             <div class="w-10 h-10 rounded-xl bg-brand-rose/10 text-brand-rose flex items-center justify-center shrink-0 text-lg">
                                 <i class="fa-brands fa-instagram"></i>
                             </div>
@@ -865,7 +865,7 @@
                         </div>
 
                         <!-- Correo Electrónico -->
-                        <div class="flex items-start gap-4 p-4 rounded-2xl bg-brand-cream border border-brand-sandDark/50">
+                        <div class="flex items-start gap-4 p-4 rounded-2xl bg-brand-sand/50 border border-brand-sandDark/60">
                             <div class="w-10 h-10 rounded-xl bg-brand-rose/10 text-brand-rose flex items-center justify-center shrink-0 text-lg">
                                 <i class="fa-regular fa-envelope"></i>
                             </div>
@@ -878,7 +878,7 @@
                         </div>
 
                         <!-- Hours -->
-                        <div class="p-5 sm:p-6 rounded-2xl bg-brand-cream border border-brand-sandDark/60 shadow-sm hover:border-brand-rose/40 transition-all">
+                        <div class="p-5 sm:p-6 rounded-2xl bg-brand-sand/50 border border-brand-sandDark/60 shadow-sm hover:border-brand-rose/40 transition-all">
                             <div class="flex items-center justify-between pb-3.5 mb-3.5 border-b border-brand-sandDark/40">
                                 <div class="flex items-center gap-3">
                                     <div class="w-10 h-10 rounded-xl bg-brand-rose/10 text-brand-rose flex items-center justify-center shrink-0 text-lg">
@@ -889,14 +889,14 @@
                                         <p class="text-[11px] text-brand-dark/60 font-light">Atención con reserva previa</p>
                                     </div>
                                 </div>
-                                <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[10px] font-medium uppercase tracking-wider bg-emerald-50 text-emerald-700 border border-emerald-200/60 shrink-0">
-                                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                                <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[10px] font-medium uppercase tracking-wider bg-emerald-100/80 text-emerald-800 border border-emerald-300 shrink-0">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-600 animate-pulse"></span>
                                     <span>Consulta Presencial</span>
                                 </span>
                             </div>
 
                             <div class="space-y-2 text-xs">
-                                <div class="flex items-center justify-between p-2.5 rounded-xl bg-white/80 border border-brand-sandDark/30 shadow-xs">
+                                <div class="flex items-center justify-between p-2.5 rounded-xl bg-brand-cream border border-brand-sandDark/40 shadow-xs">
                                     <span class="font-medium text-brand-dark flex items-center gap-2">
                                         <span class="w-1.5 h-1.5 rounded-full bg-brand-rose"></span>
                                         <span>Lunes a Miércoles</span>
@@ -904,7 +904,7 @@
                                     <span class="font-semibold text-brand-dark tracking-tight">17:20 – 19:00 hrs</span>
                                 </div>
 
-                                <div class="flex items-center justify-between p-2.5 rounded-xl bg-white/80 border border-brand-sandDark/30 shadow-xs">
+                                <div class="flex items-center justify-between p-2.5 rounded-xl bg-brand-cream border border-brand-sandDark/40 shadow-xs">
                                     <span class="font-medium text-brand-dark flex items-center gap-2">
                                         <span class="w-1.5 h-1.5 rounded-full bg-brand-rose"></span>
                                         <span>Jueves</span>
@@ -912,7 +912,7 @@
                                     <span class="font-semibold text-brand-dark tracking-tight">17:00 – 19:30 hrs</span>
                                 </div>
 
-                                <div class="flex items-center justify-between p-2.5 rounded-xl bg-white/80 border border-brand-sandDark/30 shadow-xs">
+                                <div class="flex items-center justify-between p-2.5 rounded-xl bg-brand-cream border border-brand-sandDark/40 shadow-xs">
                                     <span class="font-medium text-brand-dark flex items-center gap-2">
                                         <span class="w-1.5 h-1.5 rounded-full bg-brand-rose"></span>
                                         <span>Viernes</span>
@@ -949,14 +949,14 @@
 
                 <!-- Google Maps iFrame Card -->
                 <div class="lg:col-span-6 flex flex-col space-y-4">
-                    <div class="flex-1 rounded-2xl overflow-hidden shadow-lg border border-brand-sandDark/60 min-h-[380px] bg-brand-cream relative group flex flex-col">
+                    <div class="flex-1 rounded-2xl overflow-hidden shadow-lg border border-brand-sandDark/60 min-h-[380px] bg-brand-dark relative group flex flex-col">
                         
                         <!-- Map Embed iFrame -->
                         <iframe 
                             src="https://maps.google.com/maps?q=California%20881%2C%20La%20Serena%2C%20Coquimbo%2C%20Chile&t=&z=16&ie=UTF8&iwloc=&output=embed" 
                             width="100%" 
                             height="100%" 
-                            class="w-full h-full min-h-[320px] border-0" 
+                            class="w-full h-full min-h-[320px] border-0 opacity-90" 
                             allowfullscreen="" 
                             loading="lazy" 
                             referrerpolicy="no-referrer-when-downgrade"
@@ -986,11 +986,11 @@
 
                     <!-- Direct Navigation Action Buttons -->
                     <div class="grid grid-cols-2 gap-3 text-xs">
-                        <a href="https://maps.google.com/?cid=3012521228512605310" target="_blank" class="flex items-center justify-center gap-2 p-3 rounded-xl bg-brand-cream border border-brand-sandDark/60 hover:border-brand-rose text-brand-dark font-medium transition-all shadow-sm">
+                        <a href="https://maps.google.com/?cid=3012521228512605310" target="_blank" class="flex items-center justify-center gap-2 p-3 rounded-xl bg-brand-sand/50 border border-brand-sandDark/60 hover:border-brand-rose text-brand-dark font-medium transition-all shadow-sm">
                             <i class="fa-solid fa-map-location-dot text-brand-rose"></i>
                             <span>Google Maps</span>
                         </a>
-                        <a href="https://waze.com/ul?q=California%20881%20La%20Serena" target="_blank" class="flex items-center justify-center gap-2 p-3 rounded-xl bg-brand-cream border border-brand-sandDark/60 hover:border-brand-rose text-brand-dark font-medium transition-all shadow-sm">
+                        <a href="https://waze.com/ul?q=California%20881%20La%20Serena" target="_blank" class="flex items-center justify-center gap-2 p-3 rounded-xl bg-brand-sand/50 border border-brand-sandDark/60 hover:border-brand-rose text-brand-dark font-medium transition-all shadow-sm">
                             <i class="fa-brands fa-waze text-sky-600"></i>
                             <span>Abrir en Waze</span>
                         </a>
@@ -1033,7 +1033,7 @@
     </footer>
 
     <!-- WHATSAPP BOOKING MODAL -->
-    <div id="bookingModal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-black/60 backdrop-blur-sm transition-opacity">
+    <div id="bookingModal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-black/70 backdrop-blur-sm transition-opacity">
         <div class="bg-brand-cream rounded-3xl max-w-md w-full p-6 sm:p-8 border border-brand-sandDark shadow-2xl relative">
             
             <button onclick="closeBookingModal()" class="absolute top-5 right-5 text-brand-dark/50 hover:text-brand-dark text-xl p-1">
@@ -1053,17 +1053,17 @@
             <form id="bookingForm" onsubmit="handleModalSubmit(event)" class="space-y-4 text-xs">
                 <div>
                     <label class="block text-brand-dark font-medium mb-1">Nombre Completo</label>
-                    <input type="text" id="patientName" required placeholder="Ej: María González" class="w-full px-4 py-3 rounded-xl border border-brand-sandDark bg-white text-brand-dark focus:outline-none focus:border-brand-rose text-xs">
+                    <input type="text" id="patientName" required placeholder="Ej: María González" class="w-full px-4 py-3 rounded-xl border border-brand-sandDark bg-brand-sand/30 text-brand-dark focus:outline-none focus:border-brand-rose text-xs">
                 </div>
 
                 <div>
                     <label class="block text-brand-dark font-medium mb-1">Tratamiento o Servicio Seleccionado</label>
-                    <input type="text" id="selectedService" readonly class="w-full px-4 py-3 rounded-xl border border-brand-sandDark bg-brand-sand/50 text-brand-dark font-semibold text-xs">
+                    <input type="text" id="selectedService" readonly class="w-full px-4 py-3 rounded-xl border border-brand-sandDark bg-brand-sand/60 text-brand-dark font-semibold text-xs">
                 </div>
 
                 <div>
                     <label class="block text-brand-dark font-medium mb-1">Día de preferencia (Lunes a Viernes)</label>
-                    <select id="preferredDay" class="w-full px-4 py-3 rounded-xl border border-brand-sandDark bg-white text-brand-dark focus:outline-none focus:border-brand-rose text-xs">
+                    <select id="preferredDay" class="w-full px-4 py-3 rounded-xl border border-brand-sandDark bg-brand-sand/30 text-brand-dark focus:outline-none focus:border-brand-rose text-xs">
                         <option value="Lunes a Miércoles (17:20 a 19:00)">Lunes a Miércoles (17:20 - 19:00 hrs)</option>
                         <option value="Jueves (17:00 a 19:30)">Jueves (17:00 - 19:30 hrs)</option>
                         <option value="Viernes (16:00 a 19:30)">Viernes (16:00 - 19:30 hrs)</option>
@@ -1072,7 +1072,7 @@
 
                 <div>
                     <label class="block text-brand-dark font-medium mb-1">Mensaje opcional / Consulta adicional</label>
-                    <textarea id="additionalNote" rows="2" placeholder="Ej: Quisiera consultar si puedo combinar con una limpieza..." class="w-full px-4 py-3 rounded-xl border border-brand-sandDark bg-white text-brand-dark focus:outline-none focus:border-brand-rose text-xs"></textarea>
+                    <textarea id="additionalNote" rows="2" placeholder="Ej: Quisiera consultar si puedo combinar con una limpieza..." class="w-full px-4 py-3 rounded-xl border border-brand-sandDark bg-brand-sand/30 text-brand-dark focus:outline-none focus:border-brand-rose text-xs"></textarea>
                 </div>
 
                 <button type="submit" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white py-3.5 rounded-full uppercase tracking-widest font-semibold transition-all shadow-md flex items-center justify-center gap-2 mt-2">
@@ -1187,10 +1187,10 @@
 
             filtered.forEach(item => {
                 const card = document.createElement('div');
-                card.className = "bg-white p-6 rounded-2xl border border-brand-sandDark/50 shadow-sm hover:shadow-md hover:border-brand-rose/40 transition-all flex flex-col justify-between group";
+                card.className = "bg-brand-sand/40 p-6 rounded-2xl border border-brand-sandDark/60 shadow-sm hover:shadow-md hover:border-brand-rose/60 transition-all flex flex-col justify-between group";
 
                 const isPendingBadge = item.isPending 
-                    ? `<span class="block mt-2 text-[10px] text-amber-700 bg-amber-50 border border-amber-200 px-2.5 py-1 rounded-md font-medium"><i class="fa-solid fa-triangle-exclamation mr-1"></i> ${item.note}</span>` 
+                    ? `<span class="block mt-2 text-[10px] text-amber-800 bg-amber-100 border border-amber-300 px-2.5 py-1 rounded-md font-medium"><i class="fa-solid fa-triangle-exclamation mr-1"></i> ${item.note}</span>` 
                     : '';
 
                 card.innerHTML = `
@@ -1199,21 +1199,21 @@
                             <span class="text-[10px] uppercase tracking-wider text-brand-rose font-semibold bg-brand-roseMuted px-2.5 py-1 rounded-full">
                                 <i class="fa-regular fa-clock mr-1"></i> ${item.time}
                             </span>
-                            ${item.note && !item.isPending ? `<span class="text-[10px] text-brand-dark/60 italic">${item.note}</span>` : ''}
+                            ${item.note && !item.isPending ? `<span class="text-[10px] text-brand-dark/70 italic font-medium">${item.note}</span>` : ''}
                         </div>
                         <h4 class="font-serif-title text-base text-brand-dark font-medium leading-snug mb-2 group-hover:text-brand-rose transition-colors">${item.name}</h4>
-                        ${item.desc ? `<p class="text-xs text-brand-dark/70 font-light leading-relaxed mb-2">${item.desc}</p>` : ''}
+                        ${item.desc ? `<p class="text-xs text-brand-dark/80 font-light leading-relaxed mb-2">${item.desc}</p>` : ''}
                         ${isPendingBadge}
                     </div>
 
-                    <div class="mt-6 pt-4 border-t border-brand-sandDark/30 flex items-center justify-between">
+                    <div class="mt-6 pt-4 border-t border-brand-sandDark/40 flex items-center justify-between">
                         <div>
-                            <span class="block text-[10px] uppercase text-brand-dark/50 font-medium">Arancel</span>
-                            <span class="font-serif-title text-lg font-bold ${item.isPending ? 'text-amber-800' : 'text-brand-dark'}">${item.price}</span>
+                            <span class="block text-[10px] uppercase text-brand-dark/60 font-medium">Arancel</span>
+                            <span class="font-serif-title text-lg font-bold ${item.isPending ? 'text-amber-900' : 'text-brand-dark'}">${item.price}</span>
                         </div>
 
-                        <button onclick="openBookingModal('${item.name.replace(/'/g, "\\'")}')" class="bg-brand-cream hover:bg-brand-rose hover:text-white text-brand-dark px-3 py-2 rounded-xl text-xs font-semibold transition-all flex items-center gap-1.5 shadow-sm" title="Reservar este tratamiento">
-                            <i class="fa-brands fa-whatsapp text-sm"></i>
+                        <button onclick="openBookingModal('${item.name.replace(/'/g, "\\'")}')" class="bg-brand-dark hover:bg-brand-rose text-white px-3.5 py-2 rounded-xl text-xs font-semibold transition-all flex items-center gap-1.5 shadow-sm" title="Reservar este tratamiento">
+                            <i class="fa-brands fa-whatsapp text-sm text-emerald-400"></i>
                             <span class="hidden sm:inline">Agendar</span>
                         </button>
                     </div>
