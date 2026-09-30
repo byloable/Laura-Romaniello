@@ -127,6 +127,17 @@
             mask-image: linear-gradient(to bottom, #000 80%, transparent 100%);
         }
         @media (min-width: 640px) { .hero-bg { height: 440px; } }
+        /* Mobile-only tuning for #inicio (<640px). Desktop/tablet untouched. */
+        @media (max-width: 639px) {
+            #inicio .hero-bg {
+                height: 460px;
+                background-size: auto 100%;
+                background-position: left top;
+                margin-bottom: 1.5rem;
+            }
+            #inicio h1 { font-size: 2.125rem; }
+            #inicio .lg\:col-start-6 > * + * { margin-top: 1.75rem; }
+        }
         @media (min-width: 1024px) {
             .hero-bg {
                 position: absolute; inset: 0; height: auto; margin: 0;
@@ -260,7 +271,7 @@
                         
                         <a href="https://wa.me/56996341132?text=Hola%20Dra.%20Laura,%20quisiera%20recibir%20m%C3%A1s%20informaci%C3%B3n%20sobre%20los%20tratamientos%20y%20consultar%20por%20disponibilidad%20de%20horas.%20%C2%BFPodr%C3%ADan%20orientarme%3F" target="_blank" class="border border-white/20 hover:border-brand-roseLight hover:text-brand-roseLight bg-white/5 hover:bg-white/10 text-brand-cream px-7 py-4 rounded-full text-xs uppercase tracking-widest font-semibold transition-all duration-300 text-center flex items-center justify-center gap-2">
                             <i class="fa-brands fa-whatsapp text-lg text-emerald-400"></i>
-                            <span>por WhatsApp</span>
+                            <span>Más información</span>
                         </a>
                     </div>
 
@@ -276,7 +287,7 @@
                         </div>
                         <div>
                             <span class="block text-xs uppercase tracking-wider text-brand-roseLight font-semibold">Resultados</span>
-                            <span class="text-xs text-brand-sandDark">100% Naturales</span>
+                            <span class="text-xs text-brand-sandDark">a100% Naturales</span>
                         </div>
                         <div>
                             <span class="block text-xs uppercase tracking-wider text-brand-roseLight font-semibold">Atención</span>
@@ -292,7 +303,7 @@
     <section class="py-16 bg-brand-cream text-brand-dark border-y border-brand-sandDark/60">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="max-w-3xl mx-auto text-center space-y-4">
-                <span class="text-xs uppercase tracking-[0.25em] text-brand-rose font-semibold">Atención Médica Odontológica & Estética</span>
+                <span class="text-xs uppercase tracking-[0.a] text-brand-rose font-semibold">Atención Médica Odontológica & Estética</span>
                 <h2 class="font-serif-title text-2xl sm:text-3xl text-brand-dark">
                     Salud bucal y armonización facial bajo un solo estándar de excelencia
                 </h2>
@@ -543,43 +554,66 @@
                     $990.000 <span class="plan-clp">CLP</span>
                 </div>
 
-                <p class="mt-10 text-xl sm:text-2xl tracking-wide text-brand-cream font-normal uppercase">Incluye:</p>
+                <p class="mt-5 font-serif-title text-xl sm:text-2xl italic font-light text-brand-roseLight tracking-wide">
+                    Una propuesta integral con valor preferencial
+                </p>
 
-                <ul class="mt-8 space-y-5 sm:space-y-6 text-lg sm:text-2xl text-brand-cream font-normal">
-                    <li class="flex items-center gap-4 sm:gap-5">
+                <p class="mt-10 text-xl sm:text-2xl tracking-wide text-brand-cream font-normal uppercase">Tu plan incluye</p>
+                <p class="mt-2 text-xs sm:text-sm uppercase tracking-[0.2em] text-white/60">10 sesiones · 5 tratamientos · 1 año de cuidado</p>
+
+                <ul class="mt-6 divide-y divide-white/10 border-y border-white/10 text-lg sm:text-2xl text-brand-cream font-normal">
+                    <li class="flex items-center gap-4 sm:gap-5 py-4 sm:py-5">
                         <i class="fa-solid fa-check plan-check text-lg"></i>
                         <span>2 sesiones de HIFU Facial</span>
                     </li>
-                    <li class="flex items-center gap-4 sm:gap-5">
+                    <li class="flex items-center gap-4 sm:gap-5 py-4 sm:py-5">
                         <i class="fa-solid fa-check plan-check text-lg"></i>
                         <span>3 sesiones de Mesoterapia</span>
                     </li>
-                    <li class="flex items-center gap-4 sm:gap-5">
+                    <li class="flex items-center gap-4 sm:gap-5 py-4 sm:py-5">
                         <i class="fa-solid fa-check plan-check text-lg"></i>
                         <span>2 sesiones de Toxina Botulínica (3 zonas)</span>
                     </li>
-                    <li class="flex items-center gap-4 sm:gap-5">
+                    <li class="flex items-center gap-4 sm:gap-5 py-4 sm:py-5">
                         <i class="fa-solid fa-check plan-check text-lg"></i>
                         <span>2 sesiones de Exosomas</span>
                     </li>
-                    <li class="flex items-center gap-4 sm:gap-5">
+                    <li class="flex items-center gap-4 sm:gap-5 py-4 sm:py-5">
                         <i class="fa-solid fa-check plan-check text-lg"></i>
                         <span>1 sesión de PDRN</span>
                     </li>
                 </ul>
 
-                <p class="mt-12 text-lg sm:text-2xl text-brand-cream leading-relaxed max-w-xl">
-                    Tu plan integral de cuidado y rejuvenecimiento durante todo el año.
+                <p class="mt-10 text-lg sm:text-2xl text-brand-cream leading-relaxed max-w-xl">
+                    Un año de cuidado facial pensado para acompañarte de forma integral, combinando tratamientos de firmeza, calidad de piel y expresión en un solo plan.
                 </p>
+
+                <div class="mt-12">
+                    <p class="text-xs uppercase tracking-[0.25em] text-brand-roseLight font-semibold">¿Qué obtienes?</p>
+                    <div class="mt-4 grid grid-cols-1 sm:grid-cols-3 gap-4">
+                    <div class="rounded-2xl border border-white/10 bg-white/[0.03] p-5">
+                        <i class="fa-solid fa-calendar-check plan-check text-base"></i>
+                        <h3 class="mt-3 text-sm font-semibold text-brand-cream leading-snug">Cuidado facial durante todo el año</h3>
+                        <p class="mt-1.5 text-xs text-white/60 leading-relaxed">Un programa pensado para mantener un cuidado más constante.</p>
+                    </div>
+                    <div class="rounded-2xl border border-white/10 bg-white/[0.03] p-5">
+                        <i class="fa-solid fa-layer-group plan-check text-base"></i>
+                        <h3 class="mt-3 text-sm font-semibold text-brand-cream leading-snug">Tratamientos combinados en un solo plan</h3>
+                        <p class="mt-1.5 text-xs text-white/60 leading-relaxed">Cinco tratamientos reunidos en una sola propuesta.</p>
+                    </div>
+                    <div class="rounded-2xl border border-white/10 bg-white/[0.03] p-5">
+                        <i class="fa-solid fa-gem plan-check text-base"></i>
+                        <h3 class="mt-3 text-sm font-semibold text-brand-cream leading-snug">Valor preferencial</h3>
+                        <p class="mt-1.5 text-xs text-white/60 leading-relaxed">Frente a contratar las sesiones de forma individual.</p>
+                    </div>
+                    </div>
+                </div>
 
                 <div class="mt-10 max-w-sm">
                     <button onclick="openBookingModal('Plan Anual $990.000 CLP')" class="w-full bg-brand-rose hover:bg-brand-roseHover text-white py-4 rounded-full text-xs uppercase tracking-widest font-semibold transition-all duration-300 shadow-lg flex items-center justify-center gap-2">
                         <span>Solicitar Plan Anual</span>
                         <i class="fa-brands fa-whatsapp text-base"></i>
                     </button>
-                    <p class="text-[10px] text-white/50 mt-4">
-                        Sujeto a evaluación clínica previa · Cupos mensuales limitados
-                    </p>
                 </div>
 
             </div>
@@ -743,7 +777,7 @@
         </div>
     </section>
 
-    <section id="sobre-mi" class="py-20 bg-brand-dark text-white">
+    <section id="sobre-mi" class="py-20 lg:py-28 bg-brand-dark text-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
                 
@@ -766,23 +800,29 @@
                         <span class="block text-5xl sm:text-6xl lg:text-7xl tracking-tight">Laura Romaniello</span>
                     </h2>
 
+                    <p class="mt-6 text-xs sm:text-sm uppercase tracking-[0.2em] text-brand-sandDark font-light">Cirujano Dentista · Armonización Facial</p>
+
                     <div class="w-16 h-px bg-brand-rose mt-8 mb-8"></div>
 
-                    <div class="space-y-6 max-w-2xl">
-                        <p class="font-serif-title italic font-light text-xl sm:text-2xl leading-relaxed text-brand-cream/90">
-                            La Dra. Laura Romaniello desarrolla su práctica con un enfoque personalizado, entendiendo que cada paciente tiene necesidades, características y objetivos diferentes.
-                        </p>
+                    <p class="font-serif-title italic font-light text-xl sm:text-2xl leading-relaxed text-brand-cream/90 max-w-xl">
+                        Mi enfoque parte de entender que cada rostro es único. Busco combinar conocimiento clínico, precisión y sentido estético para lograr resultados armónicos que respeten la esencia de cada paciente.
+                    </p>
 
-                        <div class="space-y-5 text-sm sm:text-base text-brand-sandDark font-light leading-[1.9]">
-                            <p>
-                                Su trabajo se basa en una atención cercana y cuidadosa, donde la precisión clínica, la naturalidad y la armonía son parte fundamental de cada tratamiento.
-                            </p>
-                            <p>
-                                Más allá de cada procedimiento, busca construir una experiencia de atención en la que sus pacientes se sientan escuchados, acompañados y seguros, entregando un cuidado profesional y dedicado en cada etapa.
-                            </p>
-                            <p>
-                                Su propósito es que cada tratamiento respete la individualidad de cada persona y contribuya a su bienestar, confianza y satisfacción con resultados naturales y equilibrados.
-                            </p>
+                    <div class="mt-12 lg:mt-14 max-w-2xl border-b border-white/10">
+                        <div class="grid grid-cols-[auto_1fr] sm:grid-cols-[3rem_11rem_1fr] gap-x-4 sm:gap-x-6 gap-y-2 py-6 border-t border-white/10">
+                            <span class="font-serif-title italic font-light text-brand-roseLight text-lg leading-snug">01</span>
+                            <h3 class="font-serif-title text-brand-cream text-xl leading-snug">Formación clínica</h3>
+                            <p class="col-start-2 sm:col-start-3 sm:row-start-1 text-sm text-brand-sandDark font-light leading-relaxed">Base odontológica y conocimiento de la anatomía facial aplicados a cada tratamiento.</p>
+                        </div>
+                        <div class="grid grid-cols-[auto_1fr] sm:grid-cols-[3rem_11rem_1fr] gap-x-4 sm:gap-x-6 gap-y-2 py-6 border-t border-white/10">
+                            <span class="font-serif-title italic font-light text-brand-roseLight text-lg leading-snug">02</span>
+                            <h3 class="font-serif-title text-brand-cream text-xl leading-snug">Mirada estética</h3>
+                            <p class="col-start-2 sm:col-start-3 sm:row-start-1 text-sm text-brand-sandDark font-light leading-relaxed">Un enfoque orientado a la armonía, proporción y naturalidad de cada rostro.</p>
+                        </div>
+                        <div class="grid grid-cols-[auto_1fr] sm:grid-cols-[3rem_11rem_1fr] gap-x-4 sm:gap-x-6 gap-y-2 py-6 border-t border-white/10">
+                            <span class="font-serif-title italic font-light text-brand-roseLight text-lg leading-snug">03</span>
+                            <h3 class="font-serif-title text-brand-cream text-xl leading-snug">Atención cercana</h3>
+                            <p class="col-start-2 sm:col-start-3 sm:row-start-1 text-sm text-brand-sandDark font-light leading-relaxed">Evaluación personalizada y acompañamiento durante cada etapa del proceso.</p>
                         </div>
                     </div>
                 </div>
