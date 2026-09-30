@@ -720,25 +720,62 @@
                         </div>
 
                         <!-- Hours -->
-                        <div class="flex items-start gap-4 p-4 rounded-2xl bg-brand-cream border border-brand-sandDark/50">
-                            <div class="w-10 h-10 rounded-xl bg-brand-rose/10 text-brand-rose flex items-center justify-center shrink-0 text-lg">
-                                <i class="fa-regular fa-clock"></i>
+                        <div class="p-5 sm:p-6 rounded-2xl bg-brand-cream border border-brand-sandDark/60 shadow-sm hover:border-brand-rose/40 transition-all">
+                            <div class="flex items-center justify-between pb-3.5 mb-3.5 border-b border-brand-sandDark/40">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-10 h-10 rounded-xl bg-brand-rose/10 text-brand-rose flex items-center justify-center shrink-0 text-lg">
+                                        <i class="fa-regular fa-clock"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-serif-title text-base text-brand-dark font-medium">Horarios de Atención</h4>
+                                        <p class="text-[11px] text-brand-dark/60 font-light">Atención con reserva previa</p>
+                                    </div>
+                                </div>
+                                <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[10px] font-medium uppercase tracking-wider bg-emerald-50 text-emerald-700 border border-emerald-200/60 shrink-0">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                                    <span>Consulta Presencial</span>
+                                </span>
                             </div>
-                            <div class="w-full">
-                                <h4 class="font-serif-title text-base text-brand-dark mb-2">Horarios de Atención</h4>
-                                <div class="space-y-1 text-xs text-brand-dark/80 font-light">
-                                    <div class="flex justify-between py-1 border-b border-brand-sandDark/30">
-                                        <span>Lunes a Miércoles:</span>
-                                        <span class="font-medium text-brand-dark">17:20 a 19:00 hrs</span>
-                                    </div>
-                                    <div class="flex justify-between py-1 border-b border-brand-sandDark/30">
-                                        <span>Jueves:</span>
-                                        <span class="font-medium text-brand-dark">17:00 a 19:30 hrs</span>
-                                    </div>
-                                    <div class="flex justify-between py-1">
-                                        <span>Viernes:</span>
-                                        <span class="font-medium text-brand-dark">16:00 a 19:30 hrs</span>
-                                    </div>
+
+                            <div class="space-y-2 text-xs">
+                                <div class="flex items-center justify-between p-2.5 rounded-xl bg-white/80 border border-brand-sandDark/30 shadow-xs">
+                                    <span class="font-medium text-brand-dark flex items-center gap-2">
+                                        <span class="w-1.5 h-1.5 rounded-full bg-brand-rose"></span>
+                                        <span>Lunes a Miércoles</span>
+                                    </span>
+                                    <span class="font-semibold text-brand-dark tracking-tight">17:20 – 19:00 hrs</span>
+                                </div>
+
+                                <div class="flex items-center justify-between p-2.5 rounded-xl bg-white/80 border border-brand-sandDark/30 shadow-xs">
+                                    <span class="font-medium text-brand-dark flex items-center gap-2">
+                                        <span class="w-1.5 h-1.5 rounded-full bg-brand-rose"></span>
+                                        <span>Jueves</span>
+                                    </span>
+                                    <span class="font-semibold text-brand-dark tracking-tight">17:00 – 19:30 hrs</span>
+                                </div>
+
+                                <div class="flex items-center justify-between p-2.5 rounded-xl bg-white/80 border border-brand-sandDark/30 shadow-xs">
+                                    <span class="font-medium text-brand-dark flex items-center gap-2">
+                                        <span class="w-1.5 h-1.5 rounded-full bg-brand-rose"></span>
+                                        <span>Viernes</span>
+                                    </span>
+                                    <span class="font-semibold text-brand-dark tracking-tight">16:00 – 19:30 hrs</span>
+                                </div>
+
+                                <div class="flex items-center justify-between p-2.5 rounded-xl bg-brand-sand/30 border border-brand-sandDark/20 text-brand-dark/50">
+                                    <span class="font-normal flex items-center gap-2">
+                                        <span class="w-1.5 h-1.5 rounded-full bg-brand-dark/20"></span>
+                                        <span>Sábado</span>
+                                    </span>
+                                    <span class="text-[10px] font-medium tracking-wider uppercase px-2 py-0.5 rounded-md bg-brand-sandDark/30 text-brand-dark/60">Cerrado</span>
+                                </div>
+
+                                <div class="flex items-center justify-between p-2.5 rounded-xl bg-brand-sand/30 border border-brand-sandDark/20 text-brand-dark/50">
+                                    <span class="font-normal flex items-center gap-2">
+                                        <span class="w-1.5 h-1.5 rounded-full bg-brand-dark/20"></span>
+                                        <span>Domingo</span>
+                                    </span>
+                                    <span class="text-[10px] font-medium tracking-wider uppercase px-2 py-0.5 rounded-md bg-brand-sandDark/30 text-brand-dark/60">Cerrado</span>
                                 </div>
                             </div>
                         </div>
