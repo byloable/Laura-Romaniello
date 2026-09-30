@@ -127,7 +127,86 @@
             mask-image: linear-gradient(to bottom, #000 80%, transparent 100%);
         }
         @media (min-width: 640px) { .hero-bg { height: 440px; } }
-        /* Mobile-only tuning for #inicio (<640px). Desktop/tablet untouched. */
+
+        /* Hero composition: editorial hierarchy without changing the rest of the site */
+        #inicio .hero-container {
+            padding-top: clamp(2.5rem, 5vw, 5.5rem);
+            padding-bottom: clamp(3.5rem, 6vw, 6rem);
+        }
+
+        #inicio .hero-grid {
+            column-gap: clamp(3rem, 7vw, 8rem);
+        }
+
+        #inicio .hero-copy {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            max-width: 42rem;
+            padding-left: clamp(1.5rem, 3vw, 3.75rem);
+        }
+
+        #inicio .hero-copy > * {
+            margin-top: 0;
+        }
+
+        #inicio .hero-copy > * + * {
+            margin-top: 1.5rem;
+        }
+
+        #inicio .hero-title {
+            max-width: 40rem;
+            color: #F6F1ED;
+            font-size: clamp(2.8rem, 5vw, 4.35rem);
+            letter-spacing: -.035em;
+            line-height: 1.02;
+        }
+
+        #inicio .hero-title span {
+            display: inline-block;
+            color: #BFA5A7;
+            margin-top: .08em;
+        }
+
+        #inicio .hero-slogan {
+            color: #E89AAA;
+            font-size: clamp(1.6rem, 2.6vw, 2.25rem);
+            letter-spacing: .025em;
+            line-height: 1.15;
+        }
+
+        #inicio .hero-description {
+            max-width: 34rem;
+            font-size: 1rem;
+            line-height: 1.8;
+        }
+
+        #inicio .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 2.25rem;
+        }
+
+        #inicio .hero-highlights {
+            width: 100%;
+            margin-top: 3.25rem;
+            padding-top: 1.5rem;
+        }
+
+        @media (min-width: 640px) and (max-width: 1023px) {
+            #inicio .hero-container {
+                padding-top: 0;
+                padding-bottom: 3rem;
+            }
+
+            #inicio .hero-copy {
+                max-width: 44rem;
+                padding-left: 0;
+            }
+        }
+
+        /* Mobile tuning for #inicio (<640px) */
         @media (max-width: 639px) {
             #mainHeader > div:first-child {
                 height: 4.25rem;
@@ -139,7 +218,7 @@
             }
 
             #inicio {
-                padding-bottom: 2.5rem;
+                padding-bottom: 3rem;
             }
 
             #inicio .hero-bg {
@@ -152,81 +231,75 @@
                 mask-image: linear-gradient(to bottom, #000 68%, transparent 100%);
             }
 
-            #inicio .relative.max-w-7xl {
+            #inicio .hero-container {
+                padding-top: 0;
+                padding-bottom: 1.5rem;
+            }
+
+            #inicio .hero-grid {
+                gap: 0;
+            }
+
+            #inicio .hero-container {
                 padding-left: 1.25rem;
                 padding-right: 1.25rem;
             }
 
-            #inicio .grid > div {
+            #inicio .hero-copy {
+                width: 100%;
+                max-width: none;
                 align-items: flex-start;
+                padding: .75rem 0 0;
             }
 
-            #inicio .grid > div > * + * {
-                margin-top: 1rem !important;
+            #inicio .hero-copy > * + * {
+                margin-top: 1.35rem;
             }
 
-            #inicio .lg\:col-start-6 > * + * {
-                margin-top: 1rem !important;
-            }
-
-            #inicio .grid > div > div:first-child {
+            #inicio .hero-title {
                 max-width: 100%;
-                padding: .4rem .75rem;
-                gap: .4rem;
-                font-size: .65rem;
-                line-height: 1.25;
-                letter-spacing: .1em;
+                font-size: clamp(2rem, 9.5vw, 2.55rem);
+                line-height: 1.02;
+                letter-spacing: -.03em;
             }
 
-            #inicio .grid > div > div:first-child .w-2 {
-                width: .4rem;
-                height: .4rem;
-                flex: 0 0 .4rem;
-            }
-
-            #inicio h1 {
-                max-width: 100%;
-                font-size: clamp(2rem, 9.5vw, 2.4rem);
-                line-height: 1;
-                letter-spacing: -.025em;
-            }
-
-            #inicio h1 br {
+            #inicio .hero-title br {
                 display: block !important;
             }
 
-            #inicio h1 span {
-                display: inline-block;
+            #inicio .hero-title span {
                 margin-top: .18em;
             }
 
-            #inicio h1 + p {
-                font-size: 1.65rem;
-                line-height: 1.05;
+            #inicio .hero-slogan {
+                font-size: clamp(1.45rem, 7vw, 1.75rem);
+                line-height: 1.15;
                 letter-spacing: .015em;
             }
 
-            #inicio h1 + p + p {
+            #inicio .hero-description {
                 max-width: 34rem;
                 font-size: .875rem;
                 line-height: 1.5;
             }
 
-            #inicio .grid > div > div:nth-of-type(2) {
+            #inicio .hero-actions {
                 width: 100%;
-                padding-top: .15rem;
+                flex-direction: column;
                 gap: .75rem;
+                margin-top: 1.85rem;
             }
 
-            #inicio .grid > div > div:nth-of-type(2) button,
-            #inicio .grid > div > div:nth-of-type(2) a {
+            #inicio .hero-actions button,
+            #inicio .hero-actions a {
                 width: 100%;
                 min-height: 3.25rem;
                 padding: .95rem 1.1rem;
             }
 
-            #inicio .grid > div > div:last-child {
+            #inicio .hero-highlights {
                 width: 100%;
+                margin-top: 2.5rem;
                 padding-top: 1.15rem;
                 gap: .7rem;
             }
@@ -290,7 +363,7 @@
                         DRA. LAURA ROMANIELLO
                     </span>
                     <span class="text-[10px] sm:text-xs tracking-[0.18em] sm:tracking-[0.25em] text-brand-roseLight uppercase font-semibold">
-                        Estética & Armonización Facial
+                        Cirujano Dentista · Armonización Facial
                     </span>
                 </span>
             </a>
@@ -339,31 +412,26 @@
         <!-- Hero image (woman on the left, black space on the right for the text) -->
         <div class="hero-bg" role="img" aria-label="Armonización facial con la Dra. Laura Romaniello"></div>
 
-        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center lg:min-h-[560px]">
+        <div class="hero-container relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="hero-grid grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center lg:min-h-[560px]">
 
                 <!-- Text Column (sits on the black area of the image) -->
-                <div class="lg:col-start-6 lg:col-span-7 space-y-6 lg:pl-4">
-                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full badge-rose text-xs font-semibold tracking-wider uppercase">
-                        <span class="w-2 h-2 rounded-full bg-brand-roseLight animate-pulse"></span>
-                        Cirujano Dentista · Estética Facial Avanzada
-                    </div>
-
-                    <h1 class="font-serif-title text-4xl sm:text-5xl lg:text-6xl text-brand-cream leading-[1.15] font-normal">
+                <div class="hero-copy lg:col-start-7 lg:col-span-6">
+                    <h1 class="hero-title font-serif-title font-normal">
                         Armonización Facial <br class="hidden sm:inline">
                         <span class="italic font-light text-brand-sandDark">& Estética Avanzada</span>
                     </h1>
 
-                    <p class="font-serif-title text-2xl sm:text-3xl text-brand-roseLight italic font-light tracking-wide">
-                        Ciencia. Arte. Armonía.
+                    <p class="hero-slogan font-serif-title italic font-light">
+                        Arte. Ciencia. Armonía.
                     </p>
 
-                    <p class="text-brand-sandDark text-sm sm:text-base leading-relaxed max-w-xl font-light">
+                    <p class="hero-description text-brand-sandDark sm:text-base font-light">
                         Odontología integral para adultos y niños. Tratamientos médicos personalizados que realzan tu belleza natural con la más avanzada tecnología y máxima precisión clínica en La Serena.
                     </p>
 
                     <!-- CTAs -->
-                    <div class="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+                    <div class="hero-actions flex flex-col sm:flex-row items-stretch sm:items-center">
                         <button onclick="openBookingModal('Evaluación General')" class="bg-brand-rose hover:bg-brand-roseHover text-white px-8 py-4 rounded-full text-xs uppercase tracking-widest font-semibold transition-all duration-300 shadow-md hover:shadow-lg text-center flex items-center justify-center gap-3">
                             <span>Reservar Evaluación</span>
                             <i class="fa-solid fa-calendar-check text-sm"></i>
@@ -376,7 +444,7 @@
                     </div>
 
                     <!-- Micro Highlights -->
-                    <div class="pt-8 grid grid-cols-2 sm:grid-cols-4 gap-4 border-t border-white/10">
+                    <div class="hero-highlights grid grid-cols-2 sm:grid-cols-4 gap-4 border-t border-white/10">
                         <div>
                             <span class="block text-xs uppercase tracking-wider text-brand-roseLight font-semibold">Evaluación</span>
                             <span class="text-xs text-brand-sandDark">Personalizada</span>
@@ -900,7 +968,6 @@
                         <span class="block text-5xl sm:text-6xl lg:text-7xl tracking-tight">Laura Romaniello</span>
                     </h2>
 
-                    <p class="mt-6 text-xs sm:text-sm uppercase tracking-[0.2em] text-brand-sandDark font-light">Cirujano Dentista · Armonización Facial</p>
 
                     <div class="w-16 h-px bg-brand-rose mt-8 mb-8"></div>
 
