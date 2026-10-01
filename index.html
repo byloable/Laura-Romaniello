@@ -898,6 +898,99 @@
     text-shadow: 0 2px 12px rgba(0, 0, 0, 0.7);
   }
 }
+
+        /* Portada móvil: fotografía integrada, texto centrado y sin panel tipo tarjeta. */
+        @media (max-width: 639px) {
+            #mainHeader > div:first-child { height: 4.25rem; }
+
+            #inicio {
+                padding-top: 4.25rem;
+                padding-bottom: 1.75rem;
+                background-color: #191718;
+                background-image:
+                    linear-gradient(180deg,
+                        rgba(25, 23, 24, .08) 0%,
+                        rgba(25, 23, 24, .2) 22%,
+                        rgba(25, 23, 24, .72) 43%,
+                        #191718 78%),
+                    url('principal.png');
+                background-repeat: no-repeat;
+                background-position: center top;
+                background-size: 100% auto;
+            }
+
+            #inicio .hero-bg { display: none; }
+
+            #inicio .hero-container {
+                position: relative;
+                z-index: 2;
+                padding: 2.2rem 1.25rem 0;
+                margin: 0 auto;
+            }
+
+            #inicio .hero-grid { min-height: 0; gap: 0; }
+
+            #inicio .hero-copy {
+                width: 100%;
+                max-width: 34rem;
+                align-items: center;
+                margin: 0 auto;
+                padding: 0;
+                background: transparent;
+                border: 0;
+                border-radius: 0;
+                box-shadow: none;
+                backdrop-filter: none;
+                -webkit-backdrop-filter: none;
+                text-align: center;
+            }
+
+            #inicio .hero-copy > * + * { margin-top: 1rem; }
+
+            #inicio .hero-title {
+                max-width: 100%;
+                font-size: clamp(2rem, 8.2vw, 2.45rem);
+                line-height: 1.08;
+                letter-spacing: -.035em;
+                text-align: center;
+                text-shadow: 0 2px 18px rgba(0, 0, 0, .72);
+            }
+
+            #inicio .hero-title br { display: block !important; }
+            #inicio .hero-title span { display: block; margin-top: .12em; }
+
+            #inicio .hero-slogan {
+                font-size: clamp(1.35rem, 6.2vw, 1.65rem);
+                line-height: 1.18;
+                text-align: center;
+                text-shadow: 0 2px 16px rgba(0, 0, 0, .8);
+            }
+
+            #inicio .hero-description {
+                max-width: 31rem;
+                font-size: .9rem;
+                line-height: 1.65;
+                text-align: center;
+                text-shadow: 0 1px 12px rgba(0, 0, 0, .8);
+            }
+
+            #inicio .hero-actions {
+                width: 100%;
+                flex-direction: column;
+                align-items: stretch;
+                gap: .7rem;
+                margin-top: 1.35rem;
+            }
+
+            #inicio .hero-actions button,
+            #inicio .hero-actions a {
+                width: 100%;
+                min-height: 3.25rem;
+                padding: .9rem 1rem;
+            }
+
+            #inicio .hero-highlights { display: none; }
+        }
     </style>
 </head>
 <body class="antialiased selection:bg-brand-rose selection:text-white">
@@ -2136,3 +2229,4 @@
     </script>
 </body>
 </html>
+
