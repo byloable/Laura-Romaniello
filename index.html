@@ -870,6 +870,28 @@
                 display: none;
             }
         }
+   /* Portada móvil: foto a todo el ancho, se difumina y el texto va encima */
+@media (max-width: 639px) {
+  #inicio .hero-bg {
+    height: 110vw;
+    margin-bottom: 0;
+    background-size: 100% auto;
+    background-position: center -8vw;
+    -webkit-mask-image: linear-gradient(to bottom, #000 62%, transparent 96%);
+    mask-image: linear-gradient(to bottom, #000 62%, transparent 96%);
+  }
+
+  #inicio .hero-container {
+    position: relative;
+    z-index: 2;
+    margin-top: -60px;
+  }
+
+  #inicio .hero-title,
+  #inicio .hero-slogan {
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.7);
+  }
+}
     </style>
 </head>
 <body class="antialiased selection:bg-brand-rose selection:text-white">
