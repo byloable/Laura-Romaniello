@@ -904,6 +904,11 @@
             #mainHeader > div:first-child { height: 4.25rem; }
 
             #inicio {
+                min-height: 100svh;
+                min-height: 100dvh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
                 padding-top: 4.25rem;
                 padding-bottom: 1.75rem;
                 background-color: #191718;
@@ -916,7 +921,7 @@
                     url('principal.png');
                 background-repeat: no-repeat;
                 background-position: center top;
-                background-size: 100% auto;
+                background-size: auto 76svh;
             }
 
             #inicio .hero-bg { display: none; }
@@ -924,7 +929,8 @@
             #inicio .hero-container {
                 position: relative;
                 z-index: 2;
-                padding: 2.2rem 1.25rem 0;
+                width: 100%;
+                padding: 5rem 1.25rem 1.5rem;
                 margin: 0 auto;
             }
 
@@ -2229,4 +2235,5 @@
     </script>
 </body>
 </html>
+
 
