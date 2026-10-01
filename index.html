@@ -603,6 +603,267 @@
                 align-items: flex-start;
             }
         }
+
+        /* Pulido visual para móviles. */
+        @media (max-width: 639px) {
+            html {
+                scroll-padding-top: 4.5rem;
+            }
+
+            #mainHeader > div:first-child {
+                height: 4rem;
+                gap: .5rem;
+            }
+
+            #mainHeader a > span > span:first-child {
+                font-size: 1rem;
+                line-height: 1.1;
+                letter-spacing: .04em;
+            }
+
+            #mainHeader a > span > span:last-child {
+                font-size: .48rem;
+                line-height: 1.35;
+                letter-spacing: .08em;
+            }
+
+            body > section:not(#inicio) {
+                padding-top: 3.75rem;
+                padding-bottom: 3.75rem;
+            }
+
+            #inicio .hero-title {
+                font-size: clamp(1.9rem, 8.2vw, 2.25rem);
+                line-height: 1.08;
+            }
+
+            #inicio .hero-slogan {
+                font-size: clamp(1.35rem, 6vw, 1.6rem);
+            }
+
+            #inicio .hero-description {
+                font-size: .9rem;
+                line-height: 1.65;
+            }
+
+            #inicio .hero-highlights {
+                margin-top: 2rem;
+                gap: .85rem .65rem;
+            }
+
+            #categoryTabs button {
+                padding: .65rem .9rem;
+                font-size: .68rem;
+            }
+
+            #treatmentsGrid > div {
+                padding: 1.2rem;
+                border-radius: 1rem;
+            }
+
+            #tecnologia .text-center.max-w-2xl {
+                margin-bottom: 2.25rem;
+            }
+
+            #tecnologia .grid > div {
+                padding: 1.35rem;
+            }
+
+            #plan-anual .plan-flower {
+                right: -52%;
+                width: 125%;
+                opacity: .18;
+                background-size: auto 100%;
+                background-position: right center;
+                -webkit-mask-image: linear-gradient(to right, transparent 18%, #000 100%);
+                mask-image: linear-gradient(to right, transparent 18%, #000 100%);
+            }
+
+            #plan-anual .plan-price {
+                font-size: clamp(2.65rem, 11vw, 3.25rem);
+            }
+
+            #plan-anual ul {
+                font-size: .98rem;
+                line-height: 1.5;
+            }
+
+            #plan-anual ul li {
+                padding-top: .9rem;
+                padding-bottom: .9rem;
+            }
+
+            #plan-anual .mt-4.grid > div {
+                padding: 1rem;
+                border-radius: 1rem;
+            }
+
+            #opiniones .max-w-xl.mx-auto {
+                padding: 1.15rem;
+                margin-bottom: 2rem;
+            }
+
+            #opiniones .grid.grid-cols-1.md\:grid-cols-2 > div {
+                padding: 1.15rem;
+            }
+
+            #sobre-mi .img-editorial {
+                width: 100%;
+                max-width: 22rem;
+                height: auto;
+                max-height: none;
+                object-fit: contain;
+                object-position: center top;
+            }
+
+            #sobre-mi h2 .text-5xl {
+                font-size: clamp(2.25rem, 9vw, 2.8rem);
+                line-height: 1.05;
+            }
+
+            #sobre-mi p.font-serif-title {
+                font-size: 1.15rem;
+                line-height: 1.65;
+            }
+
+            #contacto .grid.grid-cols-1.lg\:grid-cols-12 {
+                gap: 2.25rem;
+            }
+
+            #contacto .space-y-8 > :not([hidden]) ~ :not([hidden]) {
+                margin-top: 1.5rem;
+            }
+
+            #bookingModal {
+                padding: .75rem;
+                align-items: flex-start;
+                overflow-y: auto;
+            }
+
+            #bookingModal > div {
+                max-height: calc(100svh - 1.5rem);
+                overflow-y: auto;
+                padding: 1.25rem;
+                margin: auto 0;
+                border-radius: 1.25rem;
+            }
+        }
+
+        @media (max-width: 639px) {
+            #plan-anual {
+                padding-top: 3.25rem;
+                padding-bottom: 3.25rem;
+                background-image: linear-gradient(180deg, rgba(0,0,0,.94), rgba(0,0,0,.82));
+            }
+
+            #plan-anual > .max-w-7xl {
+                padding-left: 1.25rem;
+                padding-right: 1.25rem;
+            }
+
+            #plan-anual .plan-flower {
+                top: 0;
+                right: -58%;
+                bottom: 0;
+                left: auto;
+                width: 145%;
+                height: 100%;
+                opacity: .15;
+                background-size: auto 100%;
+                background-position: right center;
+                -webkit-mask-image: linear-gradient(to right, transparent 12%, #000 100%);
+                mask-image: linear-gradient(to right, transparent 12%, #000 100%);
+            }
+
+            #plan-anual > .max-w-7xl > div > .mb-6 {
+                margin-bottom: 1.1rem;
+                padding: .4rem .75rem;
+                font-size: .62rem;
+                letter-spacing: .08em;
+            }
+
+            #plan-anual .plan-price {
+                font-size: clamp(2.7rem, 11.5vw, 3.3rem);
+            }
+
+            #plan-anual p.mt-5 {
+                max-width: 21rem;
+                margin-top: .8rem;
+                font-size: 1.08rem;
+                line-height: 1.5;
+                letter-spacing: 0;
+            }
+
+            #plan-anual p.mt-10 {
+                margin-top: 1.8rem;
+                font-size: 1.05rem;
+            }
+
+            #plan-anual p.mt-2 {
+                margin-top: .45rem;
+                font-size: .65rem;
+                line-height: 1.5;
+                letter-spacing: .1em;
+            }
+
+            #plan-anual ul {
+                margin-top: 1.15rem;
+                font-size: .95rem;
+            }
+
+            #plan-anual ul li {
+                align-items: flex-start;
+                gap: .7rem;
+                padding-top: .85rem;
+                padding-bottom: .85rem;
+            }
+
+            #plan-anual ul li i {
+                margin-top: .18rem;
+                flex: 0 0 auto;
+            }
+
+            #plan-anual p.max-w-xl {
+                margin-top: 1.4rem;
+                font-size: .9rem;
+                line-height: 1.65;
+            }
+
+            #plan-anual .mt-12 {
+                margin-top: 1.8rem;
+            }
+
+            #plan-anual .mt-4.grid {
+                gap: .75rem;
+            }
+
+            #plan-anual .mt-4.grid > div {
+                padding: .95rem;
+                background: rgba(8,7,8,.88);
+                border-color: rgba(255,255,255,.15);
+            }
+
+            #plan-anual .mt-4.grid h3 {
+                font-size: .86rem;
+                line-height: 1.4;
+            }
+
+            #plan-anual .mt-4.grid p {
+                font-size: .76rem;
+                line-height: 1.55;
+            }
+
+            #plan-anual .mt-10.max-w-sm {
+                margin-top: 1.6rem;
+            }
+
+            #plan-anual button {
+                min-height: 3.1rem;
+                padding: .85rem 1rem;
+                font-size: .66rem;
+                letter-spacing: .1em;
+            }
+        }
     </style>
 </head>
 <body class="antialiased selection:bg-brand-rose selection:text-white">
@@ -793,10 +1054,7 @@
 
                 <!-- Category Filter Tabs Container -->
                 <div class="flex items-center gap-2 overflow-x-auto py-1 px-1 sm:px-6 no-scrollbar scroll-smooth select-none" id="categoryTabs">
-                    <button onclick="filterCategory('todos', this)" class="tab-btn active text-xs font-semibold uppercase tracking-wider px-5 py-2.5 rounded-full border border-brand-dark/20 whitespace-nowrap shrink-0">
-                        Todos los Tratamientos
-                    </button>
-                    <button onclick="filterCategory('evaluacion', this)" class="tab-btn text-xs font-semibold uppercase tracking-wider px-5 py-2.5 rounded-full border border-brand-dark/20 text-brand-dark whitespace-nowrap shrink-0 hover:border-brand-rose">
+                    <button onclick="filterCategory('evaluacion', this)" class="tab-btn active text-xs font-semibold uppercase tracking-wider px-5 py-2.5 rounded-full border border-brand-dark/20 text-brand-dark whitespace-nowrap shrink-0 hover:border-brand-rose">
                         Consultas & Evaluaciones
                     </button>
                     <button onclick="filterCategory('mesoterapia', this)" class="tab-btn text-xs font-semibold uppercase tracking-wider px-5 py-2.5 rounded-full border border-brand-dark/20 text-brand-dark whitespace-nowrap shrink-0 hover:border-brand-rose">
@@ -1607,9 +1865,9 @@
             { category: 'otros', name: 'Ultralift Facial – Técnica Brasileña', time: '30 min', price: '$150.000 CLP', note: 'Lifting de alta intensidad', desc: 'Tratamiento de lifting facial de alta intensidad, en su versión conocida como técnica brasileña, orientado a reafirmar el rostro.' }
         ];
 
-        let currentCategory = 'todos';
+        let currentCategory = 'evaluacion';
 
-        function renderTreatments(category = 'todos') {
+        function renderTreatments(category = 'evaluacion') {
             currentCategory = category;
             const grid = document.getElementById('treatmentsGrid');
             const noResults = document.getElementById('noResults');
@@ -1811,7 +2069,7 @@
 
         /* Initial Render on Page Load */
         window.onload = function() {
-            renderTreatments('todos');
+            renderTreatments('evaluacion');
 
             // Attach scroll listeners to update arrow & fade states dynamically
             const categoryContainer = document.getElementById('categoryTabs');
